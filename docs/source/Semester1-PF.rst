@@ -156,10 +156,8 @@ There's these things called Escape Sequences. When you output a string, for exam
 | ``cout << "World!" << endl;``
 
 You get the output of:
-
 | Hello
 | World!
-
 But what if we wanted to do it in only one line? That's where Escape Sequences come in.
 
 .. _s1-pft-t002:
