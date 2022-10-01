@@ -121,12 +121,13 @@ History: It has a lot. But this doesn't matter in your exams.
 
 Syntax: This is THE MOST important thing to remember. It's crucial that you memorize this as you'll lose marks if you miss a single detail.
     
-| But can a bee be said to be
-|     or not to be an entire bee,
+    | But can a bee be said to be
+    |     or not to be an entire bee,
 
-    | A one, two, a one two three four
-    |
-    | Half a bee, philosophically,
+        | A one, two, a one two three four
+        |
+        | Half a bee, philosophically,
+        
     |     must, *ipso facto*, half not be.
     | But half the bee has got to be,
     |     *vis a vis* its entity.  D'you see?
