@@ -3,13 +3,13 @@
 Semester 1: Programming Fundamentals
 ====================================
 
-| On the right side of the page you'll find a table of sorts that, upon clicking any of the text there, will take you to that section of the page. The page is very long, it has the notes of the ENTIRE SEMESTER. Further organizing it wasn't possible, that's why it's like this.
-| If you're after a specific topic then just press Ctrl-F (or if in browser, then 'Find in Page') to search for it.
+On the right side of the page you'll find a table of sorts that, upon clicking any of the text there, will take you to that section of the page. The page is very long, it has the notes of the ENTIRE SEMESTER. Further organizing it wasn't possible, that's why it's like this.
+If you're after a specific topic then just press Ctrl-F (or if in browser, then 'Find in Page') to search for it.
 |
-| I don't want FAST to come after me and try to take this thing down so, none of their material will be uploaded here. I can however reference info from it, and upload and link files that don't belong to them.
-| Programming Fundamenttals has 4 Total Credit Hours. 3 for Theory, and 1 for Lab. That means for 16 weeks, there will be 3 hours a week for Theory and 1 hour a week for Lab. Yes, we do three hours but that's beside the point. Credit Hours are counted weirdly.
+I don't want FAST to come after me and try to take this thing down so, none of their material will be uploaded here. I can however reference info from it, and upload and link files that don't belong to them.
+Programming Fundamenttals has 4 Total Credit Hours. 3 for Theory, and 1 for Lab. That means for 16 weeks, there will be 3 hours a week for Theory and 1 hour a week for Lab. Yes, we do three hours but that's beside the point. Credit Hours are counted weirdly.
 |
-| Outline for PF Theory:
+Outline for PF Theory:
 
 *    4 Assignments. Total Absolutes: 12
 *    1 Sessional-I. Total Absolutes: 10 
@@ -18,7 +18,7 @@ Semester 1: Programming Fundamentals
 *    1 Project. Total Absolutes: 13
 *    1 Final Exam. Total Absolutes: 40
 
-| Outline for PF Lab:
+Outline for PF Lab:
 
 *    14 or more Lab Tasks. Total Absolutes: 30
 *    1 Sessional-I. Total Absolutes: 8
@@ -26,15 +26,15 @@ Semester 1: Programming Fundamentals
 *    1 Project. Total Absolutes: 10
 *    1 Final Exam. Total Absolutes: 40
 
-| Grading Polcy is Absolute Grading.
+Grading Polcy is Absolute Grading.
 |
-| Textbooks:
+Textbooks:
 
 *    Starting Out with C++: From Control Structures through Objects; Ninth Edition by Tony Gaddis
 *    Starting Out with Programming, Logic, and Design; Third Edition by Tony Gaddis
 *    Starting Out with C++; 8th Edition by Tony Gaddis
 
-| Software:
+Software:
 
 *    Ubuntu, version 20.04, installed via Dual Boot or Virtual Machine (They say it's not allowed but honestly a VM is better for most cases. It works perfectly fine and I use it. It's far far less of a hassle to install and takes less space)
 *    G++ Compiler Suite in Ubuntu
@@ -143,8 +143,8 @@ Escape Sequences
 | Two lines had to be written so 'Hello' and 'World!' were in different lines. But there's a way to do it in only one line:
 | ``cout << "Hello \n World!";``
 | This would output:
-| Hello
-| __World!
+Hello
+ World!
 | I'll explain the extra space there later. The ``\n`` is the Escape Sequence. The Backslash, ``\``, is what's used to trigger it. Within any "code which is written in speech marks", if a ``\`` is written, it's not gonna be there. An Escape Sequence is used to trigger something within the text. ``\n`` will trigger a new line. ``\t`` will trigger Tab, which aligns with columns. ``\"`` is used to write speech marks where it's not possible. This happens where, if for example you want to output:
 | I "love" Programming!
 | You'd think it's as simple as writing ``cout << "I "love" Programming!";``, but no. the program can only work with one pair of speech marks at once. So here, the actual code to get the output above, would be ``cout << "I \"love\" Programming!";``. Just like that if you also wanna output the actual backslash, you just write it twice. ``cout << "\\\\";`` would output ``\\``.
