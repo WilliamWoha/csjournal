@@ -4,6 +4,7 @@ Take it away, Eric the Orchestra Leader!
    |
    | Half a bee, philosophically,
    |     must, *ipso facto*, half not be.
+   
     | But half the bee has got to be,
     |     *vis a vis* its entity.  D'you see?
     |
