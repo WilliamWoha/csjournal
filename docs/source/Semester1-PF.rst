@@ -121,15 +121,16 @@ History: It has a lot. But this doesn't matter in your exams.
 
 Syntax: This is THE MOST important thing to remember. It's crucial that you memorize this as you'll lose marks if you miss a single detail.
 
-|``#include <iostream>``
-|``using namespace std;``
-|``int main() {``
+| ``#include <iostream>``
+| ``using namespace std;``
+| ``int main() {``
  |
  |
- |``(code)``
+ | ``(code)``
  |
- |
- |``return 0;``
+   |
+   | ``return 0;``
+| ``}``
 
 Now you're probably wondering what all of that is. So lets get to work:
 
