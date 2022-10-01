@@ -18,7 +18,7 @@ Lecture 01:
 Lecture 02:
 -----------
 
-.. _s1-pf-t002:
+.. _s1-pf-t000:
 
 (Topic learnt)
 ^^^^^^^^^^^^^^
@@ -28,7 +28,7 @@ Lecture 02:
 Lecture 03:
 -----------
 
-.. _s1-pf-t003:
+.. _s1-pf-t000:
 
 (Topic learnt)
 ^^^^^^^^^^^^^^
@@ -38,7 +38,7 @@ Lecture 03:
 Lecture 04:
 -----------
 
-.. _s1-pf-t004:
+.. _s1-pf-t000:
 
 (Topic learnt)
 ^^^^^^^^^^^^^^
@@ -48,7 +48,7 @@ Lecture 04:
 Lecture 05:
 -----------
 
-.. _s1-pf-t005:
+.. _s1-pf-t000:
 
 (Topic learnt)
 ^^^^^^^^^^^^^^
@@ -58,7 +58,7 @@ Lecture 05:
 Lecture 06:
 -----------
 
-.. _s1-pf-t006:
+.. _s1-pf-t000:
 
 (Topic learnt)
 ^^^^^^^^^^^^^^
@@ -68,7 +68,7 @@ Lecture 06:
 Lecture 07:
 -----------
 
-.. _s1-pf-t007:
+.. _s1-pf-t000:
 
 (Topic learnt)
 ^^^^^^^^^^^^^^
@@ -78,7 +78,7 @@ Lecture 07:
 Lecture 08:
 -----------
 
-.. _s1-pf-t008:
+.. _s1-pf-t000:
 
 (Topic learnt)
 ^^^^^^^^^^^^^^
@@ -88,7 +88,7 @@ Lecture 08:
 Lecture 09:
 -----------
 
-.. _s1-pf-t009:
+.. _s1-pf-t000:
 
 (Topic learnt)
 ^^^^^^^^^^^^^^
@@ -98,7 +98,7 @@ Lecture 09:
 Lecture 10:
 -----------
 
-.. _s1-pf-t010:
+.. _s1-pf-t000:
 
 (Topic learnt)
 ^^^^^^^^^^^^^^
@@ -108,7 +108,7 @@ Lecture 10:
 Lecture 11:
 -----------
 
-.. _s1-pf-t011:
+.. _s1-pf-t000:
 
 (Topic learnt)
 ^^^^^^^^^^^^^^
