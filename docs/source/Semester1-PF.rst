@@ -124,7 +124,7 @@ Syntax: This is THE MOST important thing to remember. It's crucial that you memo
     | ``#include <iostream>``
     | ``using namespace std;``
     | ``int main() {``
-    |
+    
         | ``(code)``
         |
         | ``return 0;``
@@ -151,17 +151,11 @@ Week 3.
 
 Yes I know there's some syntax not written in the above section, we'll get to it later. One thing at a time. If something isn't written it means the university will explain it later. And right now we've just done the main template for every C++ program, and cout statements. And believe me, even this is gonna be enough for now.
 There's these things called Escape Sequences. When you output a string, for example, ``cout << "Hello World!" << endl;``, then ``Hello World!`` is the output that appears in the console. If you write two lines, one below another:
-
-``cout << "Hello" << endl;``
-
-``cout << "World!" << endl;``
-
+| ``cout << "Hello" << endl;``
+| ``cout << "World!" << endl;``
 You get the output of:
-
 Hello
-
 World!
-
 But what if we wanted to do it in only one line? That's where Escape Sequences come in.
 
 .. _s1-pft-t002:
