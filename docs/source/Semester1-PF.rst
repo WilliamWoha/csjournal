@@ -54,13 +54,13 @@ Lab Lecture 01
 | Week 1.
 | It was a lot of people there and a lot of noise but pay attention as EVERY SINGLE LAB CLASS for PF Lab is graded. You'll need a laptop or computer already. If you don't have one then you'll have to stay extra hours at FAST so you can use their labs. That might affect your situation with transport, but they don't care. You either do it or you don't get a grade. If you need a good machine for little cost, then get an old laptop and put an SSD in there.
 | You learn Ubuntu in this class. The Terminal is the thing that you'll use the most. The commands to remember are:
-*    `mkdir name`: Makes new folder in current directory with name of `name`
-*    `touch name.ext`: Makes new file in current directory with name of `name` and extension `.ext`
-*    `cd name`: Changes Directory to folder `name`
-*    `cd ..`: Moves up one directory
-*    `cd`: Moves to root directory
-*    `ls`: Shows all files in directory
-*    `ls -l`: Shows all files in directory in detailed manner with read, write, and execute permissions.
+*    ``mkdir name``: Makes new folder in current directory with name of ``name``
+*    ``touch name.ext``: Makes new file in current directory with name of ``name`` and extension ``.ext``
+*    ``cd name``: Changes Directory to folder ``name``
+*    ``cd ..``: Moves up one directory
+*    ``cd``: Moves to root directory
+*    ``ls``: Shows all files in directory
+*    ``ls -l``: Shows all files in directory in detailed manner with read, write, and execute permissions.
 | Get used to them. You'll be using them a lot.
 
 .. _s1-pft-l02:
@@ -102,25 +102,25 @@ Intro to C++
 ^^^^^^^^^^^^
 | History: It has a lot. But this doesn't matter in your exams.
 | Syntax: This is THE MOST important thing to remember. It's crucial that you memorize this as you'll lose marks if you miss a single detail.
-| `#include <iostream>`
-| `using namespace std;`
-| `int main() {`
+| ``#include <iostream>``
+| ``using namespace std;``
+| ``int main() {``
 |     
-|     `(code)`
+|     ``(code)``
 |
-|     `return 0;`
-| `}`
+|     ``return 0;``
+| ``}``
 |
 | Now you're probably wondering what all of that is. So lets get to work:
-*    `#include <iostream>` is called a 'Preprocessor Directive'. It's written at the top and basically prepares the rest of the program for these commands. #include means, that specific library has to be included.
-*    `using namespace std;` means using names for objects and variables from the standard library. Don't focus on what it does for now, just know that you have to write it.
-*    `int main()` is a Function. You'll learn Functions in OOP but for now just understand that, ALL of your code that you write, is to be written inside of this. If written outside or if you don't mention this line, it WILL NOT work. It has to be written between the {curly brackets}.
-*    `return 0` is also a part of the Function. Just know that you have to write it at the absolute very end for now. This isn't always important, as the program works completely fine without it, but I've lost marks on quizzes for forgetting to write it so, it's better if you do.
+*    ``#include <iostream>`` is called a 'Preprocessor Directive'. It's written at the top and basically prepares the rest of the program for these commands. #include means, that specific library has to be included.
+*    ``using namespace std;`` means using names for objects and variables from the standard library. Don't focus on what it does for now, just know that you have to write it.
+*    ``int main()`` is a Function. You'll learn Functions in OOP but for now just understand that, ALL of your code that you write, is to be written inside of this. If written outside or if you don't mention this line, it WILL NOT work. It has to be written between the {curly brackets}.
+*    ``return 0`` is also a part of the Function. Just know that you have to write it at the absolute very end for now. This isn't always important, as the program works completely fine without it, but I've lost marks on quizzes for forgetting to write it so, it's better if you do.
 | There's still more stuff to actually cover, but that above is just the template. MAKE SURE to memorize it, you will need it for the rest of the semester.
 | Other Syntax that you'll use for Program Execution:
-*    `cout`: Used to output to the Console. Written in format of `cout << "Hello World!";`
-*    `endl`: Written at the end of a cout statement so that anything that comes after is done in a new line. Written in format of `cout << "Hello World!" << endl;`
-| Do make sure to write a semicolon at the end of every single thing you write. The only time you don't, is for # lines, and after the `}` which is found below `return 0;`.
+*    ``cout``: Used to output to the Console. Written in format of ``cout << "Hello World!";``
+*    ``endl``: Written at the end of a cout statement so that anything that comes after is done in a new line. Written in format of ``cout << "Hello World!" << endl;``
+| Do make sure to write a semicolon at the end of every single thing you write. The only time you don't, is for # lines, and after the ``}`` which is found below ``return 0;``.
 
 .. _s1-pft-l05:
 
@@ -128,9 +128,9 @@ Theory Lecture 05
 -----------------
 | Week 3.
 | Yes I know there's some syntax not written in the above section, we'll get to it later. One thing at a time. If something isn't written it means the university will explain it later. And right now we've just done the main template for every C++ program, and cout statements. And believe me, even this is gonna be enough for now.
-| There's these things called Escape Sequences. When you output a string, for example, `cout << "Hello World!" << endl;`, then `Hello World!` is the output that appears in the console. If you write two lines, one below another:
-| `cout << "Hello" << endl;`
-| `cout << "World!" << endl;`
+| There's these things called Escape Sequences. When you output a string, for example, ``cout << "Hello World!" << endl;``, then ``Hello World!`` is the output that appears in the console. If you write two lines, one below another:
+| ``cout << "Hello" << endl;``
+| ``cout << "World!" << endl;``
 | You get the output of:
 | Hello
 | World!
@@ -140,6 +140,16 @@ Theory Lecture 05
 
 Escape Sequences
 ^^^^^^^^^^^^^^^^
+| Two lines had to be written so 'Hello' and 'World!' were in different lines. But there's a way to do it in only one line:
+| ``cout << "Hello \n World!";``
+| This would output:
+| Hello
+|  World!
+| I'll explain the extra space there later. The ``\\n`` is the Escape Sequence. The Backslash, \\, is what's used to trigger it. Within any "code which is written in speech marks", if a ``\\`` is written, it is not gonna be there. An Escape Sequence is used to trigger something within the text. ``\\n`` will trigger a new line. ``\\t`` will trigger Tab key, which aligns with columns. ``\"`` is used to write speech marks where it's not possible. This happens where, if for example you want to output:
+| I "love" Programming!
+| You'd think it's as simple as writing ``cout << "I "love" Programming!";``, but no. It can only work with one pair of speech marks at once. So here, the actual code to get the output above, would be ``cout << "I \"love\" Programming!";``. Just like that if you also wanna output the actual backslash, you just write it twice. ``cout << "\\\\";`` would output \\\\.
+| ``\\`` only reads the character in front of it. So writing "\\\\n" would in fact just output "\\n".
+| An important thing to note is, Even though you're pressing two keyboard buttons for an Escape Sequence, it only counts as one character to the program. ``cout << "Hello";`` is five characters, while ``cout << "\\n"`` is only one.
 
 .. _s1-pfl-l01:
 
