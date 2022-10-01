@@ -3,10 +3,6 @@
 Semester 1: Programming Fundamentals
 ====================================
 
-` `
-balls
-` `
-
 | On the right side of the page you'll find a table of sorts that, upon clicking any of the text there, will take you to that section of the page. The page is very long, it has the notes of the ENTIRE SEMESTER. Further organizing it wasn't possible, that's why it's like this.
 | If you're after a specific topic then just press Ctrl-F (or if in browser, then 'Find in Page') to search for it.
 |
@@ -181,7 +177,9 @@ Escape Sequences
 | Here's some commands to know about:
 *    ``setw(num)``: Sets output in characters. If number of characters is too many, it will cut off. If number of characters is not enough, it will fill empty locations via another character (By default it will leave spaces, but the character can be changed with setfill() ). Written in format of ``cout << 30.5/6 << setw(4);`` 
 *    ``setfill('char')``: Chooses what characters to use for extra spaces, if any are left from ``setw()`` being too high.
-*    ``setprecision(num)``: Chooses number of significant figures to output. Decimals are not counted. If too high of a number is entered, it will add 0's after the decimal. If too low, it will use Scientific Notation, for example if it's set to 3 for a number 21,427 then it will output as 2.1e4.
+*    ``setprecision(num)``: Chooses number of significant figures to output. Decimals are not counted. If too high of a number is entered, it will give the full number. If too low of a number is entered, such that it can't cover all decimal places, then it will use scientific notation, like 2.4e5. If the number is high enough to cover all decimal places then it will output that amount of significant figures. It will do rounding for the last number.
+| All of these are written to the left of the thing they are to affect. ``cout << setw(10) << setfill('*') << setprecision(6) << 34.678156`` would output:
+    | ``***34.6782``
 
 .. _s1-pfl-l01:
 
