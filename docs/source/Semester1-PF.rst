@@ -149,16 +149,14 @@ Theory Lecture 05
 
 Week 3.
 
-Yes I know there's some syntax not written in the above section, we'll get to it later. One thing at a time. If something isn't written it means the university will explain it later. And right now we've just done the main template for every C++ program, and cout statements. And believe me, even this is gonna be enough for now.
+| Yes I know there's some syntax not written in the above section, we'll get to it later. One thing at a time. If something isn't written it means the university will explain it later. And right now we've just done the main template for every C++ program, and cout statements. And believe me, even this is gonna be enough for now.
 There's these things called Escape Sequences. When you output a string, for example, ``cout << "Hello World!" << endl;``, then ``Hello World!`` is the output that appears in the console. If you write two lines, one below another:
-
 | ``cout << "Hello" << endl;``
 | ``cout << "World!" << endl;``
-
-You get the output of:
+| You get the output of:
 | Hello
 | World!
-But what if we wanted to do it in only one line? That's where Escape Sequences come in.
+| But what if we wanted to do it in only one line? That's where Escape Sequences come in.
 
 .. _s1-pft-t002:
 
@@ -169,7 +167,7 @@ Two lines had to be written so 'Hello' and 'World!' were in different lines. But
 | ``cout << "Hello \n World!";``
 This would output:
 | Hello
-| World!
+| \ World!
 
 I'll explain the extra space there later. The ``\n`` is the Escape Sequence. The Backslash, ``\``, is what's used to trigger it. Within any "code which is written in speech marks", if a ``\`` is written, it's not gonna be there. An Escape Sequence is used to trigger something within the text. ``\n`` will trigger a new line. ``\t`` will trigger Tab, which aligns with columns. ``\"`` is used to write speech marks where it's not possible. This happens where, if for example you want to output:
 | I "love" Programming!
