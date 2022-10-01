@@ -125,7 +125,6 @@ Syntax: This is THE MOST important thing to remember. It's crucial that you memo
     | ``using namespace std;``
     | ``int main() {``
     
-        |
         | ``(code)``
         |
         | ``return 0;``
