@@ -163,9 +163,9 @@ There's these things called Escape Sequences. When you output a string, for exam
 Escape Sequences
 ^^^^^^^^^^^^^^^^
 
-Two lines had to be written so 'Hello' and 'World!' were in different lines. But there's a way to do it in only one line:
+| Two lines had to be written so 'Hello' and 'World!' were in different lines. But there's a way to do it in only one line:
 | ``cout << "Hello \n World!";``
-This would output:
+| This would output:
 | Hello
 | \ World!
 
