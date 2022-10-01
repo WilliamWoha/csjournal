@@ -266,7 +266,7 @@ Precedence
 
 | What if multiple arithmetic operators are used in one statement? It has to follow an order. So here it is:
 *    ``( )``
-*    `` / ``,`` % ``,`` * ``. If in same line, left to right
+*    `` \/ ``,`` % ``,`` * ``. If in same line, left to right
 *    `` + ``,`` - ``. If in same line, left to right
 | So ``(3+2)*6`` would give 30 and ``3+2*6`` would give 15
 | ``6*4+3-2/5`` would give 32
