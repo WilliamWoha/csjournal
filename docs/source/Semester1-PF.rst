@@ -179,7 +179,7 @@ Escape Sequences
 *    ``setprecision(num)``: Chooses number of significant figures to output. Decimals are not counted. If too high of a number is entered, it will give the full number. If too low of a number is entered, such that it can't cover all decimal places, then it will use scientific notation, like 2.4e5. If the number is high enough to cover all decimal places then it will output that amount of significant figures. It will do rounding for the last number.
 | All of these are written to the left of the thing they are to affect. You can remember this easily by remembering that code outputs left to right, so it has to come first. ``cout << setw(10) << setfill('*') << setprecision(6) << 34.678156`` would output:
 
-    | ``***34.6782``
+    | ***34.6782
 
 .. _s1-pfl-l03:
 
@@ -355,12 +355,28 @@ Keyboard Buffer (.get(), getline(), .ignore())
     | }
 | You want it to only work when Enter is pressed, but ``cin`` won't store Enter. So the solution? Replace ``cin >> key;`` with ``key = cin.get()``. If you press Enter, then ``\n`` will be stored into ``key``.
 | If you just write ``cin.get();`` then it won't store the key, but instead works like a "Press Any Key to Continue" button.
+| 
+| There's an even funnier problem though.
+    | ``int number;``
+    | ``char ch;``
+    | ``cout << "Enter number: " << endl;``
+    | ``cin >> number;``
+    | ``cout << "Enter Character: " << endl;``
+    | ``cin.get(ch);``
+    | ``cout << "Thank you." << endl;``
+| This code has a problem.
+| You won't get the opportunity to store a character into the ``cin.get()``.
+| In the first ``cin``, if you write 324 then press Enter, the buffer would have these characters in it:
+| ``3`` ``2`` ``4`` ``\n``
+| ``\n`` is an escape sequence and is one character. ``cin`` reads until that point and stores the numbers into the variable, but ``\n`` isn't removed, it's still there. That gets stored into ``cin.get(ch)``. You don't get the prompt.
+|
+| The solution? Another command. ``cin.ignore(cond1, cond2)``. This is mentioned now instead of way back with John Cena because it only solves the problem of the rest of the Keyboard Buffer going into the next ``cin`` statement. It didn't solve the problem of Space not being stored.
+| ``cin.ignore(cond1, cond2)`` will ignore characters in the Keyboard Buffer until either Condition 1 is fulfilled, or Condition 2 is fulfilled. Condition 1 is a number value, and Condition 2 is a character check. ``cin.ignore(20,'\n')`` will ignore characters in the Keyboard Buffer until a ``\n`` is found, or until 20 spaces.
 
+.. _s1-pft-l09:
 
-.. _s1-pft-l10:
-
-Lecture 10:
------------
+Theory Lecture 9
+----------------
 
 .. _s1-pft-t000:
 
