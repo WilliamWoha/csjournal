@@ -10,6 +10,10 @@ how to :ref:`installation` the project.
 
    This project is under active development until the degree is completed. So I guess that means 2026.
 
+Credit
+------
+This documentation was made by `Woha <https://github.com/WilliamWoha>`_. Real name hidden, you don't need it. If you need to contact me, do it via Discord (INSERT SERVER NAME HERE).
+
 Contents
 --------
 
