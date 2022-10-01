@@ -44,16 +44,17 @@ Software:
 
 Theory Lecture 01
 -----------------
-| Week 1.
-| The most relaxing class. We did introductions, learnt about the course, what absolutes are, what GCR to join, which books and software we need, and were also warned about how difficult it was gonna be but took it lightly. Don't make our mistake, young reader, this institution will break you unless you're prepared. At the time of writing this (1st October 2022), it already broke my colleagues. In the first Sessional of Calculus, the total marks were 60. Our class average was 24/60. The Highest in Section A was 36 and in Section C was 40. You must be ready.
+Week 1.
+The most relaxing class. We did introductions, learnt about the course, what absolutes are, what GCR to join, which books and software we need, and were also warned about how difficult it was gonna be but took it lightly. Don't make our mistake, young reader, this institution will break you unless you're prepared. At the time of writing this (1st October 2022), it already broke my colleagues. In the first Sessional of Calculus, the total marks were 60. Our class average was 24/60. The Highest in Section A was 36 and in Section C was 40. You must be ready.
 
 .. _s1-pfl-l01:
 
 Lab Lecture 01
 --------------
-| Week 1.
-| It was a lot of people there and a lot of noise but pay attention as EVERY SINGLE LAB CLASS for PF Lab is graded. You'll need a laptop or computer already. If you don't have one then you'll have to stay extra hours at FAST so you can use their labs. That might affect your situation with transport, but they don't care. You either do it or you don't get a grade. If you need a good machine for little cost, then get an old laptop and put an SSD in there.
-| You learn Ubuntu in this class. The Terminal is the thing that you'll use the most. The commands to remember are:
+Week 1.
+It was a lot of people there and a lot of noise but pay attention as EVERY SINGLE LAB CLASS for PF Lab is graded. You'll need a laptop or computer already. If you don't have one then you'll have to stay extra hours at FAST so you can use their labs. That might affect your situation with transport, but they don't care. You either do it or you don't get a grade. If you need a good machine for little cost, then get an old laptop and put an SSD in there.
+
+You learn Ubuntu in this class. The Terminal is the thing that you'll use the most. The commands to remember are:
 *    ``mkdir name``: Makes new folder in current directory with name of ``name``
 *    ``touch name.ext``: Makes new file in current directory with name of ``name`` and extension ``.ext``
 *    ``cd name``: Changes Directory to folder ``name``
@@ -61,16 +62,16 @@ Lab Lecture 01
 *    ``cd``: Moves to root directory
 *    ``ls``: Shows all files in directory
 *    ``ls -l``: Shows all files in directory in detailed manner with read, write, and execute permissions.
-| Get used to them. You'll be using them a lot.
+Get used to them. You'll be using them a lot.
 
 .. _s1-pft-l02:
 
 Theory Lecture 02
 -----------------
-| Week 1.
-| A lot of background information on what Fundamentals means and what Programming means, and then finally, Programming Fundamentals. Computer Organization is also important and then there was the history of Von-Neumann.
-|
-| There are three types of languages:
+Week 1.
+A lot of background information on what Fundamentals means and what Programming means, and then finally, Programming Fundamentals. Computer Organization is also important and then there was the history of Von-Neumann.
+
+There are three types of languages:
 *    Machine Language: Only language machine actually understands. This is the 0's and 1's you see. Very cumbersome for humans but ALL languages are deconstructed to this level via something that translates them for the computer.
 *    Assembly Language: 1's and 0's with letters. It's very very close to Machine Language but is readable by humans. You can program in it but it will test your patience like no other. But hey, Chris Sawyer got 30 Million Dollars for it since he made a game called RollerCoaster Tycoon. So if you have the guts, then go for it. The translator for Assembly Language is called the Instructor.
 *    High Level Language: Way closer to Human Language. Uses Common Math operations, and converted either in real time with Interpretors, or after compiling all at once with Compilers. C++ is a Compiled language. Compiler languages are much faster than Interpreted languages but troubleshooting can be a massive hassle as, if one part of the code doesn't work, the entire thing drops.
@@ -79,15 +80,15 @@ Theory Lecture 02
 
 Theory Lecture 03
 -----------------
-| Week 2.
-| Logic and Problem Solving. It explained about flowcharts and pseudocode, and why they're used. Pseudocode is widely used as it is easy to read, has no strict syntax, and lets the Programmer focus on the logic first. That's literally it, it just explained those three things again. If you know them, great. Othewrise, just google them. I'm not explaining here.
+Week 2.
+Logic and Problem Solving. It explained about flowcharts and pseudocode, and why they're used. Pseudocode is widely used as it is easy to read, has no strict syntax, and lets the Programmer focus on the logic first. That's literally it, it just explained those three things again. If you know them, great. Othewrise, just google them. I'm not explaining here.
 
 .. _s1-pfl-l02:
 
 Lab Lecture 02
 --------------
-| Week 2.
-| More about Problem Solving with Algorithms and Flowcharts. Then we made some flowcharts and did a Scratch assignment.
+Week 2.
+More about Problem Solving with Algorithms and Flowcharts. Then we made some flowcharts and did a Scratch assignment.
 
 .. _s1-pft-l04:
 
