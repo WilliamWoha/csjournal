@@ -115,6 +115,7 @@ Intro to C++
     | ``#include <iostream>``
     | ``using namespace std;``
     | ``int main() {``
+        
         |
         | ``(code)``
         |
