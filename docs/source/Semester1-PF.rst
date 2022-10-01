@@ -1,20 +1,3 @@
-Take it away, Eric the Orchestra Leader!
-
-   | A one, two, a one two three four
-   |
-   | Half a bee, philosophically,
-   |     must, *ipso facto*, half not be.
-   
-    | But half the bee has got to be,
-    |     *vis a vis* its entity.  D'you see?
-    |
-    | But can a bee be said to be
-    |     or not to be an entire bee,
-    |         when half the bee is not a bee,
-    |             due to some ancient injury?
-    |
-    | Singing...
-
 .. _s1-pf-intro:
 
 Semester 1: Programming Fundamentals
@@ -138,19 +121,17 @@ History: It has a lot. But this doesn't matter in your exams.
 
 Syntax: This is THE MOST important thing to remember. It's crucial that you memorize this as you'll lose marks if you miss a single detail.
 
-``#include <iostream>``
-
-``using namespace std;``
-
-``int main() {``
-
-
-    ``(code)``
-
-
-    ``return 0;``
+|``#include <iostream>``
+|``using namespace std;``
+|``int main() {``
+    |
+    |
+    |``(code)``
+    |
+    |
+    |``return 0;``
     
-``}``
+|``}``
 
 Now you're probably wondering what all of that is. So lets get to work:
 
