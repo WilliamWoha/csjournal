@@ -181,7 +181,7 @@ Escape Sequences
 
     | ``***34.6782``
 
-.. _s1-pfl-l01:
+.. _s1-pfl-l03:
 
 Lab Lecture 03
 --------------
@@ -269,7 +269,7 @@ Precedence
 *    ``/ , % , *``: If in same line, left to right
 *    ``+ , -``: If in same line, left to right
 | So ``(3+2)*6`` would give 30 and ``3+2*6`` would give 15
-| ``6*4+3-2/5`` would give 32
+| ``6*4+3-2/5`` would give 32 (as 2/5 would be 0)
 
 .. _s1-t007:
 
@@ -291,25 +291,71 @@ Type Coercion (Type Casting)
 *    ``type(value)`` or ``(type)value``: Write the data type in ``type``, and the variable name or direct value you want to convert in ``value``.
 | If you do float(7/10) the result would be 0. If you instead do float(7)/10 then you get 0.7. It solves in the brackets first so make sure you're converting BEFORE the division.
 
+.. _s1-pfl-l04:
+
+Lab Lecture 04
+--------------
+
+| Just did more practice of type casting. Read the above.
+
 .. _s1-pft-l08:
 
-Lecture 08:
------------
+Theory Lecture 08
+-----------------
 
-.. _s1-t008:
+| This is gonna be a long one because of something called the Keyboard Buffer. Get ready.
 
-(Topic learnt)
-^^^^^^^^^^^^^^
+.. _s1-pft-t008:
 
-.. _s1-pft-l09:
+Variable Assigning using itself
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Lecture 09:
------------
+    | ``int sum = 30;``
+    | ``sum = sum + 10;``
+| Does that make sense to you?
+| If you called ``sum`` after those two lines, you'd get a value of 40.
+| When assigning (meaning in statements with ``=`` in them), the Compiler first works out the things on the right side, then assigns it to the variable on the left side. So for the line ``sum = sum + 10``, it first takes the value of ``sum`` from memory, does the required operations on it (in this case, addition of 10), and then assigns it. It just so happens to be that the assigning part happens to be at the original memory location.
+| In these situations, aka the ones where the variable works on itself, we can do something called `Combined Assignments`.
+*    ``sum = sum + 10`` is ``sum += 10``
+*    ``sum = sum - 10`` is ``sum -= 10``
+*    ``sum = sum * 10`` is ``sum *= 10``
+*    ``sum = sum / 10`` is ``sum /= 10``
+*    ``sum = sum % 10`` is ``sum %= 10``
+| If we do ``cout << sum + 10``, will the value of ``sum`` change? No. That just calculates and then outputs, there's no assigning taking place.
+| ``x += b + 5;`` is ``x = x + b + 5;``
 
-.. _s1-pft-t000:
+.. _s1-pft-t009:
 
-(Topic learnt)
-^^^^^^^^^^^^^^
+Keyboard Buffer (.get(), getline(), .ignore())
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| Here's a funny thing about using ``#iostream <string>``. If you try to put data into a ``string`` variable via a ``cin`` statement, it won't store values past an escape sequence. Here's the program:
+    | ``string name;``
+    | ``cin >> "Enter name: ";``
+| If I write John Cena into that, then try to check the value of ``name``, it will give me an output of ``John``.
+| But there's this thing called the Keyboard Buffer. The thing is, this Buffer holds the data for all the keys pressed via the keyboard. ``John Cena`` is stored in the Keyboard Buffer, but the ``cin`` statement only read it until ``John``.
+| Here's an even funnier thing:
+    | ``string name, city;``
+    | ``cout << "Please enter your full name: " << endl;``
+    | ``cin >> name;``
+    | ``cout << "Please enter your city: " << endl;
+    | ``cin >> city;``
+    | ``cout << "Your full name is " << name << ", and your city is " << city << endl;``
+| If you ran that code and entered John Cena into the first prompt for an input, then you wouldn't even get the second prompt, and the code would output: ``Your full name is John, and your city is Cena``. This is because of the Keyboard Buffer.
+| "John Cena" is stored in the buffer, but the ``cin`` statement finds an escape sequence at the space present between John and Cena. So it stops there. But then another ``cin`` statement is called. Since it stopped at the space button, it then picks up from there and finds Cena, and just puts that into the second ``cin`` statement.
+|
+| The solution? Use a thing called ``getline(cin, var);``. It works the same way as ``cin >> var;``. You just write ``getline(cin, var);`` instead. But the difference is, this time no matter what you write, all of it will be stored into the variable. It only stops when the Enter key is pressed, and doesn't store the ``\n`` from that either.
+|
+| There's also ``.get()``. You write it as ``var = cin.get()``. This will read any key that is pressed and store it into the variable. Be it Enter, Space, Escape, Tab, anything. It reads all of it. It's used in games for checking for specific button key presses.
+    | ``char key;``
+    | ``cin >> key;``
+    | if (key == '\n')
+    | {
+        | (Some Code to trigger something)
+    | }
+| You want it to only work when Enter is pressed, but ``cin`` won't store Enter. So the solution? Replace ``cin >> key;`` with ``key = cin.get()``. If you press Enter, then ``\n`` will be stored into ``key``.
+| If you just write ``cin.get();`` then it won't store the key, but instead works like a "Press Any Key to Continue" button.
+
 
 .. _s1-pft-l10:
 
