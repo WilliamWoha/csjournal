@@ -104,7 +104,7 @@ Theory Lecture 04
 | Week 2.
 | Now we're doing the good stuff. Welcome to C++.
 
-.. _s1-pft-t001:
+.. _s1-t001:
 
 Intro to C++
 ^^^^^^^^^^^^
@@ -138,8 +138,7 @@ Other Syntax that you'll use for Program Execution:
 Theory Lecture 05
 -----------------
 
-Week 3.
-
+| Week 3.
 | Yes I know there's some syntax not written in the above section, we'll get to it later. One thing at a time. If something isn't written it means the university will explain it later. And right now we've just done the main template for every C++ program, and cout statements. And believe me, even this is gonna be enough for now.
 | There's these things called Escape Sequences. When you output a string, for example, ``cout << "Hello World!" << endl;``, then ``Hello World!`` is the output that appears in the console. If you write two lines, one below another:
 | ``cout << "Hello" << endl;``
@@ -149,7 +148,7 @@ Week 3.
 | World!
 | But what if we wanted to do it in only one line? That's where Escape Sequences come in.
 
-.. _s1-pft-t002:
+.. _s1-t002:
 
 Escape Sequences
 ^^^^^^^^^^^^^^^^
@@ -168,58 +167,136 @@ Escape Sequences
 | An important thing to note is, Even though you're pressing two keyboard buttons for an Escape Sequence, it only counts as one character to the program. ``cout << "Hello";`` is five characters, while ``cout << "\n"`` is only one.
 | Now, remember that extra space? That's because the code was ``cout << "Hello \n World!";``. There's a space between ``\n`` and ``World!`` which causes that gap to happen, as ``\n`` causes a new line, then there's a space, then there's ``World!``. The space is also a character. If you want it to be in line, the code would be ``cout << "Hello \nWorld!";``. And, though less readable for humans, ``cout << "Hello\nWorld!";`` would be the true solution.
 
-.. _s1-pft-t003:
+.. _s1-t003:
 
 #include <iomanip>
 ^^^^^^^^^^^^^^^^^^
 
 | You remember ``#include <iostream>`` right? This is another library you should get used to. This one's called ``iomanip``, which stands for Input Output Manipulation.
 | Here's some commands to know about:
-*    ``setw(num)``: Sets output in characters. If number of characters is too many, it will cut off. If number of characters is not enough, it will fill empty locations via another character (By default it will leave spaces, but the character can be changed with setfill() ). Written in format of ``cout << 30.5/6 << setw(4);`` 
+*    ``setw(num)``: Sets output in characters. If number of characters is too many, it will cut off. If number of characters is not enough, it will fill empty locations via another character (By default it will leave spaces, but the character can be changed with setfill() ). Written in format of ``cout << 30.5/6 << setw(4);``. Do note, this doesn't apply to the entire ``cout`` statement, but rather only the neighboring thing separated by ``<<``, so you can use multiple in one ``cout`` statement.
 *    ``setfill('char')``: Chooses what characters to use for extra spaces, if any are left from ``setw()`` being too high.
 *    ``setprecision(num)``: Chooses number of significant figures to output. Decimals are not counted. If too high of a number is entered, it will give the full number. If too low of a number is entered, such that it can't cover all decimal places, then it will use scientific notation, like 2.4e5. If the number is high enough to cover all decimal places then it will output that amount of significant figures. It will do rounding for the last number.
-| All of these are written to the left of the thing they are to affect. ``cout << setw(10) << setfill('*') << setprecision(6) << 34.678156`` would output:
+| All of these are written to the left of the thing they are to affect. You can remember this easily by remembering that code outputs left to right, so it has to come first. ``cout << setw(10) << setfill('*') << setprecision(6) << 34.678156`` would output:
 
     | ``***34.6782``
 
 .. _s1-pfl-l01:
 
-Lecture 01:
------------
+Lab Lecture 03
+--------------
 
-| The most relaxing class. We just did introductions 
-
-.. _s1-pft-t001:
-
-(Topic learnt)
-^^^^^^^^^^^^^^
+| Now you actually learn how to make the C++ program via the Compiler in Ubuntu. Navigate to the directory where it's stored in the Terminal, then to compile it (and it's important that this is in order. Remember this line, you're gonna use it a lot) write:
+| ``g++ -o name2 name.cpp``
+| Where ``name.cpp`` is your C++ compiled file, and name2 is the name of the Compiled Program. There's no file type associated to it (Don't worry about it for now). This command just generates a file called ``name2`` in the same directory, and this is the comiled program. To run said program, in the Terminal you just write ``./name2`` (NOT ``./name2.cpp``). Make sure you're still in the same directory or else it won't work.
+| If the compilation was successful and these instructions were done correctly, your program should now run in the terminal.
+| Memorize these steps. You have to do them EVERY TIME you wanna test the code. First Save it in the text editor (aka in the ``.cpp`` file), then run the command to compile, then execute.
 
 .. _s1-pft-l06:
 
-Lecture 06:
------------
+Theory Lecture 06
+-----------------
 
-.. _s1-pft-t000:
+| This whole time we've been doing ``cout``. Now it's time for actually inputting data. Welcome to variables, data types, and ``cin``.
 
-(Topic learnt)
-^^^^^^^^^^^^^^
+.. _s1-t004:
+
+Data Types
+^^^^^^^^^^
+
+| There's 6 Data Types in C++:
+*    Integer (Declared by ``int``)
+*    Float (Declared by ``float``)
+*    Double (Declared by ``double``)
+*    Boolean (Declared by ``bool``)
+*    Character (Declared by ``char``)
+*    String (Declared by ``string``)
+| Out of the 6 above, 5 are already in ``<iostream>`` and part of the foundation of C++. String is the odd one out. To use it, you need to import the ``<string>`` library.
+
+    | #include <string>
+| Integers are Whole Numbers only, Float and Double are Decimal Numbers.
+| Character holds the data of a single character in ' ', and String holds the data of multiple characters in " ".
+| Boolean has only two options: It is either True or False.
+|
+| Computers don't recognize letters, their memory holds numbers. So they convert them using the ASCII table. Here's what you need to remember: ``A`` has the integer value of 65, ``a`` has the integer value of 97. REMEMBER THEM. YOU GET ASKED QUESTIONS ON THEM.
+| 
+| Each data type takes location in memory by varying amounts. Int takes 4 bytes, which is 32 bits, and has a range of ``-2147483648`` to ``2147483647``. Short int takes only two bytes, hence having a range of ``-32768`` to ``32767``. Long int has 8 bytes, and Long Long int has 16 bytes. You can use ``cout << sizeof(int)`` to find the number of bytes they take.
+| Float takes 8 bytes, Double takes 16 bytes, Bool takes one byte, Char takes one byte, and String is...we don't talk about that.
+| You can transfer values from one variable to another but if the first one was bigger in size than the second then some data is truncated, aka lost. We'll deal with that later.
+|
+| To do a declaration, write ``type name;``. So for example, ``int a;``, ``float num;``, ``char c = 'p'``, ``string a,b,c;``, ``int a=2;``, ``int x=y=z=4;``, ``float num1=2, num2=3.5;`` are all valid declarations. The later ones you can figure out on your own.
+| You don't have to immediately declare a value. You can just assign it later. The way to do so would be ``var = value``. So if you have ``int a;`` and then ``a = 3``, and if you did ``cout << a << endl;``, you'd get an output of 3. The ``=`` is what assigns values.
 
 .. _s1-pft-l07:
 
-Lecture 07:
------------
+Theory Lecture 07
+-----------------
 
-.. _s1-pft-t000:
+| So there's these things called Operators. There's four categories of them. Arithmetic, Logical, Relational, and Bitwise. Lets start with the easy one.
 
-(Topic learnt)
-^^^^^^^^^^^^^^
+.. _s1-t005:
+
+Arithmetic Operators
+^^^^^^^^^^^^^^^^^^^^
+
+| These just apply to numbers. They are:
+*    ``+``: Plus Sign (Addition)
+*    ``-``: Minus Sign (Subtraction)
+*    ``*``: Asterisk (Multiplication)
+*    ``/``: Forward Slash (Division)
+*    ``%``: Percentage Sign (Modulus)
+| You know the first four already so I'm not gonna bother with them. The one thing you should know is, for division, there's no rounding. The data is just lost. If you do ``5 / 5`` you get 1 but if you do ``4 / 5`` or ``3 / 5`` or something where the decimal answer would be less then 1, your result is gonna be 0. This is different if you did ``4.0 / 5`` as then one of the values is float, and it's not a pure integer division. Then you get an answer in a float (meaning in decimal) instead of a 0.
+Modulus, or MOD for short, is the new one. The simple explanation is:
+| ``18 / 7`` is 2 with a remainder of 4. Ignore decimals for now. If you did ``int a;`` and then ``a = 18/7;``, the value of ``a`` would be 2. The rest of the data would be lost since it's an ``int`` data type. If you did ``a = 18%7;``, the value of ``a`` would be 4. The MOD operator keeps only the remainder.
+| This can be useful in a number of ways. For example, doing any number MOD 2 would either give 0 or 1. If it's 0 then it's even and if it's 1 then it's odd.
+| MOD can apply only on two integers. Not on more than that.
+| If ``x`` and ``y`` are two integers and you're doing ``x%y``, but ``x`` and ``y`` can both be either positive or negative, then the result of ``x%y`` will have the sign of ``x``. If ``x`` is negative, the result will be negative, regardless of if ``y`` is negative or positive.
+| You can use MOD for digit separation too. Here's how it works:
+*    We have a number, ``3451``.
+*    ``3452 % 10`` is 2.
+*    ``3452 % 100`` is 52. ``52 / 10`` is 5.2 but since it's an integer, data is lost, and we get 5.
+*    ``3452 % 1000`` is 452. ``452 / 100`` is 4.52 but since it's an integer, data is lost, and we get 4.
+*    ``3452 % 10000`` is 3452. ``3452 / 1000`` is 3.452 but since it's an integer, data is lost, and we get 3.
+| In the first line, we get 2. In the second, 5. In the third, 4. In the fourth, 3. These results are the individual numbers that make up the entire number.
+
+.. _s1-t006:
+
+Precedence
+^^^^^^^^^^
+
+| What if multiple arithmetic operators are used in one statement? It has to follow an order. So here it is:
+*    1) `` ( ) ``.
+*    2) `` / , % , * ``. If in same line, left to right.
+*    3) `` + , - ``. If in same line, left to right.
+| So ``(3+2)*6`` would give 30 and ``3+2*6`` would give 15.
+| ``6*4+3-2/5`` would give 32.
+
+.. _s1-t007:
+
+Type Coercion (Type Casting)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| Coercion means conversion. You can convert between data types. There's multiple ways to do so. It either falls under Type Promotion or Type Demotion.
+
+    | ``float a = 3.2;``
+    | ``int b = 10;``
+| ``a / b``, ``b / a``, ``a * b``, ``a + b``, and ``a - b`` would all give an output in float form. All of them "Promote" the int to a float then do an operation on it (MOD won't work, MOD needs two integers). The compiler does it automatically, you don't have to do it. This is what we call Automatic Type Coercion.
+| Data Type Ranking determines whether the conversion is promoting or demoting. It goes as follows: Long Double, Double, Float, Unsigned Long Long Int, Long Long Int, Long Int, Unsigned Int, Int. So in simple terms, Double, then Float, then Int, with Int being lowest rank and Double being the highest rank.
+
+    | ``int answer = a*b;``
+| ``a`` is float, and ``b`` is int. ``b`` gets promoted to float, and then the math operation is done. ``a * b`` is calculated. This is then saved to ``answer``, but the value gets demoted into ``int`` as the declaration of ``answer`` was in ``int``. Decimal Place values are truncated.
+| 
+| To do the conversion manually, there's two ways:
+*    ``static_cast<data type>(value)``: Static Cast. In ``<data type>`` you write the data type you want to convert to, such as ``float``. In ``value``, you write the variable name or the direct value you want to convert.
+*    ``type(value)`` or ``(type)value``: Write the data type in ``type``, and the variable name or direct value you want to convert in ``value``.
+| If you do float(7/10) the result would be 0. If you instead do float(7)/10 then you get 0.7. It solves in the brackets first so make sure you're converting BEFORE the division.
 
 .. _s1-pft-l08:
 
 Lecture 08:
 -----------
 
-.. _s1-pft-t000:
+.. _s1-t008:
 
 (Topic learnt)
 ^^^^^^^^^^^^^^
