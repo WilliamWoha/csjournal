@@ -128,8 +128,8 @@ Syntax: This is THE MOST important thing to remember. It's crucial that you memo
     | But half the bee has got to be,
     |     *vis a vis* its entity.  D'you see?
     |
-    | But can a bee be said to be
-    |     or not to be an entire bee,
+| But can a bee be said to be
+|     or not to be an entire bee,
     |         when half the bee is not a bee,
     |             due to some ancient injury?
     |
