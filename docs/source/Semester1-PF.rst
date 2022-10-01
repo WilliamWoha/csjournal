@@ -156,7 +156,7 @@ Week 3.
 | ``cout << "World!" << endl;``
 | You get the output of:
 | Hello
-| World!
+|     World!
 | But what if we wanted to do it in only one line? That's where Escape Sequences come in.
 
 .. _s1-pft-t002:
