@@ -156,7 +156,7 @@ Escape Sequences
 
 | Two lines had to be written so 'Hello' and 'World!' were in different lines. But there's a way to do it in only one line:
 | ``cout << "Hello \n World!";``
-|This would output:
+| This would output:
 
     | Hello
     
@@ -179,6 +179,7 @@ Escape Sequences
 *    ``setfill('char')``: Chooses what characters to use for extra spaces, if any are left from ``setw()`` being too high.
 *    ``setprecision(num)``: Chooses number of significant figures to output. Decimals are not counted. If too high of a number is entered, it will give the full number. If too low of a number is entered, such that it can't cover all decimal places, then it will use scientific notation, like 2.4e5. If the number is high enough to cover all decimal places then it will output that amount of significant figures. It will do rounding for the last number.
 | All of these are written to the left of the thing they are to affect. ``cout << setw(10) << setfill('*') << setprecision(6) << 34.678156`` would output:
+
     | ``***34.6782``
 
 .. _s1-pfl-l01:
