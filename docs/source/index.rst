@@ -16,9 +16,9 @@ This documentation was made by `Woha <https://github.com/WilliamWoha>`_. Real na
 
 Contents
 --------
-
 .. toctree::
-
-   usage
-   api
+   :caption: Table of Contents
+   :maxdepth: 2
+   :glob:
    
+   *
