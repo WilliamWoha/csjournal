@@ -131,8 +131,7 @@ Syntax: This is THE MOST important thing to remember. It's crucial that you memo
             | ``return 0;``
         | ``}``
     |
-
-Now you're probably wondering what all of that is. So lets get to work:
+| Now you're probably wondering what all of that is. So lets get to work:
 
 *    ``#include <iostream>`` is called a 'Preprocessor Directive'. It's written at the top and basically prepares the rest of the program for these commands. #include means, that specific library has to be included.
 *    ``using namespace std;`` means using names for objects and variables from the standard library. Don't focus on what it does for now, just know that you have to write it.
@@ -168,10 +167,8 @@ Escape Sequences
 | Two lines had to be written so 'Hello' and 'World!' were in different lines. But there's a way to do it in only one line:
 | ``cout << "Hello \n World!";``
 | This would output:
-|
     | Hello
         | World!
-|
 | I'll explain the extra space there later. The ``\n`` is the Escape Sequence. The Backslash, ``\``, is what's used to trigger it. Within any "code which is written in speech marks", if a ``\`` is written, it's not gonna be there. An Escape Sequence is used to trigger something within the text. ``\n`` will trigger a new line. ``\t`` will trigger Tab, which aligns with columns. ``\"`` is used to write speech marks where it's not possible. This happens where, if for example you want to output:
 | I "love" Programming!
 | You'd think it's as simple as writing ``cout << "I "love" Programming!";``, but no. the program can only work with one pair of speech marks at once. So here, the actual code to get the output above, would be ``cout << "I \"love\" Programming!";``. Just like that if you also wanna output the actual backslash, you just write it twice. ``cout << "\\\\";`` would output ``\\``.
