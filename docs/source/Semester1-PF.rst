@@ -133,7 +133,7 @@ Syntax: This is THE MOST important thing to remember. It's crucial that you memo
     |
 | Now you're probably wondering what all of that is. So lets get to work:
 
-*    ``#include <iostream>`` is called a 'Preprocessor Directive'. It's written at the top and basically prepares the rest of the program for these commands. #include means, that specific library has to be included.
+*    ``#include <iostream>`` is called a 'Preprocessor Directive'. It's written at the top and basically prepares the rest of the program for these commands. #include means, that specific library has to be included. We're gonna look at other libraries later.
 *    ``using namespace std;`` means using names for objects and variables from the standard library. Don't focus on what it does for now, just know that you have to write it.
 *    ``int main()`` is a Function. You'll learn Functions in OOP but for now just understand that, ALL of your code that you write, is to be written inside of this. If written outside or if you don't mention this line, it WILL NOT work. It has to be written between the {curly brackets}.
 *    ``return 0`` is also a part of the Function. Just know that you have to write it at the absolute very end for now. This isn't always important, as the program works completely fine without it, but I've lost marks on quizzes for forgetting to write it so, it's better if you do.
@@ -156,7 +156,7 @@ Week 3.
 | ``cout << "World!" << endl;``
 | You get the output of:
 | Hello
-|     World!
+| World!
 | But what if we wanted to do it in only one line? That's where Escape Sequences come in.
 
 .. _s1-pft-t002:
@@ -176,6 +176,18 @@ Escape Sequences
 | You'd think it's as simple as writing ``cout << "I "love" Programming!";``, but no. the program can only work with one pair of speech marks at once. So here, the actual code to get the output above, would be ``cout << "I \"love\" Programming!";``. Just like that if you also wanna output the actual backslash, you just write it twice. ``cout << "\\\\";`` would output ``\\``.
 | ``\`` only reads the character in front of it. So writing "\\\\n" would in fact just output ``\n``.
 | An important thing to note is, Even though you're pressing two keyboard buttons for an Escape Sequence, it only counts as one character to the program. ``cout << "Hello";`` is five characters, while ``cout << "\n"`` is only one.
+| Now, remember that extra space? That's because the code was ``cout << "Hello \n World!";``. There's a space between ``\n`` and ``World!`` which causes that gap to happen, as ``\n`` causes a new line, then there's a space, then there's ``World!``. The space is also a character. If you want it to be in line, the code would be ``cout << "Hello \nWorld!";``. And, though less readable for humans, ``cout << "Hello\nWorld!";`` would be the true solution.
+
+.. _s1-pft-t003:
+
+#include <iomanip>
+^^^^^^^^^^^^^^^^^^
+
+| You remember ``#include <iostream>`` right? This is another library you should get used to. This one's called ``iomanip``, which stands for Input Output Manipulation.
+| Here's some commands to know about:
+*    ``setw(num)``: Sets output in characters. If number of characters is too many, it will cut off. If number of characters is not enough, it will fill empty locations via another character (By default it will leave spaces, but the character can be changed with setfill() ). Written in format of ``cout << 30.5/6 << setw(4);`` 
+*    ``setfill('char')``: Chooses what characters to use for extra spaces, if any are left from ``setw()`` being too high.
+*    ``setprecision(num)``: Chooses number of significant figures to output. Decimals are not counted. If too high of a number is entered, it will add 0's after the decimal. If too low, it will use Scientific Notation, for example if it's set to 3 for a number 21,427 then it will output as 2.1e4.
 
 .. _s1-pfl-l01:
 
