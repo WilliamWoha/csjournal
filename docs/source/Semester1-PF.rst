@@ -102,15 +102,15 @@ Intro to C++
 ^^^^^^^^^^^^
 | History: It has a lot. But this doesn't matter in your exams.
 | Syntax: This is THE MOST important thing to remember. It's crucial that you memorize this as you'll lose marks if you miss a single detail.
-| ``#include <iostream>``
-| ``using namespace std;``
-| ``int main() {``
-|     
-| \t``(code)``
-|
-| \t``return 0;``
-| ``}``
-|
+``#include <iostream>``
+``using namespace std;``
+``int main() {``
+     
+    ``(code)``
+
+    ``return 0;``
+``}``
+
 | Now you're probably wondering what all of that is. So lets get to work:
 *    ``#include <iostream>`` is called a 'Preprocessor Directive'. It's written at the top and basically prepares the rest of the program for these commands. #include means, that specific library has to be included.
 *    ``using namespace std;`` means using names for objects and variables from the standard library. Don't focus on what it does for now, just know that you have to write it.
@@ -131,10 +131,10 @@ Theory Lecture 05
 | There's these things called Escape Sequences. When you output a string, for example, ``cout << "Hello World!" << endl;``, then ``Hello World!`` is the output that appears in the console. If you write two lines, one below another:
 | ``cout << "Hello" << endl;``
 | ``cout << "World!" << endl;``
-| You get the output of:
-| Hello
-| World!
-| But what if we wanted to do it in only one line? That's where Escape Sequences come in.
+You get the output of:
+Hello
+World!
+But what if we wanted to do it in only one line? That's where Escape Sequences come in.
 
 .. _s1-pft-t002:
 
