@@ -130,7 +130,6 @@ Syntax: This is THE MOST important thing to remember. It's crucial that you memo
  |
  |
  |``return 0;``
-|``}``
 
 Now you're probably wondering what all of that is. So lets get to work:
 
