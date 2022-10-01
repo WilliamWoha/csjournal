@@ -1,17 +1,14 @@
-Welcome to Lumache's documentation!
-===================================
+FAST BS-CS Journal Documentatiion
+=================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+| This documentation is being written by a student of the FAST Bachelor's of Computer Science Program. After witnessing what the institution meant in the powerpoint slides by '50% of students won't make it to the second year', my goal is to make a central hub where I note down all of my learnings in a clear, summarized, redistributable way such that anyone who needs them can use them. Hopefully in the future it will serve and help out more people, until a change is made so this degree doesn't have to be this difficult in the first place.
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 
 .. note::
 
-   This project is under active development.
+   This project is under active development until the degree is completed. So I guess that means 2026.
 
 Contents
 --------
@@ -21,4 +18,3 @@ Contents
    usage
    api
    
-docs/source/index.rst
