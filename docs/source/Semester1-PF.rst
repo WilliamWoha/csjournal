@@ -4,7 +4,7 @@ Semester 1: Programming Fundamentals
 ====================================
 
 ```
- balls
+balls
 ```
 
 | On the right side of the page you'll find a table of sorts that, upon clicking any of the text there, will take you to that section of the page. The page is very long, it has the notes of the ENTIRE SEMESTER. Further organizing it wasn't possible, that's why it's like this.
