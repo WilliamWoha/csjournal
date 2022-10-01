@@ -1,9 +1,9 @@
 Take it away, Eric the Orchestra Leader!
 
-    | A one, two, a one two three four
-    |
-    | Half a bee, philosophically,
-|     must, *ipso facto*, half not be.
+   | A one, two, a one two three four
+   |
+   | Half a bee, philosophically,
+   |     must, *ipso facto*, half not be.
     | But half the bee has got to be,
     |     *vis a vis* its entity.  D'you see?
     |
