@@ -9,15 +9,16 @@ FAST BS-CS Journal Documentation
 
 Credit
 ------
-This documentation was made by `Woha <https://github.com/WilliamWoha>`_. Real name hidden, you don't need it. If you need to contact me, do it via Discord (INSERT SERVER NAME HERE).
+This documentation was made by `Woha <https://github.com/WilliamWoha>`_. Real name hidden, you don't need it. If you need to contact us or anyone for help regarding these sites, or have anything to report, you can find us on the `BS-CS Batch 22 Discord server <https://discord.gg/zHC2gJW>`_
 
 Contents
 --------
 .. toctree::
+   :caption: Table of Contents
    :maxdepth: 2
-   Semester1-PF.rst
-   Semester1-AP.rst
-   Semester1-CAL.rst
-   Semester1-ICT.rst
-   Semester1-ENG.rst
-   Semester1-ISL.rst
+   :glob:
+
+   Semester1-PF
+   Semester1-AP
+   
+   *
