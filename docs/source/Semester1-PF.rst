@@ -543,14 +543,17 @@ Selection Structures (elseif)
 
     | ``if (a>b)``
     | ``{``
+    
         | ``cout << a << " is greater." << endl;``
     | ``}``
     | ``elseif (b>a)``
     | ``{``
+    
         | ``cout << b << " is greater." << endl;``
     | ``}``
     | ``else``
     | ``{``
+    
         | ``cout << "Both are equal." << endl;``
     | ``}``
 | There's three conditions there. One being, ``a > b``, the second being ``a < b``, and the third being ``a == b``. Now you could do this any way you want, and even put the ``a == b`` statement at the start and leave the other two in an ``elseif`` and ``else``. The choice is yours.
