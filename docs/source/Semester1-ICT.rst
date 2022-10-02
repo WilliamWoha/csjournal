@@ -172,7 +172,7 @@ Converting bases
 .. figure:: images/binarytohexadecimal.png
     :scale: 80%
 
-    11111011101110010 :sub:`2` = 1F772 :sub`16`
+    11111011101110010 :sub:`2` = 1F772 :sub:`16`
 
         
 
