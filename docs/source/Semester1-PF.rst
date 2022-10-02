@@ -443,7 +443,7 @@ Overflow and Underflow
     | ``short int a;``
     | ``a = 32767;``
     | ``cout << a + 100 << endl;``
-| Then you'd get 32867 in the console. If instead you did ``a = 32867;`` and then ``cout << a << endl;``, THEN you'd get the Overflow, and the value you'd get would be -32699, which is (32767+1), which is -32768, then +99 which is -32669.
+| Then you'd get 32867 in the console. If instead you did ``a = 32867;`` and then ``cout << a << endl;``, THEN you'd get the Overflow, and the value you'd get would be -32669, which is (32767+1), which is -32768, then +99 which is -32669.
 |
 | Underflow is all of that just the other way around.
 
