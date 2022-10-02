@@ -186,6 +186,7 @@ Escape Sequences
 Lab Lecture 03
 --------------
 
+| Week 3.
 | Now you actually learn how to make the C++ program via the Compiler in Ubuntu. Navigate to the directory where it's stored in the Terminal, then to compile it (and it's important that this is in order. Remember this line, you're gonna use it a lot) write:
 | ``g++ -o name2 name.cpp``
 | Where ``name.cpp`` is your C++ compiled file, and name2 is the name of the Compiled Program. There's no file type associated to it (Don't worry about it for now). This command just generates a file called ``name2`` in the same directory, and this is the comiled program. To run said program, in the Terminal you just write ``./name2`` (NOT ``./name2.cpp``). Make sure you're still in the same directory or else it won't work.
@@ -232,6 +233,7 @@ Data Types
 Theory Lecture 07
 -----------------
 
+| Week 4.
 | So there's these things called Operators. There's four categories of them. Arithmetic, Logical, Relational, and Bitwise. Lets start with the easy one.
 
 .. _s1-t005:
@@ -296,6 +298,7 @@ Type Coercion (Type Casting)
 Lab Lecture 04
 --------------
 
+| Week 4.
 | Just did more practice of type casting. Read the above.
 
 .. _s1-pft-l08:
@@ -303,6 +306,7 @@ Lab Lecture 04
 Theory Lecture 08
 -----------------
 
+| Week 4.
 | This is gonna be a long one because of something called the Keyboard Buffer. Get ready.
 
 .. _s1-pft-t008:
@@ -330,11 +334,13 @@ Keyboard Buffer (.get(), getline(), .ignore())
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | Here's a funny thing about using ``#iostream <string>``. If you try to put data into a ``string`` variable via a ``cin`` statement, it won't store values past an escape sequence. Here's the program:
+
     | ``string name;``
     | ``cin >> "Enter name: ";``
 | If I write John Cena into that, then try to check the value of ``name``, it will give me an output of ``John``.
 | But there's this thing called the Keyboard Buffer. The thing is, this Buffer holds the data for all the keys pressed via the keyboard. ``John Cena`` is stored in the Keyboard Buffer, but the ``cin`` statement only read it until ``John``.
 | Here's an even funnier thing:
+
     | ``string name, city;``
     | ``cout << "Please enter your full name: " << endl;``
     | ``cin >> name;``
@@ -347,6 +353,7 @@ Keyboard Buffer (.get(), getline(), .ignore())
 | The solution? Use a thing called ``getline(cin, var);``. It works the same way as ``cin >> var;``. You just write ``getline(cin, var);`` instead. But the difference is, this time no matter what you write, all of it will be stored into the variable. It only stops when the Enter key is pressed, and doesn't store the ``\n`` from that either.
 |
 | There's also ``.get()``. You write it as ``var = cin.get()``. This will read any key that is pressed and store it into the variable. Be it Enter, Space, Escape, Tab, anything. It reads all of it. It's used in games for checking for specific button key presses.
+
     | ``char key;``
     | ``cin >> key;``
     | if (key == '\n')
@@ -357,6 +364,7 @@ Keyboard Buffer (.get(), getline(), .ignore())
 | If you just write ``cin.get();`` then it won't store the key, but instead works like a "Press Any Key to Continue" button.
 | 
 | There's an even funnier problem though.
+
     | ``int number;``
     | ``char ch;``
     | ``cout << "Enter number: " << endl;``
@@ -378,21 +386,213 @@ Keyboard Buffer (.get(), getline(), .ignore())
 Theory Lecture 9
 ----------------
 
-.. _s1-pft-t000:
+| Week 5.
+| Ok so to understand today's class you need to know how the Binary number system works. If you don't know how that works, look up a youtube video of it or something, you NEED to understand it. It's too much to explain here.
 
-(Topic learnt)
-^^^^^^^^^^^^^^
+.. _s1-pft-t010:
+
+Bitwise Operators
+^^^^^^^^^^^^^^^^^
+
+| These operators apply to the bits of the numbers instead of the actual values. If you know how Logic Gates work on bits, and Truth Tables, then you're already an expert on it.
+*    ``&``: AND. Only 1 when both inputs are 1 (This statement is only true, if a is true AND b is true).
+*    ``|``: OR. Outputs 1 when either is 1 (If a is true OR be is true, then this statement is true).
+*    ``^``: XOR. Outputs 1 when inputs are different. 0 0, and 1 1, both output 0. 1 0, and 0 1, both output 1.
+*    ``<<``: Left Shift. Moves all bits to the left. Data is truncated if bits exist at the very left end. Don't confuse this with the ``<<`` of ``cin``, the symbol is the same but the way you use it is different. You'll see examples later. If data isn't truncated, the effect is that the value gets multiplied by two (It's the same as moving all values in a number to the left then adding a 0 at the end. Literally the exact same thing. This is a number system after all. 452.0 vs 4520).
+*    ``>>``: Right Shift. Moves all bits to the right. Data is truncated if bits exist at the very right end. Don't confuse this with the ``>>`` of ``cout``, the symbol is the same but the way you use it is different. You'll see examples later. If data isn't truncated, the effect is that the value gets divided by two (It's the same as moving all values in a number to the right then adding a 0 at the end. Literally the exact same thing. This is a number system after all. 23000 vs 02300).
+*    ``~``: Bitwise Complement. Flips all bits. The formula for finding out new value, if ``a`` is the variable this is applied on, is -(a+1). This works both ways. If for example the value of ``a`` is 14, then ``~a`` would be -15. If instead the value of ``a`` is ``-15``, then the value of ``~a`` would be -(-15+1) which is -(-14) which is 14. This is a One's Complement form. If you want the actual negative value you need to actually add one to it. Look up how Two's Complement works.
+| The practical applications of this are that these operations are `extremely` memory efficient compared to arithmetic operations. If you want as few variables and load on the computer as possible, this is what you use.
+| You can also use it to do individual bit work and save memory instead of having to use extra space. If you want to turn the first bit of a variable ``x`` into a 1, you just do ``x = x | 1``. If you want to do the second bit, it's ``x = x | 2``, or ``x = x | (1<<1)``. Then let's say you want to do the 8th bit. That would be ``x = x | 256`` but you have to calculate that. It would be easier to just do ``x = x | (1<<7)``. It's one less than the bit you want to flip as 1 is in the starting position already. ``x = x | 1`` is actually ``x = x | (1<<0)``.
+| You can check how many bits are on by doing ``x & (Max Value)`` where ``Max Value`` is just the maximum value the data type can hold. This works because any bit which is 1, would be itself if you do AND 1. If it's 0, it would be itself if you do AND 0. Doing AND 1 is the same as multiplying with 1.
+| And finally, we had a Sessional and there was a question where you had to specifically `flip` a bit at a specific position. The answer to that was just ``x = x^(1<<bitposition)``. That's it.
+
+.. _s1-pfl-l05:
+
+Lab Lecture 05
+--------------
+
+| Week 5.
+| It was just more practice of Type Coerciion. Read :ref:`s1-t007` for details. There was a specific problem called Problem 04 which we were told to leave for now as none of us could figure it out. We had to take the individual digits of a number and keep adding them until we got to a one digit answer, but the catch is that we're not allowed to use the MOD ``(%)`` operator to actually separate the digits.
+| I'll write the answer here if I find it later.
+
+.. _s1-pft-l10:
+
+Theory Lecture 10
+-----------------
+
+| Week 5.
+| Here's the syllabus of the Sessionals:
+*    Data Types (Typecasting, Overflow/Underflow)
+*    Variables and Constants
+*    ``<cmath>`` functions
+*    Operators (Bitwise, Arithmetic, Logical, Relational)
+*    IF/ELSE
+| Actually at the time of writing this we just finished the Sessionals 5 days ago (October 2nd, 2022, Sunday 8:15AM). We get the results tomorrow, I'll write any extra info or questions or whatever can help. We have another Sessional on Tuesday (October 4th, 2022) and I have no idea how that's gonna go. Best advice I can give for now is, practice your typing.
+
+.. _s1-pft-t011:
+
+Overflow and Underflow
+^^^^^^^^^^^^^^^^^^^^^^
+
+| Let's declare a variable called ``a``, with this line: ``short int a;``. The range of this value would be from ``-32768`` to ``32767`` (It's one less on the positive side as 0 is also included there). Overflow happens when the value tries to store a value greater than the max range, and Underflow happens when the value is smaller than the minimum range.
+| Here's what actually happens. Let's say you declare ``short int a = 32767``. In bit form this would be ``0111 1111 1111 1111``. If you add one to it, the value becomes ``1000 0000 0000 0000``, which is equal to ``-32768``. Adding 1 to the max value turned it into the min value. If you do it for an unsigned short int instead, it would go from ``1111 1111 1111 1111``, which is 65536, which is the max value of an unsigned short int, then add 1 to it, it becomes ``1 0000 0000 0000 0000``. But the problem is that the 1 at the very beginning is truncated as there aren't enough bits to store it. So it just becomes ``0000 0000 0000 0000``, which is the smallest value.
+| Overflow means adding more to the variable than it can handle, causing it to loop around to the smallest value. Kind of like a clock.
+| It doesn't just work with 1, it works with any value, as long as it's actually ASSIGNING. If you do:
+
+    | ``short int a;``
+    | ``a = 32767;``
+    | ``cout << a + 100 << endl;``
+| Then you'd get 32867 in the console. If instead you did ``a = 32867;`` and then ``cout << a << endl;``, THEN you'd get the Overflow, and the value you'd get would be -32699, which is (32767+1), which is -32768, then +99 which is -32669.
+|
+| Underflow is all of that just the other way around.
+
+.. _s1-pft-t012:
+
+IF/ELSE
+^^^^^^^
+
+| At last we come to the HOLY GRAIL.
+| Ok so the easiest way to understand it is, "If this happens then do this, otherwise do this". That's literally it. You just have to write that in code form.
+| The key to understand this is Relational Operators and Logical Operators (You were probably wondering when we'd get to those huh?).
+| Here's Relational Operators:
+*    ``>=``: Greater than or equal to
+*    ``<=``: Less than or equal to
+*    ``>``: Greater than
+*    ``<``: Less than
+*    ``==``: Equal to
+*    ``!=``: Not Equal to
+| And now here's some Logical Operators:
+*    ``&&``: AND
+*    ``||``: OR
+*    ``!``: NOT
+| Here's how the syntax works.
+
+    | ``if (condition) {``
+        | (code)
+        | (more code)
+    | ``}``
+| It can also be written as:
+
+    | ``if (condition)``
+    | ``{``
+        | (code)
+        | (more code)
+    | ``}``
+| There's no actual semicolon to write for the ``if`` statement itself. Just for the lines between it which are regular code. The brackets around ``condition`` are NECESSARY. No matter how big the statement is, there has to be one set of brackets holding it all together.
+| The indentation (which means the gap for the code between the if statement) isn't necessary but is highly recommended for making code readable. It's just good practice to do.
+| Then there's ELSE statements. Which mean, if the original IF condition isn't filled, then execute this code. "If this happens then do this, OTHERWISE do this". The ELSE statement is just the otherwise part of that sentence. And else just means the opposite of the if statement. You don't write a condition for it.
+
+    | ``if (condition)``
+    | ``{``
+        | (code)
+        | (more code)
+    | ``}``
+    | ``else``
+    | ``{``
+        | (code)
+        | (more code)
+    | ``}``
+
+    | ``if (num % 2 == 0)
+    | ``{``
+        | ``cout << "The number is an even number." << endl;
+    | ``}``
+    | ``else``
+    | ``{``
+        | ``cout << "The number is an odd number." << endl;
+    | ``}``
+| The reason that the Equals comparison sign is ``==`` and not ``=`` is because ``=`` is used for ASSIGNING. So if you just did one equals sign in an IF statement it would give an error.
+|
+| Here's something new. Let's say you have a statement called ``int n = 0;``
+| Then you make an if statement of ``if (n)``. Would that statement trigger? Nope. But that's not because of the lack of comparison, it's just because n is 0. If you instead did ``int n = 1;`` or ``int n = 5;`` or ``int n = -3``, and then did ``if (n)``, then that statement would in fact trigger, because it's just checking that it's not 0. ``if (n)`` is the same as writing ``if (n != 0)``. ``if (!0)`` would also be true.
+|
+| One more thing to know about this (and I'm typing this now AFTER the sessionals. I didn't know it before) is that there's a priority for these operators and you need to know which one is carried out when.
+| The highest to lowest priority goes as such:
+*    Arithmetic Operators ``( + - / * % )``
+*    Bitwise Shift Operators ``( << >> )``
+*    Relational Operators ``( > >= < <= )``
+*    Equality Operators ``( == != )``
+*    Bitwise AND Operator ``( & )``
+*    Bitwise XOR Operator ``( ^ )``
+*    Bitwise OR Operator ``( | )``
+*    Logical AND Operator ``( && )``
+*    Logical OR Operator ``( || )``
+| Yeah so I made the mistake of not knowing that the Logical AND is above the Logical OR, so in a question that asked ``A || B && C`` I assumed it was going left to right. In reality it first checks ``B && C`` then does ``||`` with ``A`` after that.
+| A, B, and C are all just brackets with their own operations going on inside of them. Don't worry about it.
 
 .. _s1-pft-l11:
 
-Lecture 11:
------------
+Theory Lecture 11
+-----------------
 
-.. _s1-pft-t000:
+| Week 6, but this is the second class of the week and not the first. That one was lost due to Sessionals. I have no idea what they'll do to recover that.
 
-(Topic learnt)
-^^^^^^^^^^^^^^
+.. _s1-pft-t013:
 
+Selection Structures (elseif)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+| So remember the statement I made earlier? "If this happens, then do this. Otherwise do this". Let's modify that a bit. "If this happens, do this, but if this happens, do this, and if neither of those happen, then do this". That's IF, ElseIF, and ELSE in a nutshell.
+| Elseif is used when more than two conditions have to be checked. Let's assume we have two numbers, a and b.
 
+    | ``if (a>b)``
+    | ``{``
+        | ``cout << a << " is greater." << endl;``
+    | ``}``
+    | ``elseif (b>a)``
+    | ``{``
+        | ``cout << b << " is greater." << endl;``
+    | ``}``
+    | ``else``
+    | ``{``
+        | ``cout << "Both are equal." << endl;``
+    | ``}``
+| There's three conditions there. One being, ``a > b``, the second being ``a < b``, and the third being ``a == b``. Now you could do this any way you want, and even put the ``a == b`` statement at the start and leave the other two in an ``elseif`` and ``else``. The choice is yours.
+| You can have wayyyy more elseif statements too, for checking more conditions.
+| Here's a little tip about IF statements though. Those ``{ }`` brackets you see? They're only used if there's more than one line of code to execute. Otherwise, you can be completely fine with something like this:
 
+    | ``if (marks >= 90 && marks <= 100)``
+        | ``cout << "A grade." << endl;``
+    | ``elseif (marks >= 80 && marks < 90)``
+        | ``cout << "B grade." << endl;``
+    | ``elseif (marks >= 70 && marks < 80)``
+        | ``cout << "C grade." << endl;``
+    | ``elseif (marks >= 60 && marks < 70)``
+        | ``cout << "D grade." << endl;``
+    | ``else
+        | ``cout << "Failed." << endl;``
+| And yes this is exactly how you do correction statements. You just write ``if (marks > 100 || marks < 0)`` at the start and get the code to output a statement saying that this isn't an acceptable answer.
+| Anyways. That about covers that. The only thing left is Nested IF statements, and then my 9 hours of typing can come to a rest and PF will have been caught up. Then I'll do weekly updates on this or something.
+
+.. _s1-pft-t014:
+
+Nested Selections
+^^^^^^^^^^^^^^^^^
+
+| Ok so if you already know this then great but if you don't already know this then it's a rather simple concept but once you get it, it's super easy.
+| "If Pizza Hut is open, go there. If they have the Medium Combo, then get the Medium Combo, otherwise get the Small Combo. If Pizza hut isn't open, go to Dominoes. If they have the Weekend Deal, get the Weekend deal. Otherwise, get a Buy 1 Get 1 Free Deal. If neither is open, come back home."
+| Here's how that would be written in code.
+
+    | ``if (Pizza hut is open)``
+        | ``if (Medium Combo is there)``
+            | ``Get Medium Combo``
+        | ``else``
+            | ``Get Small Combo``
+    | ``elseif (Pizza hut is closed && Dominoes is open)``
+        | ``if (Weekend Deal is there)``
+            | ``Get Weekend Deal``
+        | ``else``
+            | ``Get Buy 1 Get 1 Free Deal``
+    | ``elseif (Pizza Hut is closed && Dominoes is closed)``
+        | ``Go home``
+| That's about it. You should be able to understand that. If not then watch a YT video on it, I'm tired.
+| You may have noticed that the last statement is an ``elseif`` and not an ``else``. That's because the two conditions before it were: ``Pizza hut is open``, ``Pizza hut is closed AND Dominoes is open``. If we did an ELSE statement here, that would also include the situation of both Pizza Hut and Dominoes being open. You're not supposed to go home if they both happen to be open.
+| ELSE is the equivalent of checking the opposites of the previous IF statements.
+
+.. _s1-pft-l11:
+
+Theory Lecture 11
+-----------------
+| Week 7
+| To be continued...
+ 
