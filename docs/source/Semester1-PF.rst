@@ -573,7 +573,7 @@ Selection Structures (elseif)
     | ``elseif (marks >= 60 && marks < 70)``
     
         | ``cout << "D grade." << endl;``
-    | ``else
+    | ``else``
     
         | ``cout << "Failed." << endl;``
 | And yes this is exactly how you do correction statements. You just write ``if (marks > 100 || marks < 0)`` at the start and get the code to output a statement saying that this isn't an acceptable answer.
