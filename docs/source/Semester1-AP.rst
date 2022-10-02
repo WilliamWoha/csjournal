@@ -1,6 +1,6 @@
 .. _s1-ap-intro:
 
-Applied Physics
+Semester 1: Applied Physics
 ===============
 
 | Applied Physics has 3 total credit hours, all for lectures. No lab work.
