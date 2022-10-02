@@ -182,6 +182,7 @@ Converting bases
 
 Lecture 05:
 -----------
+| Class didn't happen so, no info here. Teacher was sick.
 
 .. _s1-ict-l06:
 
