@@ -19,6 +19,9 @@ Contents
 .. toctree::
    :caption: Table of Contents
    :maxdepth: 2
-   :glob:
-   
-   *
+   Semester1-PF
+   Semester1-AP
+   Semester1-CAL
+   Semester1-ICT
+   Semester1-ENG
+   Semester1-ISL
