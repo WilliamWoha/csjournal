@@ -1,7 +1,7 @@
 .. _s1-cal-intro:
 
-Calculus & Analytical Geometry
-==============================
+Semester 1: Calculus & Analytical Geometry
+==========================================
 
 | Calculus & Analytical Geometry has 3 total credit hours.
 
