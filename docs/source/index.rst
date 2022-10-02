@@ -19,6 +19,7 @@ Contents
    :glob:
 
    Semester1-PF
+   Semester1-ICT
    Semester1-AP
    
    *
