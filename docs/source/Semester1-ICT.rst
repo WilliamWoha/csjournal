@@ -133,14 +133,14 @@ Number Systems
     :scale: 80%
     :alt: a table of the 4 number systems
 
-    Table of the 4 number systems up to 17 numbers. Look at how the numbers increase when they run out of unique symbols.
+    Table of the 4 number systems up to 17 numbers. The only thing you need to memorize here is how binary numbers increase, and that A - F in hexadecimal represent 10-15 in decimal.
 
-Converting bases
+Converting Bases
 ^^^^^^^^^^^^^^^^
-| Decimal Conversion:
+| Converting Decimal:
 | This is the simplest of all conversions, just successively divide the decimal number by the base of the required number:
 *     Decimal to Binary: Successively divide the decimal number by 2, and read the remainders from the bottom to the top.
- .. figure:: images/decimaltobinary.png
+.. figure:: images/decimaltobinary.png
     :scale: 90 %
             
     17 :sub:`10`  is equal to 10001 :sub:`2`
@@ -150,19 +150,19 @@ Converting bases
 
     148 :sub:`10` is equal to 224 :sub:`8`
 
-*     Decimal to Hexadecimal: Successively divide the decimal number by 16, and read the remainders from the bottom to the top. If the remainder is greater than 10, give it the hexadecimal value associated with that number.
+*     Decimal to Hexadecimal: Successively divide the decimal number by 16, and read the remainders from the bottom to the top. If the remainder is greater than 9, give it the hexadecimal value associated with that number.
 .. figure:: images/hexadecimal.png
         
     2545 :sub:`10` is equal to 9F1 :sub:`16`
 
-| Binary Conversion:
+| Converting Binary:
 *     Binary to Decimal: Suppose that we have the digit 111 :sub:`2`. This is 7 :sub:`10` represented in binary. This binary number in decimal form will be the total sum of the numbers multiplied by 2 to the power of their position. 
 .. figure:: images/binarydecimal.png
     :scale: 80 %
 
     111 :sub:`2` = 7 :sub:`10`
 
-*     Binary to Octal: For any Binary value, group the binary digits into groups of 3 - and convert those 3 digits to their octal form. We only need to know how the first 7 binary numbers correspond to their octal counterparts:
+*     Binary to Octal: For any Binary value, group the binary digits into groups of 3 - and convert those 3 digits to their octal form.  
 .. figure:: images/binarytooctal.png
     :scale: 80%
 
@@ -174,8 +174,48 @@ Converting bases
 
     11111011101110010 :sub:`2` = 1F772 :sub:`16`
 
-        
+| Converting Octal:
+*    Octal to Decimal: The same process for how binary numbers are converted to decimal, except the digits are multiplied by powers of 8. And remember, we start counting from the right.
+.. figure:: images/octaltodecimal.png
+    :scale: 80%
 
+    37246 :sub:`8` = 16038 :sub:`10`
+
+*    Octal to Binary: The opposite of the Binary to Octal conversion. Separate the number into single digits and convert those into their 3-digit binary.
+.. figure:: images/octaltobinary.png
+    :scale: 80%
+
+    372 :sub:`8` = 11111010 :sub:`2`. We erase the left-most '0' from three's binary for brevity.
+
+*    Octal to Hexadecimal: This one has two steps. First, convert the Octal digit to it's binary equivalent, then convert *that* binary number to hexadecimal.
+.. figure:: images/octaltohex.png
+    :scale: 80%
+
+    372 :sub:`8` = FA :sub:`16`. 
+
+| Converting Hexadecimal:
+*    Hexadecimal to Decimal: Similar to the other Binary/Octal -> Decimal conversions, the digits are multiplied by powers of 16. Since we can't multiply the letters A-F by numbers, consider the numbers they represent: A represents 10, B represents 11, etc.
+.. figure:: images/hextodecimal.png
+    :scale: 80%
+
+    1FA :sub:`16` = 506 :sub:`10`
+
+*    Hexadecimal to Binary: Simply the opposite of the Binary to Hexadecimal conversion. Separate the number into single characters and convert those into their 4-digit binary.
+.. figure:: images/hextobinary.png
+    :scale: 80%
+
+    1FA :sub:`16` = 11111101 :sub:`2`
+
+*    Hexadecimal to Octal: Convert the individual Hex digits to their binary equivalent, then convert *that* binary number to it's octal equivalent.
+.. figure:: images/hextooctal.png
+    :scale: 80%
+
+    1FA :sub:`16` = 772 :sub:`8`
+
+| That's it for positive binary representation and conversion. There is another topic, representing decimals in binary, but that's past the scope of this semester.
+NOTE:
+^^^^^
+| You will most likely have an assignment related to the addition of binary numbers via bitwise operators after this lecture. To learn this, brush up on half-adder logic online. It'll take too long to explain it here. 
 
 
 .. _s1-ict-l05:
