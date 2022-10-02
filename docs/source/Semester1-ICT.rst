@@ -1,7 +1,7 @@
 .. _s1-ict-intro:
 
-IICT (Introduction to ICT)
-==========================
+Semester 1: IICT (Introduction to ICT)
+======================================
 
 | IICT has 1 credit hour. 
 
