@@ -1,7 +1,7 @@
 .. _s1-eng-intro:
 
-English Composition & Comprehension
-===================================   
+Semester 1: English Composition & Comprehension
+===============================================
 
 | English Composition & Comprehension has 3 total credit hours. 2 for theory, and 1 for lab.
 
