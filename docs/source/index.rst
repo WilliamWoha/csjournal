@@ -15,9 +15,9 @@ Contents
 --------
 .. toctree::
    :maxdepth: 2
-   Semester1-PF
-   Semester1-AP
-   Semester1-CAL
-   Semester1-ICT
-   Semester1-ENG
-   Semester1-ISL
+   Semester1-PF.rst
+   Semester1-AP.rst
+   Semester1-CAL.rst
+   Semester1-ICT.rst
+   Semester1-ENG.rst
+   Semester1-ISL.rst
