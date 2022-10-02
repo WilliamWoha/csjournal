@@ -16,19 +16,6 @@ Semester 1: IICT (Introduction to ICT)
 
 | Grading Policy is Absolute Grading.
 
-| IICT has 1 credit hour. 
-
-| Outline for IICT:
-
-*    10 Lab Tasks. Total Absolutes: 15
-*    1 Assignment. Total Absolutes: 10
-*    1 Presentation. Total Absolutes: 15
-*    1 Project. Total Absolutes: 20
-*    1 Final Exam. Total Absolutes: 40
-
-
-| Grading Policy is Absolute Grading.
-
 .. _s1-ict-l01:
 
 Lecture 01:
@@ -152,40 +139,40 @@ Converting bases
 ^^^^^^^^^^^^^^^^
 | Decimal Conversion:
 | This is the simplest of all conversions, just successively divide the decimal number by the base of the required number:
-     1. Decimal to Binary: Successively divide the decimal number by 2, and read the remainders from the bottom to the top.
-        .. figure:: images/decimaltobinary.png
-            :scale: 90 %
+*     Decimal to Binary: Successively divide the decimal number by 2, and read the remainders from the bottom to the top.
+ .. figure:: images/decimaltobinary.png
+    :scale: 90 %
             
-            (17) :sub:`10`  is equal to (10001) :sub:`2`
+    17 :sub:`10`  is equal to 10001 :sub:`2`
 
-     2. Decimal to Octal: Successively divide the decimal number by 8, and read the remainders from the bottom to the top.
-        .. figure:: images/octal.png
+*     Decimal to Octal: Successively divide the decimal number by 8, and read the remainders from the bottom to the top.
+.. figure:: images/octal.png
 
-            (148) :sub:`10` is equal to (224) :sub:`8`
+    148 :sub:`10` is equal to 224 :sub:`8`
 
-     3. Decimal to Hexadecimal: Successively divide the decimal number by 16, and read the remainders from the bottom to the top. If the remainder is greater than 10, give it the hexadecimal value associated with that number.
-        .. figure:: images/hexadecimal.png
-            
-            (2545) :sub:`10` is equal to (9F1) :sub:`16`
+*     Decimal to Hexadecimal: Successively divide the decimal number by 16, and read the remainders from the bottom to the top. If the remainder is greater than 10, give it the hexadecimal value associated with that number.
+.. figure:: images/hexadecimal.png
+        
+    2545 :sub:`10` is equal to 9F1 :sub:`16`
 
 | Binary Conversion:
-     1. Binary to Decimal: Suppose that we have the digit 111 :sub:`2`. This is 7 :sub:`10` represented in binary. This binary number in decimal form will be the total sum of the numbers multiplied by 2 to the power of their position. 
-        .. figure:: images/binarydecimal.png
-            :scale: 80 %
+*     Binary to Decimal: Suppose that we have the digit 111 :sub:`2`. This is 7 :sub:`10` represented in binary. This binary number in decimal form will be the total sum of the numbers multiplied by 2 to the power of their position. 
+.. figure:: images/binarydecimal.png
+    :scale: 80 %
 
-            (111) :sub:`2` = 7 :sub:`10`
+    111 :sub:`2` = 7 :sub:`10`
 
-    2.  Binary to Octal: For any Binary value, group the binary digits into groups of 3 - and convert those 3 digits to their octal form. We only need to know how the first 7 binary numbers correspond to their octal counterparts:
-        .. figure:: images/binarytooctal.png
-            :scale: 80%
+*     Binary to Octal: For any Binary value, group the binary digits into groups of 3 - and convert those 3 digits to their octal form. We only need to know how the first 7 binary numbers correspond to their octal counterparts:
+.. figure:: images/binarytooctal.png
+    :scale: 80%
 
-            (110101100101) :sub:`2` = (6545) :sub:`8`
+    110101100101 :sub:`2` = 6545 :sub:`8`
 
-    3. Binary to Hexadecimal: Similar to what we did with conversion to Octal, this time group the digits in groups of 4 - and convert *those* digits to their hexadecimal equivalent.
-        .. figure:: images/binarytohexadecimal.png
-            :scale: 80%
+*     Binary to Hexadecimal: Similar to what we did with conversion to Octal, this time group the digits in groups of 4 - and convert *those* digits to their hexadecimal equivalent.
+.. figure:: images/binarytohexadecimal.png
+    :scale: 80%
 
-            (11111011101110010) :sub:`2` = (1F772) :sub`16`
+    11111011101110010 :sub:`2` = 1F772 :sub`16`
 
         
 
