@@ -1,7 +1,7 @@
 .. _s1-isl-intro:
 
-Islamic Studies/Ethics
-======================
+Semester 1: Islamic Studies/Ethics
+==================================
 
 | Islamic Studies has 3 total credit hours. 
 
