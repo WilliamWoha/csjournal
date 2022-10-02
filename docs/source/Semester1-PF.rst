@@ -506,6 +506,7 @@ IF/ELSE
     | ``}``
     | ``else``
     | ``{``
+    
         | ``cout << "The number is an odd number." << endl;``
     | ``}``
 | The reason that the Equals comparison sign is ``==`` and not ``=`` is because ``=`` is used for ASSIGNING. So if you just did one equals sign in an IF statement it would give an error.
