@@ -498,14 +498,15 @@ IF/ELSE
         | (more code)
     | ``}``
 | Here's an example:
-    | ``if (num % 2 == 0)
+
+    | ``if (num % 2 == 0)``
     | ``{``
     
-        | ``cout << "The number is an even number." << endl;
+        | ``cout << "The number is an even number." << endl;``
     | ``}``
     | ``else``
     | ``{``
-        | ``cout << "The number is an odd number." << endl;
+        | ``cout << "The number is an odd number." << endl;``
     | ``}``
 | The reason that the Equals comparison sign is ``==`` and not ``=`` is because ``=`` is used for ASSIGNING. So if you just did one equals sign in an IF statement it would give an error.
 |
