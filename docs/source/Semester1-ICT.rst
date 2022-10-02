@@ -212,11 +212,7 @@ Converting Bases
 
     1FA :sub:`16` = 772 :sub:`8`
 
-| That's it for positive binary representation and conversion. There is another topic, representing decimals in binary, but that's past the scope of this semester.
-NOTE:
-^^^^^
-| You will most likely have an assignment related to the addition of binary numbers via bitwise operators after this lecture. To learn this, brush up on half-adder logic online. It'll take too long to explain it here. 
-
+| That's it for binary representation and conversion. There is another topic, representing decimals in binary, but that's past the scope of this semester.
 
 .. _s1-ict-l05:
 
