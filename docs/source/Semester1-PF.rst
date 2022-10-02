@@ -344,7 +344,7 @@ Keyboard Buffer (.get(), getline(), .ignore())
     | ``string name, city;``
     | ``cout << "Please enter your full name: " << endl;``
     | ``cin >> name;``
-    | ``cout << "Please enter your city: " << endl;
+    | ``cout << "Please enter your city: " << endl;``
     | ``cin >> city;``
     | ``cout << "Your full name is " << name << ", and your city is " << city << endl;``
 | If you ran that code and entered John Cena into the first prompt for an input, then you wouldn't even get the second prompt, and the code would output: ``Your full name is John, and your city is Cena``. This is because of the Keyboard Buffer.
@@ -356,10 +356,11 @@ Keyboard Buffer (.get(), getline(), .ignore())
 
     | ``char key;``
     | ``cin >> key;``
-    | if (key == '\n')
-    | {
-        | (Some Code to trigger something)
-    | }
+    | ``if (key == '\n')``
+    | ``{``
+    
+        | ``(Some Code to trigger something)``
+    | ``}``
 | You want it to only work when Enter is pressed, but ``cin`` won't store Enter. So the solution? Replace ``cin >> key;`` with ``key = cin.get()``. If you press Enter, then ``\n`` will be stored into ``key``.
 | If you just write ``cin.get();`` then it won't store the key, but instead works like a "Press Any Key to Continue" button.
 | 
@@ -468,13 +469,15 @@ IF/ELSE
 | Here's how the syntax works.
 
     | ``if (condition) {``
-        | (code)
-        | (more code)
+    
+        | ``(code)``
+        | ``(more code)``
     | ``}``
 | It can also be written as:
 
     | ``if (condition)``
     | ``{``
+    
         | (code)
         | (more code)
     | ``}``
@@ -484,17 +487,20 @@ IF/ELSE
 
     | ``if (condition)``
     | ``{``
+    
         | (code)
         | (more code)
     | ``}``
     | ``else``
     | ``{``
+    
         | (code)
         | (more code)
     | ``}``
-
+| Here's an example:
     | ``if (num % 2 == 0)
     | ``{``
+    
         | ``cout << "The number is an even number." << endl;
     | ``}``
     | ``else``
@@ -574,16 +580,24 @@ Nested Selections
 | Here's how that would be written in code.
 
     | ``if (Pizza hut is open)``
+    
         | ``if (Medium Combo is there)``
+        
             | ``Get Medium Combo``
         | ``else``
+        
             | ``Get Small Combo``
+            
     | ``elseif (Pizza hut is closed && Dominoes is open)``
+    
         | ``if (Weekend Deal is there)``
+        
             | ``Get Weekend Deal``
         | ``else``
+        
             | ``Get Buy 1 Get 1 Free Deal``
     | ``elseif (Pizza Hut is closed && Dominoes is closed)``
+    
         | ``Go home``
 | That's about it. You should be able to understand that. If not then watch a YT video on it, I'm tired.
 | You may have noticed that the last statement is an ``elseif`` and not an ``else``. That's because the two conditions before it were: ``Pizza hut is open``, ``Pizza hut is closed AND Dominoes is open``. If we did an ELSE statement here, that would also include the situation of both Pizza Hut and Dominoes being open. You're not supposed to go home if they both happen to be open.
