@@ -1,7 +1,7 @@
 .. _s1-ict-l01:
 
-Lecture 01:
------------
+Lecture 01
+----------
 Definitions and History:
 ^^^^^^^^^^^^^^^^^^^^^^^^
 | The definitions of Computer, User, Data, Software and IT are discussed. Further, the Evolution of Computers from the first Analog Computers to the Electronic Computers of today is explored. This isn't rocket science.

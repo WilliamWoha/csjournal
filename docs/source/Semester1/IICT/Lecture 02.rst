@@ -1,7 +1,7 @@
 .. _s1-ict-l02:
 
-Lecture 02:
------------
+Lecture 02
+----------
 Data Organization:
 ^^^^^^^^^^^^^^^^^^
 | The important things to practice here are:

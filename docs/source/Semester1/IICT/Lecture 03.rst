@@ -1,7 +1,7 @@
 .. _s1-ict-l03:
 
-Lecture 03:
------------
+Lecture 03
+----------
 Presentation Skills:
 ^^^^^^^^^^^^^^^^^^^^
 

@@ -1,7 +1,7 @@
 .. _s1-iict-l04:
 
-Lecture 04:
------------
+Lecture 04
+----------
 Number Systems
 ^^^^^^^^^^^^^^
 | Buckle up, this is the biggest topic for this subject.
