@@ -1,3 +1,7 @@
+========================
+Programming Fundamentals
+========================
+
 .. toctree::
    :caption: Lectures
    :maxdepth: 1
