@@ -61,8 +61,8 @@ Grading Polcy is Absolute Grading.
    Theory Lecture 09
    Lab Lecture 05
    Theory Lecture 10
-   Theory Lecture 11	
    Theory Lecture 11
+   Theory Lecture 12
 
 	
    
