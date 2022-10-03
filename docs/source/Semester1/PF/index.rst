@@ -1,6 +1,6 @@
 .. toctree::
-   :caption: Table of Contents
-   :maxdepth: 2
+   :caption: Lectures
+   :maxdepth: 1
    :glob:
 
    Theory Lecture 01

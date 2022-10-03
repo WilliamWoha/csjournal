@@ -1,6 +1,6 @@
 .. toctree::
-   :caption: Table of Contents
-   :maxdepth: 2
+   :caption: Subjects
+   :maxdepth: 1
    :glob:
 
    PF/index

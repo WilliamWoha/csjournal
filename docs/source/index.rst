@@ -14,13 +14,12 @@ This documentation was made by `Woha <https://github.com/WilliamWoha>`_. Real na
 Contents
 --------
 .. toctree::
-   :caption: Table of Contents
-   :maxdepth: 2
+   :caption: Overview
+   :maxdepth: 1
    :glob:
 
-   Semester1-PF
    Semester1/index
    Semester1-ICT
    Semester1-AP
-   
+   Semester1-PF
    *
