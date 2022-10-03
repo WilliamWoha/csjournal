@@ -1,0 +1,49 @@
+.. _s1-pft-l05:
+
+Theory Lecture 05
+-----------------
+
+| Week 3.
+| Yes I know there's some syntax not written in the above section, we'll get to it later. One thing at a time. If something isn't written it means the university will explain it later. And right now we've just done the main template for every C++ program, and cout statements. And believe me, even this is gonna be enough for now.
+| There's these things called Escape Sequences. When you output a string, for example, ``cout << "Hello World!" << endl;``, then ``Hello World!`` is the output that appears in the console. If you write two lines, one below another:
+| ``cout << "Hello" << endl;``
+| ``cout << "World!" << endl;``
+| You get the output of:
+| Hello
+| World!
+| But what if we wanted to do it in only one line? That's where Escape Sequences come in.
+
+.. _s1-t002:
+
+Escape Sequences
+^^^^^^^^^^^^^^^^
+
+| Two lines had to be written so 'Hello' and 'World!' were in different lines. But there's a way to do it in only one line:
+| ``cout << "Hello \n World!";``
+| This would output:
+
+    | Hello
+    
+        | World!
+| I'll explain the extra space there later. The ``\n`` is the Escape Sequence. The Backslash, ``\``, is what's used to trigger it. Within any "code which is written in speech marks", if a ``\`` is written, it's not gonna be there. An Escape Sequence is used to trigger something within the text. ``\n`` will trigger a new line. ``\t`` will trigger Tab, which aligns with columns. ``\"`` is used to write speech marks where it's not possible. This happens where, if for example you want to output:
+| I "love" Programming!
+| You'd think it's as simple as writing ``cout << "I "love" Programming!";``, but no. the program can only work with one pair of speech marks at once. So here, the actual code to get the output above, would be ``cout << "I \"love\" Programming!";``. Just like that if you also wanna output the actual backslash, you just write it twice. ``cout << "\\\\";`` would output ``\\``.
+| ``\`` only reads the character in front of it. So writing "\\\\n" would in fact just output ``\n``. Not the Enter line, this just means that in the console you will see a backslash and then an n.
+| An important thing to note is, Even though you're pressing two keyboard buttons for an Escape Sequence, it only counts as one character to the program. ``cout << "Hello";`` is five characters, while ``cout << "\n"`` is only one.
+| Now, remember that extra space? That's because the code was ``cout << "Hello \n World!";``. There's a space between ``\n`` and ``World!`` which causes that gap to happen, as ``\n`` causes a new line, then there's a space, then there's ``World!``. The space is also a character. If you want it to be in line, the code would be ``cout << "Hello \nWorld!";``. And, though less readable for humans, ``cout << "Hello\nWorld!";`` would be the true solution.
+
+.. _s1-t003:
+
+#include <iomanip>
+^^^^^^^^^^^^^^^^^^
+
+| You remember ``#include <iostream>`` right? This is another library you should get used to. This one's called ``iomanip``, which stands for Input Output Manipulation.
+| Here's some commands to know about:
+*    ``setw(num)``: Sets output in characters. If number of characters is too many, it will cut off. If number of characters is not enough, it will fill empty locations via another character (By default it will leave spaces, but the character can be changed with setfill() ). Written in format of ``cout << 30.5/6 << setw(4);``. Do note, this doesn't apply to the entire ``cout`` statement, but rather only the neighboring thing separated by ``<<``, so you can use multiple in one ``cout`` statement.
+*    ``setfill('char')``: Chooses what characters to use for extra spaces, if any are left from ``setw()`` being too high.
+*    ``setprecision(num)``: Chooses number of significant figures to output. Decimals are not counted. If too high of a number is entered, it will give the full number. If too low of a number is entered, such that it can't cover all decimal places, then it will use scientific notation, like 2.4e5. If the number is high enough to cover all decimal places then it will output that amount of significant figures. It will do rounding for the last number.
+| All of these are written to the left of the thing they are to affect. You can remember this easily by remembering that code outputs left to right, so it has to come first. ``cout << setw(10) << setfill('*') << setprecision(6) << 34.678156`` would output:
+
+    | ***34.6782
+
+.. _s1-pfl-l03:
