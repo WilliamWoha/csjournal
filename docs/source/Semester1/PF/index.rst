@@ -2,14 +2,12 @@
 Programming Fundamentals
 ========================
 
-| This site is currently going updates until the Semester finishes. Please refresh the page to make sure it's the latest version.
-|
-| On the right side of the page you'll find a table of sorts that, upon clicking any of the text there, will take you to that section of the page. The page is very long, it has the notes of the ENTIRE SEMESTER. Further organizing it wasn't possible, that's why it's like this.
-| If you're after a specific topic then just press Ctrl-F (or if in browser, then 'Find in Page') to search for it.
+| This site is undergoing updates until the Semester finishes. Please refresh the page to make sure it's the latest version.
 |
 | To avoid copyright issues with FAST, none of their material will be uploaded here. I can however reference info from it, and upload and link files that don't belong to them.
 |
-| Programming Fundamenttals has 4 Total Credit Hours. 3 for Theory, and 1 for Lab. That means for 16 weeks, there will be 3 hours a week for Theory and 1 hour a week for Lab. Yes, we do three hours but that's beside the point. Credit Hours are counted weirdly.
+| Programming Fundamentals has 4 Total Credit Hours. 3 for Theory, and 1 for Lab. That means for 16 weeks, there will be 3 hours a week for Theory and 1 hour a week for Lab. Yes, we do three hours for Lab but that's beside the point. Credit Hours are counted weirdly.
+|
 | Outline for PF Theory:
 
 *    4 Assignments. Total Absolutes: 12
@@ -27,7 +25,7 @@ Programming Fundamentals
 *    1 Project. Total Absolutes: 10
 *    1 Final Exam. Total Absolutes: 40
 
-Grading Polcy is Absolute Grading.
+Grading Policy is Absolute Grading.
 
 | Textbooks:
 
