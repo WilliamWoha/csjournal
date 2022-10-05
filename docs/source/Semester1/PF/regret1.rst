@@ -15,12 +15,13 @@ Things I wish I knew earlier
 .. code-block:: c++
    
    int a, b, c, d; // This many are unnecessary. This is just for explanation.
-	a = 17 % 3;
-   
+   a = 17 % 3;
+   // The next 3 lines are the technique for doing it without the % operator.
    b = 17 / 3;
    c = b * 3;
    d = 17 - c;
    
+|
     | At the end of this, the value of a will be the same as the value of d. To write the Modulus without MOD in one line:
 
 .. code-block:: c++
