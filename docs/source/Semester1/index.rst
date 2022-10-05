@@ -12,5 +12,6 @@ Semester 1
 
    PF/index
    IICT/index
+   AP/index
    
    *
