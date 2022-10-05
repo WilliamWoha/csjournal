@@ -20,7 +20,7 @@ Things I wish I knew earlier
 	   b = (17 / 3) * 3;
 	   c = 17 - b;
  
-    | At the end of this, the value of ``a`` will be the same as the value of ``c``. To write the Modulus without MOD in one line:
+    At the end of this, the value of ``a`` will be the same as the value of ``c``. To write the Modulus without MOD in one line:
 
 	.. code-block:: c++
 
