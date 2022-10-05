@@ -6,14 +6,14 @@ Programming Fundamentals
 |
 | To avoid copyright issues with FAST, none of their material will be uploaded here. I can however reference info from it, and upload and link files that don't belong to them.
 |
-| Programming Fundamentals has 4 Total Credit Hours. 3 for Theory, and 1 for Lab. That means for 16 weeks, there will be 3 hours a week for Theory and 1 hour a week for Lab. Yes, we do three hours for Lab but that's beside the point. Credit Hours are counted weirdly.
+| Programming Fundamentals is worth 4 Total Credit Hours. 3 for Theory, and 1 for Lab. That means for 16 weeks, there will be 3 hours a week for Theory and 1 hour a week for Lab. Yes, we do three hours for Lab but that's beside the point. Credit Hours are counted weirdly.
 |
 | Outline for PF Theory:
 
 *    4 Assignments. Total Absolutes: 12
+*    4 or more Quizzes. Total Absolutes: 10
 *    1 Sessional-I. Total Absolutes: 10 
 *    1 Sessional-II. Total Absolutes: 15
-*    4 or more Quzzes. Total Absolutes: 10
 *    1 Project. Total Absolutes: 13
 *    1 Final Exam. Total Absolutes: 40
 

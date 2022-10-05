@@ -6,7 +6,7 @@ IICT (Introduction to ICT)
 |
 | To avoid copyright issues with FAST, none of their material will be uploaded here. I can however reference info from it, and upload and link files that don't belong to them.
 |
-| IICT has 1 credit hour.
+| IICT is worth 1 Total Credit Hour.
 |
 | Outline for IICT:
 
