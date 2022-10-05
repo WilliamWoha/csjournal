@@ -134,7 +134,7 @@ IF/ELSE
 
 	#include <cmath>
 
-| It only gets used for one command, which is called ``pow(a, b``. This command gives the result of a :sup:`b` (a power b). It can be used in multiple ways, imagine it the same way as an arithmetic statement.
+| It only gets used for one command, which is called ``pow(a, b``. This command gives the result of a :sup:`b` (a power b). It can be used in multiple ways. You can imagine using it the same ways you can use an arithmetic statement.
 
 
 .. code-block:: c++
