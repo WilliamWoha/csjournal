@@ -12,13 +12,13 @@ Things I wish I knew earlier
     *    Input a position then flip a bit at that specific position
 *    How to do the MOD function without Modulus:
 
-.. code-block:: c++
+	.. code-block:: c++
    
-   int a, b, c; // This many are unnecessary. This is just for explanation.
-   a = 17 % 3;
-   // The next 3 lines are the technique for doing it without the % operator.
-   b = (17 / 3) * 3;
-   c = 17 - b;
+	   int a, b, c; // This many are unnecessary. This is just for explanation.
+	   a = 17 % 3;
+	   // The next 3 lines are the technique for doing it without the % operator.
+	   b = (17 / 3) * 3;
+	   c = 17 - b;
  
 |
 
