@@ -18,10 +18,10 @@ Intro to C++
 #include <iostream>
 using namespace std;
 int main() {
-        
-       
-    // (code)
-       
+    // Write
+    // Your
+    // Code
+    // Here
     return 0;
 }
 
