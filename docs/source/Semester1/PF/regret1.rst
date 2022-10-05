@@ -14,26 +14,25 @@ Things I wish I knew earlier
 
 .. code-block:: c++
    
-   int a, b, c, d; // This many are unnecessary. This is just for explanation.
+   int a, b, c; // This many are unnecessary. This is just for explanation.
    a = 17 % 3;
    // The next 3 lines are the technique for doing it without the % operator.
-   b = 17 / 3;
-   c = b * 3;
-   d = 17 - c;
+   b = (17 / 3) * 3;
+   c = 17 - b;
  
 |
 
-    | At the end of this, the value of ``a`` will be the same as the value of ``d``. To write the Modulus without MOD in one line:
+    | At the end of this, the value of ``a`` will be the same as the value of ``c``. To write the Modulus without MOD in one line:
 
 .. code-block:: c++
 
-	d = 17-((17/3)*3)
+	c = 17-((17/3)*3)
    
 |
 
-    | The way it works is that ``17/3`` is integer division, so it gets rid of any decimal values. The answer is 5.something but that's deleted so, it's 5. That's the key here. The extra part is deleted.
-    | If you then multiplied that by the numerator, the expression would be ``5 * 3``, which is 15. It's not the original value of 17, but rather it's the closest whole number value.
+    | The way it works is that ``17/3`` is integer division, so it gets rid of any decimal values. The answer is 5 point something but that's deleted, so it's 5. That's the key here. The extra part is deleted.
+    | If you then multiplied that by the same thing you divided with, the expression would be ``5 * 3``, which is 15. It's not the original value of 17, but rather it's the closest whole number value.
     | Then you subtract it from the original value. That's ``17 - 15``. The result is 2, which is the remainder of the expression ``17 / 3``.
     | You can read through the steps again if confused. This ONLY WORKS because the integer data type doesn't store original values.
 
-| I've written general notes and stuff in the :ref:`semester1` section.
+| I've written other general notes and stuff in the :ref:`semester1` section if they are needed.
