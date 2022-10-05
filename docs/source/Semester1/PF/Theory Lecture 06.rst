@@ -50,4 +50,3 @@ Data Types
 
 | These are all valid declarations. The less traditional ones ones you can figure out on your own.
 | You don't have to immediately declare a value. You can just assign it later. The way to do so would be ``var = value``. So if you have ``int a;`` and then ``a = 3``, and if you did ``cout << a << endl;``, you'd get an output of 3. The ``=`` is what assigns values.
-
