@@ -6,11 +6,17 @@ Theory Lecture 05
 | Week 3.
 | Yes I know there's some syntax not written in the above section, we'll get to it later. One thing at a time. If something isn't written it means the university will explain it later. And right now we've just done the main template for every C++ program, and cout statements. And believe me, even this is gonna be enough for now.
 | There's these things called Escape Sequences. When you output a string, for example, ``cout << "Hello World!" << endl;``, then ``Hello World!`` is the output that appears in the console. If you write two lines, one below another:
-| ``cout << "Hello" << endl;``
-| ``cout << "World!" << endl;``
+
+.. code-block:: c++
+	cout << "Hello" << endl;
+	cout << "World!" << endl;
+
 | You get the output of:
-| Hello
-| World!
+
+.. code-block::
+	Hello
+	World!
+
 | But what if we wanted to do it in only one line? That's where Escape Sequences come in.
 
 .. _s1-t002:
@@ -19,10 +25,13 @@ Escape Sequences
 ^^^^^^^^^^^^^^^^
 
 | Two lines had to be written so 'Hello' and 'World!' were in different lines. But there's a way to do it in only one line:
-| ``cout << "Hello \n World!";``
-| This would output:
 
 .. code-block:: c++
+	cout << "Hello \n World!";
+
+| This would output:
+
+.. code-block::
 	Hello
 	 World!
 
@@ -45,7 +54,5 @@ Escape Sequences
 *    ``setprecision(num)``: Chooses number of significant figures to output. Decimals are not counted. If too high of a number is entered, it will give the full number. If too low of a number is entered, such that it can't cover all decimal places, then it will use scientific notation, like 2.4e5. If the number is high enough to cover all decimal places then it will output that amount of significant figures. It will do rounding for the last number.
 | All of these are written to the left of the thing they are to affect. You can remember this easily by remembering that code outputs left to right, so it has to come first. ``cout << setw(10) << setfill('*') << setprecision(6) << 34.678156`` would output:
 
-.. code-block:: c++
+.. code-block::
     ***34.6782
-
-.. _s1-pfl-l03:

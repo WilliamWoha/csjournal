@@ -22,9 +22,11 @@ Overflow and Underflow
 | Overflow means adding more to the variable than it can handle, causing it to loop around to the smallest value. Kind of like a clock.
 | It doesn't just work with 1, it works with any value, as long as it's actually ASSIGNING. If you do:
 
-    | ``short int a;``
-    | ``a = 32767;``
-    | ``cout << a + 100 << endl;``
+.. code-block:: c++
+	short int a;
+	a = 32767;
+	cout << a + 100 << endl;
+
 | Then you'd get 32867 in the console. If instead you did ``a = 32867;`` and then ``cout << a << endl;``, THEN you'd get the Overflow, and the value you'd get would be -32669, which is (32767+1), which is -32768, then +99 which is -32669.
 |
 | Underflow is all of that just the other way around.
@@ -50,47 +52,54 @@ IF/ELSE
 *    ``!``: NOT
 | Here's how the syntax works.
 
-    | ``if (condition) {``
-    
-        | ``(code)``
-        | ``(more code)``
-    | ``}``
+.. code-block:: c++
+   :linenos:
+   
+	if (condition) {
+		(code)
+		(more code)
+	}
+
 | It can also be written as:
 
-    | ``if (condition)``
-    | ``{``
-    
-        | (code)
-        | (more code)
-    | ``}``
+.. code-block:: c++
+   :linenos:
+	if (condition)
+	{
+		(code)
+		(more code)
+	}
+
 | There's no actual semicolon to write for the ``if`` statement itself. Just for the lines between it which are regular code. The brackets around ``condition`` are NECESSARY. No matter how big the statement is, there has to be one set of brackets holding it all together.
 | The indentation (which means the gap for the code between the if statement) isn't necessary but is highly recommended for making code readable. It's just good practice to do.
 | Then there's ELSE statements. Which mean, if the original IF condition isn't filled, then execute this code. "If this happens then do this, OTHERWISE do this". The ELSE statement is just the otherwise part of that sentence. And else just means the opposite of the if statement. You don't write a condition for it.
 
-    | ``if (condition)``
-    | ``{``
-    
-        | (code)
-        | (more code)
-    | ``}``
-    | ``else``
-    | ``{``
-    
-        | (code)
-        | (more code)
-    | ``}``
+.. code-block:: c++
+   :linenos:
+	if (condition)
+	{
+		(code)
+		(more code)
+	}
+	else
+	{
+		(code)
+		(more code)
+	}
+
 | Here's an example:
 
-    | ``if (num % 2 == 0)``
-    | ``{``
-    
-        | ``cout << "The number is an even number." << endl;``
-    | ``}``
-    | ``else``
-    | ``{``
-    
-        | ``cout << "The number is an odd number." << endl;``
-    | ``}``
+.. code-block:: c++
+   :linenos:
+	if (num % 2 == 0)
+	{
+		cout << "The number is an even number." << endl;
+	}
+	else
+	{
+		cout << "The number is an odd number." << endl;
+	}
+
 | The reason that the Equals comparison sign is ``==`` and not ``=`` is because ``=`` is used for ASSIGNING. So if you just did one equals sign in an IF statement it would give an error.
 |
 | Here's something new. Let's say you have a statement called ``int n = 0;``

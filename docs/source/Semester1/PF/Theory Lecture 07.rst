@@ -50,16 +50,21 @@ Type Coercion (Type Casting)
 
 | Coercion means conversion. You can convert between data types. There's multiple ways to do so. It either falls under Type Promotion or Type Demotion.
 
-    | ``float a = 3.2;``
-    | ``int b = 10;``
-| ``a / b``, ``b / a``, ``a * b``, ``a + b``, and ``a - b`` would all give an output in float form. All of them "Promote" the int to a float then do an operation on it (MOD won't work, MOD needs two integers). The compiler does it automatically, you don't have to do it. This is what we call Automatic Type Coercion.
+.. code-block:: c++
+	float a = 3.2;
+	int b = 10;
+
+| ``(a / b)``, ``(b / a)``, ``(a * b)``, ``(a + b)``, and ``(a - b)`` would all give an output in float form. All of them "Promote" the int to a float then do an operation on it (MOD won't work, MOD needs two integers). The compiler does it automatically, you don't have to do it. This is what we call Automatic Type Coercion.
 | Data Type Ranking determines whether the conversion is promoting or demoting. It goes as follows: Long Double, Double, Float, Unsigned Long Long Int, Long Long Int, Long Int, Unsigned Int, Int. So in simple terms, Double, then Float, then Int, with Int being lowest rank and Double being the highest rank.
 
-    | ``int answer = a*b;``
+.. code-block:: c++
+	int answer = a*b;
+
 | ``a`` is float, and ``b`` is int. ``b`` gets promoted to float, and then the math operation is done. ``a * b`` is calculated. This is then saved to ``answer``, but the value gets demoted into ``int`` as the declaration of ``answer`` was in ``int``. Decimal Place values are truncated.
 | 
 | To do the conversion manually, there's two ways:
 *    ``static_cast<data type>(value)``: Static Cast. In ``<data type>`` you write the data type you want to convert to, such as ``float``. In ``value``, you write the variable name or the direct value you want to convert.
 *    ``type(value)`` or ``(type)value``: Write the data type in ``type``, and the variable name or direct value you want to convert in ``value``.
-| If you do float(7/10) the result would be 0. If you instead do float(7)/10 then you get 0.7. It solves in the brackets first so make sure you're converting BEFORE the division.
+| If you do ``float(7/10)`` the result would be 0. If you instead do ``float(7)/10`` then you get 0.7. It solves in the brackets first so make sure you're converting BEFORE the division.
+| The same logic applies to ``(float)7/10`` and ``static_cast<float>(7)/10``.
 
