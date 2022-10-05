@@ -45,8 +45,8 @@ Selection Structures (elseif)
 	else if (marks >= 60 && marks < 70)
 		cout << "D grade." << endl;
 	else
-    
-        | cout << "Failed." << endl;
+		cout << "Failed." << endl;
+		
 | And yes this is exactly how you do correction statements. You just write ``if (marks > 100 || marks < 0)`` at the start and get the code to output a statement saying that this isn't an acceptable answer.
 | Anyways. That about covers that. The only thing left is Nested IF statements, and then my 9 hours of typing can come to a rest and PF will have been caught up. Then I'll do weekly updates on this or something.
 
