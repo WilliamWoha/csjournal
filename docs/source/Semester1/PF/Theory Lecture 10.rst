@@ -141,5 +141,7 @@ IF/ELSE
 
 	c = pow(a, b);
 	cout << pow((a+b),c) // This line outputs (a+b) whole raised to the power of c.
+	d = pow(a, 0.5); // This line takes the square root of a.
+	e = pow(a, 1.0/3); // This line takes the cube root of a. It's 1.0/3 instead of 1/3 as 1/3 would evaluate as 0 instead.
 	
 | Anything can be put into the brackets of the pow() function as long as it just fits between the comma present inside of it. More than one comma shouldn't be there, and the whole expression should fit and be possible to solve.
