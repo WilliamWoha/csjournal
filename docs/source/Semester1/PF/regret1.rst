@@ -22,9 +22,9 @@ Things I wish I knew earlier
  
     At the end of this, the value of ``a`` will be the same as the value of ``c``. To write the Modulus without MOD in one line:
 
-	.. code-block:: c++
+    .. code-block:: c++
 
-		c = 17-((17/3)*3)
+	c = 17-((17/3)*3)
 
     | The way it works is that ``17/3`` is integer division, so it gets rid of any decimal values. The answer is 5 point something but that's deleted, so it's 5. That's the key here. The extra part is deleted.
     | If you then multiplied that by the same thing you divided with, the expression would be ``5 * 3``, which is 15. It's not the original value of 17, but rather it's the closest whole number value.
