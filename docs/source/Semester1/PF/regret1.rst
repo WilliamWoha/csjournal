@@ -22,6 +22,7 @@ Things I wish I knew earlier
    d = 17 - c;
    
 |
+
     | At the end of this, the value of a will be the same as the value of d. To write the Modulus without MOD in one line:
 
 .. code-block:: c++
