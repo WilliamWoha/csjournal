@@ -123,3 +123,23 @@ IF/ELSE
 | Yeah so I made the mistake of not knowing that the Logical AND is above the Logical OR, so in a question that asked ``A || B && C`` I assumed it was going left to right. In reality it first checks ``B && C`` then does ``||`` with ``A`` after that.
 | A, B, and C are all just brackets with their own operations going on inside of them. Don't worry about it.
 
+.. _s1-pft-t013:
+
+#include <cmath>
+^^^^^^^^^^^^^^^^
+
+| So just like how we included the ``<iostream>``, ``<iomanip>``, and ``<string>`` libraries, here's another. But as of now we only studied one function of it. This library is called the ``<cmath>`` library, and it's imported by typing 
+
+.. code-block:: c++
+
+	#include <cmath>
+
+| It only gets used for one command, which is called ``pow(a, b``. This command gives the result of a :sup:`b` (a power b). It can be used in multiple ways, imagine it the same way as an arithmetic statement.
+
+
+.. code-block:: c++
+
+	c = pow(a, b);
+	cout << pow((a+b),c) // This line outputs (a+b) :sup:`c`
+	
+| Anything can be put into the brackets of the pow() function as long as it just fits between the comma present inside of it. More than one comma shouldn't be there, and the whole expression should fit and be possible to solve.
