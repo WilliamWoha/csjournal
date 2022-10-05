@@ -45,7 +45,8 @@ Data Types
 	int a=2;
 	int x=y=z=4;
 	float num1=2;
-	num2=3.5;
+	float num2=3.5;
+	string name = "John Cena";
 
 | are all valid declarations. The later ones you can figure out on your own.
 | You don't have to immediately declare a value. You can just assign it later. The way to do so would be ``var = value``. So if you have ``int a;`` and then ``a = 3``, and if you did ``cout << a << endl;``, you'd get an output of 3. The ``=`` is what assigns values.
