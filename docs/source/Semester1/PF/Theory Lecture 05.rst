@@ -60,7 +60,8 @@ Escape Sequences
 | Do make sure you import the other libraries as well. Realistically, in a code you wouldn't write that alone. You'd write this:
 
 .. code-block:: c++
-	
+   :linenos:
+
 	#include <iostream>
 	#include <iomanip>
 	using namespace std;
