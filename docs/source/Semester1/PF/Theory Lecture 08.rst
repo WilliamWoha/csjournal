@@ -70,7 +70,7 @@ Keyboard Buffer (.get(), getline(), .ignore())
 	cin >> key;
 	if (key == '\n')
 	{
-    		// (Some Code to trigger something)
+    		(Some Code to trigger something)
 	}
 
 | You want it to only work when Enter is pressed, but ``cin`` won't store Enter. So the solution? Replace ``cin >> key;`` with ``key = cin.get()``. If you press Enter, then ``\n`` will be stored into ``key``.
