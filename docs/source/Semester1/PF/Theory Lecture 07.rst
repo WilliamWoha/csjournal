@@ -51,6 +51,7 @@ Type Coercion (Type Casting)
 | Coercion means conversion. You can convert between data types. There's multiple ways to do so. It either falls under Type Promotion or Type Demotion.
 
 .. code-block:: c++
+
 	float a = 3.2;
 	int b = 10;
 
@@ -58,6 +59,7 @@ Type Coercion (Type Casting)
 | Data Type Ranking determines whether the conversion is promoting or demoting. It goes as follows: Long Double, Double, Float, Unsigned Long Long Int, Long Long Int, Long Int, Unsigned Int, Int. So in simple terms, Double, then Float, then Int, with Int being lowest rank and Double being the highest rank.
 
 .. code-block:: c++
+
 	int answer = a*b;
 
 | ``a`` is float, and ``b`` is int. ``b`` gets promoted to float, and then the math operation is done. ``a * b`` is calculated. This is then saved to ``answer``, but the value gets demoted into ``int`` as the declaration of ``answer`` was in ``int``. Decimal Place values are truncated.

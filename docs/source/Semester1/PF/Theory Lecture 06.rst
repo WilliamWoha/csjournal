@@ -36,6 +36,7 @@ Data Types
 
 .. code-block:: c++
    :linenos:
+
 	int a;
 	float num;
 	char c = 'p';

@@ -1,7 +1,7 @@
 .. _s1-pft-l09:
 
-Theory Lecture 9
-----------------
+Theory Lecture 09
+-----------------
 
 | Week 5.
 | Ok so to understand today's class you need to know how the Binary number system works. If you don't know how that works, look up a youtube video of it or something, you NEED to understand it. It's too much to explain here.

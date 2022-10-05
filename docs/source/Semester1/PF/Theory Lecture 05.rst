@@ -8,12 +8,14 @@ Theory Lecture 05
 | There's these things called Escape Sequences. When you output a string, for example, ``cout << "Hello World!" << endl;``, then ``Hello World!`` is the output that appears in the console. If you write two lines, one below another:
 
 .. code-block:: c++
+
 	cout << "Hello" << endl;
 	cout << "World!" << endl;
 
 | You get the output of:
 
 .. code-block::
+
 	Hello
 	World!
 
@@ -27,11 +29,13 @@ Escape Sequences
 | Two lines had to be written so 'Hello' and 'World!' were in different lines. But there's a way to do it in only one line:
 
 .. code-block:: c++
+
 	cout << "Hello \n World!";
 
 | This would output:
 
 .. code-block::
+
 	Hello
 	 World!
 

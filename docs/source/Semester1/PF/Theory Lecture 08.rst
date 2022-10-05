@@ -12,6 +12,7 @@ Variable Assigning using itself
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: c++
+
 	int sum = 30;
 	sum = sum + 10;
 
@@ -37,6 +38,7 @@ Keyboard Buffer (.get(), getline(), .ignore())
 | Here's a funny thing about using ``#iostream <string>``. If you try to put data into a ``string`` variable via a ``cin`` statement, it won't store values past an escape sequence. Here's the program:
 
 .. code-block:: c++
+
 	string name;
 	cin >> "Enter name: ";
 
@@ -46,6 +48,7 @@ Keyboard Buffer (.get(), getline(), .ignore())
 
 .. code-block:: c++
    :linenos:
+
 	string name, city;
 	cout << "Please enter your full name: " << endl;
 	cin >> name;
@@ -62,6 +65,7 @@ Keyboard Buffer (.get(), getline(), .ignore())
 
 .. code-block:: c++
    :linenos:
+
 	char key;
 	cin >> key;
 	if (key == '\n')
@@ -76,6 +80,7 @@ Keyboard Buffer (.get(), getline(), .ignore())
 
 .. code-block:: c++
    :linenos:
+
 	int number;
 	char ch;
 	cout << "Enter number: " << endl;

@@ -23,6 +23,7 @@ Overflow and Underflow
 | It doesn't just work with 1, it works with any value, as long as it's actually ASSIGNING. If you do:
 
 .. code-block:: c++
+
 	short int a;
 	a = 32767;
 	cout << a + 100 << endl;
@@ -64,6 +65,7 @@ IF/ELSE
 
 .. code-block:: c++
    :linenos:
+
 	if (condition)
 	{
 		(code)
@@ -76,6 +78,7 @@ IF/ELSE
 
 .. code-block:: c++
    :linenos:
+
 	if (condition)
 	{
 		(code)
@@ -91,6 +94,7 @@ IF/ELSE
 
 .. code-block:: c++
    :linenos:
+
 	if (num % 2 == 0)
 	{
 		cout << "The number is an even number." << endl;

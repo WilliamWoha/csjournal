@@ -15,6 +15,7 @@ Selection Structures (elseif)
 
 .. code-block:: c++
    :linenos:
+
 	if (a>b)
 	{
 		cout << a << " is greater." << endl;
@@ -34,6 +35,7 @@ Selection Structures (elseif)
 
 .. code-block:: c++
    :linenos:
+
 	if (marks >= 90 && marks <= 100)
 		cout << "A grade." << endl;
 	else if (marks >= 80 && marks < 90)
@@ -59,6 +61,7 @@ Nested Selections
 
 .. code-block:: c++
    :linenos:
+
 	if (Pizza hut is open)
 		if (Medium Combo is there)
 			Get Medium Combo
