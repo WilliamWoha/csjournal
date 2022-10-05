@@ -23,8 +23,8 @@ Escape Sequences
 | This would output:
 
 .. code-block::
-	Hello
-	 World!
+Hello
+ World!
 
 | I'll explain the extra space there later. The ``\n`` is the Escape Sequence. The Backslash, ``\``, is what's used to trigger it. Within any "code which is written in speech marks", if a ``\`` is written, it's not gonna be there. An Escape Sequence is used to trigger something within the text. ``\n`` will trigger a new line. ``\t`` will trigger Tab, which aligns with columns. ``\"`` is used to write speech marks where it's not possible. This happens where, if for example you want to output:
 | I "love" Programming!
@@ -46,6 +46,6 @@ Escape Sequences
 | All of these are written to the left of the thing they are to affect. You can remember this easily by remembering that code outputs left to right, so it has to come first. ``cout << setw(10) << setfill('*') << setprecision(6) << 34.678156`` would output:
 
 .. code-block::
-    ***34.6782
+***34.6782
 
 .. _s1-pfl-l03:
