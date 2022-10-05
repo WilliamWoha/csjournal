@@ -51,7 +51,24 @@ Escape Sequences
 #include <iomanip>
 ^^^^^^^^^^^^^^^^^^
 
-| You remember ``#include <iostream>`` right? This is another library you should get used to. This one's called ``iomanip``, which stands for Input Output Manipulation.
+| You remember ``#include <iostream>`` right? This is another library you should get used to. This one's called ``iomanip``, which stands for Input Output Manipulation. You include it in the code by writing it the same way you would write it for iostream.
+
+.. code-block:: c++
+
+	#include <iomanip>
+	
+| Do make sure you import the other libraries as well. Realistically, in a code you wouldn't write that alone. You'd write this:
+
+.. code-block:: c++
+	
+	#include <iostream>
+	#include <iomanip>
+	using namespace std;
+	int main() {
+		code
+		return 0;
+	}
+	
 | Here's some commands to know about:
 *    ``setw(num)``: Sets output in characters. If number of characters is too many, it will cut off. If number of characters is not enough, it will fill empty locations via another character (By default it will leave spaces, but the character can be changed with setfill() ). Written in format of ``cout << 30.5/6 << setw(4);``. Do note, this doesn't apply to the entire ``cout`` statement, but rather only the neighboring thing separated by ``<<``, so you can use multiple in one ``cout`` statement.
 *    ``setfill('char')``: Chooses what characters to use for extra spaces, if any are left from ``setw()`` being too high.
