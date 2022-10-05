@@ -15,15 +15,19 @@ Intro to C++
 | Syntax: This is THE MOST important thing to remember. It's crucial that you memorize this as you'll lose marks if you miss a single detail.
 
 .. code-block:: c++
+   :linenos:
+   :emphasize-lines: 1,2,3,8
+   
     #include <iostream>
     using namespace std;
     int main() {
-        
-       
-        // (code)
-       
+        // Write
+        // Your
+        // Code
+        // Here
         return 0;
     }
+
 | Now you're probably wondering what all of that is. So lets get to work:
 
 *    ``#include <iostream>`` is called a 'Preprocessor Directive'. It's written at the top and basically prepares the rest of the program for these commands. #include means, that specific library has to be included. We're gonna look at other libraries later.
