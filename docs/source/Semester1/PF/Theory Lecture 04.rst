@@ -15,15 +15,18 @@ Intro to C++
 | Syntax: This is THE MOST important thing to remember. It's crucial that you memorize this as you'll lose marks if you miss a single detail.
 
 .. code-block::
-#include <iostream>
-using namespace std;
-int main() {
-    // Write
-    // Your
-    // Code
-    // Here
-    return 0;
-}
+   :linenos:
+   :emphasize-lines: 1,2,3,8
+   
+    #include <iostream>
+    using namespace std;
+    int main() {
+        // Write
+        // Your
+        // Code
+        // Here
+        return 0;
+    }
 
 | Now you're probably wondering what all of that is. So lets get to work:
 
