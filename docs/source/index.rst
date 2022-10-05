@@ -21,6 +21,5 @@ Contents
 
    Semester1/index
    Semester1-ICT
-   Semester1-AP
    Semester1-PF
    *
