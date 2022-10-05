@@ -20,6 +20,7 @@ Data Types
 | Out of the 6 above, 5 are already in ``<iostream>`` and part of the foundation of C++. String is the odd one out. To use it, you need to import the ``<string>`` library.
 
 .. code-block:: c++
+
 	#include <string>
 
 | Integers are Whole Numbers only, Float and Double are Decimal Numbers.
