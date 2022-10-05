@@ -23,12 +23,14 @@ Things I wish I knew earlier
  
 |
 
-    | At the end of this, the value of a will be the same as the value of d. To write the Modulus without MOD in one line:
+    | At the end of this, the value of ``a`` will be the same as the value of ``d``. To write the Modulus without MOD in one line:
 
 .. code-block:: c++
 
 	d = 17-((17/3)*3)
    
+|
+
     | The way it works is that ``17/3`` is integer division, so it gets rid of any decimal values. The answer is 5.something but that's deleted so, it's 5. That's the key here. The extra part is deleted.
     | If you then multiplied that by the numerator, the expression would be ``5 * 3``, which is 15. It's not the original value of 17, but rather it's the closest whole number value.
     | Then you subtract it from the original value. That's ``17 - 15``. The result is 2, which is the remainder of the expression ``17 / 3``.
