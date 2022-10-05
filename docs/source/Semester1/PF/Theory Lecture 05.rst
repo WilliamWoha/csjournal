@@ -22,7 +22,7 @@ Escape Sequences
 | ``cout << "Hello \n World!";``
 | This would output:
 
-.. code-block:: c++
+.. code-block::
 	Hello
 	 World!
 
@@ -45,7 +45,7 @@ Escape Sequences
 *    ``setprecision(num)``: Chooses number of significant figures to output. Decimals are not counted. If too high of a number is entered, it will give the full number. If too low of a number is entered, such that it can't cover all decimal places, then it will use scientific notation, like 2.4e5. If the number is high enough to cover all decimal places then it will output that amount of significant figures. It will do rounding for the last number.
 | All of these are written to the left of the thing they are to affect. You can remember this easily by remembering that code outputs left to right, so it has to come first. ``cout << setw(10) << setfill('*') << setprecision(6) << 34.678156`` would output:
 
-.. code-block:: c++
+.. code-block::
     ***34.6782
 
 .. _s1-pfl-l03:
