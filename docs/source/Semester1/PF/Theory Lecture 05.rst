@@ -14,14 +14,14 @@ Theory Lecture 05
 
 | You get the output of:
 
-.. code-block::
+.. code-block:: c++
 
 	Hello
 	World!
 
 | But what if we wanted to do it in only one line? That's where Escape Sequences come in.
 
-.. _s1-t002:
+.. _s1-t002: c++
 
 Escape Sequences
 ^^^^^^^^^^^^^^^^
@@ -34,7 +34,7 @@ Escape Sequences
 
 | This would output:
 
-.. code-block::
+.. code-block:: c++
 
 	Hello
 	 World!
@@ -58,6 +58,6 @@ Escape Sequences
 *    ``setprecision(num)``: Chooses number of significant figures to output. Decimals are not counted. If too high of a number is entered, it will give the full number. If too low of a number is entered, such that it can't cover all decimal places, then it will use scientific notation, like 2.4e5. If the number is high enough to cover all decimal places then it will output that amount of significant figures. It will do rounding for the last number.
 | All of these are written to the left of the thing they are to affect. You can remember this easily by remembering that code outputs left to right, so it has to come first. ``cout << setw(10) << setfill('*') << setprecision(6) << 34.678156`` would output:
 
-.. code-block::
+.. code-block:: c++
 
     ***34.6782
