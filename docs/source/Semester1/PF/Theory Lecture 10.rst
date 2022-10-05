@@ -134,12 +134,12 @@ IF/ELSE
 
 	#include <cmath>
 
-| It only gets used for one command, which is called ``pow(a, b``. This command gives the result of a :sup:`b` (a power b). It can be used in multiple ways, imagine it the same way as an arithmetic statement.
+| It only gets used for one command, which is called ``pow(a, b``. This command gives the result of a:sup:`b` (a power b). It can be used in multiple ways, imagine it the same way as an arithmetic statement.
 
 
 .. code-block:: c++
 
 	c = pow(a, b);
-	cout << pow((a+b),c) // This line outputs (a+b) :sup:`c`
+	cout << pow((a+b),c) // This line outputs (a+b) whole raised to the power of c.
 	
 | Anything can be put into the brackets of the pow() function as long as it just fits between the comma present inside of it. More than one comma shouldn't be there, and the whole expression should fit and be possible to solve.
