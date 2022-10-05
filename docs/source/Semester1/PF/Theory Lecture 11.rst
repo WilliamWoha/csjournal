@@ -29,6 +29,7 @@ Selection Structures (elseif)
 	{
     		cout << "Both are equal." << endl;
 	}
+	
 | There's three conditions there. One being, ``a > b``, the second being ``a < b``, and the third being ``a == b``. Now you could do this any way you want, and even put the ``a == b`` statement at the start and leave the other two in an ``else if`` and ``else``. The choice is yours.
 | You can have wayyyy more else if statements too, for checking more conditions.
 | Here's a little tip about IF statements though. Those ``{ }`` brackets you see? They're only used if there's more than one line of code to execute. Otherwise, you can be completely fine with something like this:
