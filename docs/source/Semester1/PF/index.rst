@@ -60,6 +60,7 @@ Grading Policy is Absolute Grading.
    Lab Lecture 05
    Theory Lecture 10
    Theory Lecture 11
+   regret1
    Theory Lecture 12
 
 	
