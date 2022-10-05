@@ -59,4 +59,5 @@ Escape Sequences
 | All of these are written to the left of the thing they are to affect. You can remember this easily by remembering that code outputs left to right, so it has to come first. ``cout << setw(10) << setfill('*') << setprecision(6) << 34.678156`` would output:
 
 .. code-block::
+
     ***34.6782
