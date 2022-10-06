@@ -79,7 +79,7 @@ Cross Product
 ^^^^^^^^^^^^^
 
 | The cross product gives the orientation of the **plane** described by two vectors in 3D space. Also called the vector product, it is a binary operation on two vectors that results in a vector value. Represented by :math:`\vec{a}\times\vec{b}`, the cross product is a vector that is perpendicular to both :math:`\vec{a}` and :math:`\vec{b}` and is normal to the plane containing them.
-| The cross product is anti-commutative, i.e :math:`\vec(a)\times\vec{b} = - \vec{b}\times\vec{a}` and is given by
+| The cross product is anti-commutative, i.e :math:`\vec{a}\times\vec{b} = - \vec{b}\times\vec{a}` and is given by
 
 .. math::
 
@@ -89,18 +89,10 @@ Cross Product
 | Similarly, the cross product of two unit vectors will be perpendicular to the vectors, i.e :math:`\hat{i}\times\hat{j} = \hat{k}`, :math:`\hat{j}\times\hat{k} = \hat{i}`, etc. and the cross product of the same unit vector will be 0: :math:`\hat{i}\times\hat{i} = 0`.
 
 | Consider the cross product :math:`\vec{a} \times \vec{b} = (a_{\text{x}}\hat{i} + a_{\text{y}}\hat{j} + a_{\text{z}}\hat{k}) \times (b_{\text{x}}\hat{i} + b_{\text{y}}\hat{j} + b_{\text{z}}\hat{k})`
-| This can be represented as the determinant of the square matrix
+| This can be represented by the determinant of the square matrix
 
 .. math::
-    \vec{a} \times \vec{b} = \renewcommand{\arraystretch}{2.5}
-		
-    	\left[
-         	\begin{array}{ccc}
-         	i & j & k          \\
-         	a_{\text{x}} & a_{\text{y}}    & a_{\text{z}} \\
-         	b_{\text{x}} & b_{\text{y}} & b_{\text{z}}
-        	\end{array}
-    	\right]
+    \vec{a} \times \vec{b} = \renewcommand{\arraystretch}{2.5} \left[ \begin{array}{ccc}	i & j & k          \\	a_{\text{x}} & a_{\text{y}}    & a_{\text{z}} \\ 	b_{\text{x}} & b_{\text{y}} & b_{\text{z}}	\end{array}\right]
 
 
  
