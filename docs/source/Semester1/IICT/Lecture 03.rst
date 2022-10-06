@@ -36,6 +36,7 @@ Presentation Skills:
 
 .. figure:: images/presSlide.png
 
+    
 | and not like this
 
 .. figure:: images/presSlideTwo.png
@@ -45,3 +46,12 @@ Presentation Skills:
 Lab Work:
 ^^^^^^^^^
 | The lab work here just has you making a presentation with the above format. Experiment with the tabs if you don't know where something is, it's fairly straightforward.
+|
+|
+|
+|
+|
+|
+|
+|
+| Images sourced by `Stinson Design <https://www.stinsondesign.com/>`_.
