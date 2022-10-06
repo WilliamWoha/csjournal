@@ -8,7 +8,11 @@ Vectors
 
 | Head-to-Tail Rule:
 |
+<<<<<<< HEAD
+| Graphically, vectors can be added by drawing a line from the tail of the first vector to the head of the last vector. In graphical form, the $\bar{C} = \bar{A} + \bar{B}$ can be represented as
+=======
 | Graphically, vectors can be added by drawing a line from the tail of the first vector to the head of the last vector. In graphical form, the equation :math: `\vec{C} = \vec{A} + \vec{B}` can be represented as
+>>>>>>> 75097691e182782ef9a8f716e7b6ec7163f4a043
 
 .. figure:: images/headtotail.png
 
