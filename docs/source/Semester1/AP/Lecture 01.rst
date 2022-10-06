@@ -66,14 +66,15 @@ Multiplication of Vectors
 *    Multiplying a vector with negative one reverses direction but doesn't change magnitude.
 *    Multiplying a vector with a negative number other than negative one reverses direction and changes magnitude.
 
-| Multiplication of a Vector with a Vector
+| Multiplication of a Vector with a Vector:
+|
 | This is further split into two parts, the dot product and the cross product
 
 | Dot Product:
 *     Binary operation on two vectors
 *     Always results in a scalar value (i.e :math:`W = \vec{F}\centerdot\vec{d}`)
 *     Denoted by :math:`\vec{a}\centerdot\vec{b}`
-*     :math:`\vec{a}\centerdot\vec{b} = \vert a \vert\ b \vert\cos(\theta)`
+*     :math:`\vec{a}\centerdot\vec{b} = \vert a \vert b \vert\cos(\theta)`
 *     The dot product is commutative, i.e :math:`\vec{a}\centerdot\vec{b} = \vec{b}\centerdot\vec{a}`
 | The dot product gives the **relative orientation** of two vectors in 2D space. Intuitively, the dot product tells us how much two vectors point in the same direction. This helps us in measuring the angle between the pair of vectors.
 | Look at how the dot product uses :math:`\cos(\theta)`, it is evident that dot product of same unit vectors is :math:`\hat{i}\centerdot\hat{i} = \hat{j}\centerdot\hat{j} = \hat{k}\centerdot\hat{k} = 1` and the dot product of perpendicular unit vectors (:math:`\hat{i}\centerdot\hat{j} = 0`, etc.) will be :math:`0`.
