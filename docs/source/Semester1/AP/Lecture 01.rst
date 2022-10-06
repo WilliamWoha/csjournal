@@ -19,8 +19,9 @@ Vector Components
 | Consider the vector :math:`\vec{a}` in a 2D Cartesian plane making an angle :math:`\theta` with the x-axis:
 
 .. image:: images/vector2d.png
+    :scale: 40%
 
-| Projection of components: :math:`\vec{a} = `( :math:`\vec{a}` :sub:`x`, :math:`\vec{a}` :sub:`y`). It's evident that :math:`\vec{a}` is the sum of its components.
+| Projection of components: :math:`\vec{a} = ( \vec{a}_{\text{x}}, \vec{a}_{\text{y}} )`. It's evident that :math:`\vec{a}` is the sum of its components.
 | The x-component: :math:`a` :sub:`x` = :math:`\vert \vec{a} \vert\cos(\theta)`
 | The y-component: :math:`a` :sub:`y` = :math:`\vert \vec{a} \vert\sin(\theta)`
 | Magnitude: :math:`\vert \vec{a} \vert = \sqrt{ a_{\text{x}}^2 + a_{\text{y}}^2}`
