@@ -6,12 +6,12 @@ Week 01
 Vectors
 ^^^^^^^
 
-| Scalars are possessing only magnitude. Vectors are directional quantities possessing a magnitude and an angle (direction), they are 'arrows' in space. They can be represented in the Cartesian coordinate system using either three (3D) or two (2D) orthogonal (perpendicular) axes. The components of the vector are its projections on a rectangular axis.
+| Scalars are possessing only magnitude. Vectors are directional quantities possessing a magnitude and an angle (direction), they are 'arrows' in space. They can be represented in the Cartesian coordinate system using either three (3D) or two (2D) perpendicular axes. The components of the vector are its projections on a rectangular axis.
 .. image:: images/vector.jpg
 
     This is a right handed coordinate system. A vector rotated 90:math:`\circ` from OZ to OY will travel in the positive y-direction.
 
-| Then consider a vector :math:`\vec{P}` in the 3D Cartesian plane, it has magnitude :math:`\vert\\vec{P}\vert` and the components ( :math:`P` :sub:`x`, :math:`P` :sub:`y`, :math:`P` :sub:`z`)
+| Then consider a vector :math:`\vec{P}` in the 3D Cartesian plane, it has magnitude :math:`\vert\ \vec{P} \vert` and the components ( :math:`P` :sub:`x`, :math:`P` :sub:`y`, :math:`P` :sub:`z`)
 
 Vector Components
 ^^^^^^^^^^^^^^^^^
@@ -20,10 +20,10 @@ Vector Components
 
 .. image:: images/vector2d.png
 
-| Projection of components: :math:`\vec{a} = `(:math:`\vec{a}` :sub:`x`, :math:`\vec{a}` :sub:`y`). It's evident that :math:`\vec{a}` is the sum of its components.
-| The x-component: :math:`a` :sub:`x` = :math:`\vert\vec{a}\vert\cos(\theta)`
-| The y-component: :math:`a` :sub:`y` = :math:`\vert\vec{a}\vert\sin(\theta)`
-| Magnitude: :math:`\vert\vec{a}\vert = \sqrt{ a_{\text{x}}^2 + a_{\text{y}}^2`
+| Projection of components: :math:`\vec{a} = `( :math:`\vec{a}` :sub:`x`, :math:`\vec{a}` :sub:`y`). It's evident that :math:`\vec{a}` is the sum of its components.
+| The x-component: :math:`a` :sub:`x` = :math:`\vert \vec{a} \vert\cos(\theta)`
+| The y-component: :math:`a` :sub:`y` = :math:`\vert \vec{a} \vert\sin(\theta)`
+| Magnitude: :math:`\vert \vec{a} \vert = \sqrt{ a_{\text{x}}^2 + a_{\text{y}}^2}`
 | Direction: :math:`\tan(\theta) = \frac{a_{\text{y}}}{a_{\text{x}}}`
 
 | Two vectors are equal if they have the same magnitude and direction. :math:`\vec{a} = \vec{b}` gives :math:`a_{\text{x}} = b_{\text{x}}, a_{\text{y}} = b_{\text{y}}`. The same property applies for vectors in 3 dimensions.
@@ -71,10 +71,10 @@ Multiplication of Vectors
 *     Binary operation on two vectors
 *     Always results in a scalar value (i.e :math:`W = \vec{F}\centerdot\vec{d}`)
 *     Denoted by :math:`\vec{a}\centerdot\vec{b}`
-*     :math:`\vec{a}\centerdot\vec{b} = \verta\vert\vertb\vert\cos(\theta)`
+*     :math:`\vec{a}\centerdot\vec{b} = \vert a \vert\ b \vert\cos(\theta)`
 *     The dot product is commutative, i.e :math:`\vec{a}\centerdot\vec{b} = \vec{b}\centerdot\vec{a}`
 | The dot product gives the **relative orientation** of two vectors in 2D space. Intuitively, the dot product tells us how much two vectors point in the same direction. This helps us in measuring the angle between the pair of vectors.
-| Look at how the dot product uses :math:`\cos(\theta)`, it is evident that dot product of same unit vectors is :math:`\hat{i}\centerdot\hat{i} = \hat{j}\centerdot\hat{j} = hat{k}\centerdot\hat{k} = 1` and the dot product of perpendicular unit vectors (:math:`\hat{i}\centerdot\hat{j} = 0`, etc.) will be :math:`0`.
+| Look at how the dot product uses :math:`\cos(\theta)`, it is evident that dot product of same unit vectors is :math:`\hat{i}\centerdot\hat{i} = \hat{j}\centerdot\hat{j} = \hat{k}\centerdot\hat{k} = 1` and the dot product of perpendicular unit vectors (:math:`\hat{i}\centerdot\hat{j} = 0`, etc.) will be :math:`0`.
 Cross Product
 ^^^^^^^^^^^^^
 
@@ -83,7 +83,7 @@ Cross Product
 
 .. math::
 
-        \vec{a} \times \vec{b} = \verta\vert\vertb\vert\sin(\theta)\hat{n}
+        \vec{a} \times \vec{b} = \vert a \vert b \vert\sin(\theta)\hat{n}
 
 | Where :math:`\theta` is the angle between the two vectors and :math:`\hat{n}` is the unit vector perpendicular to the plane containing the two vectors. It's direction is given by the right-hand rule.
 | Similarly, the cross product of two unit vectors will be perpendicular to the vectors, i.e :math:`\hat{i}\times\hat{j} = \hat{k}`, :math:`\hat{j}\times\hat{k} = \hat{i}`, etc. and the cross product of the same unit vector will be 0: :math:`\hat{i}\times\hat{i} = 0`.
@@ -92,8 +92,15 @@ Cross Product
 | This can be represented as the determinant of the square matrix
 
 .. math::
-    \vec{a} \times \vec{b} = ( \begin{matrix} i & j & k \\ a:sub:`x` & a:sub:`y` & a:sub:`z` \\ b:sub:`x` & b:sub:`y` & b:sub:`z` \end{matrix})
-
+    \vec{a} \times \vec{b} = \renewcommand{\arraystretch}{2.5}
+		
+    	\left[
+         	\begin{array}{ccc}
+         	i & j & k          \\
+         	a_{\text{x}} & a_{\text{y}}    & a_{\text{z}} \\
+         	b_{\text{x}} & b_{\text{y}} & b_{\text{z}}
+        	\end{array}
+    	\right]
 
 
  
