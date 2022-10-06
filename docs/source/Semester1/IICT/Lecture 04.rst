@@ -12,7 +12,7 @@ Number Systems
 | When we start counting up, though, is when we encounter issues. '1 + 1' in decimal is '2', but '1 + 1' in binary is '10', since there's only two symbols to represent numbers. If we wanted to count numbers in binary with respect to decimal, we could instead keep counting in decimal until we encounter a combination of '0's or '1's. For example, '0' exists in both number systems and is the first value, so '0' is the same in both. Similarly, '1' exists in both, and it's the same. '2' does not exist in binary though, so to imagine that we go to the nearest combination of '1's and '0's after '1' in decimal: which is the number '10'.
 | Following this, '3' in binary is just the next combination of '1's or '0's after '10', which is '11'. These numbers can be represented as 3 :sub:`10` = 11 :sub:`2`
 
-.. figure:: images/numbersystems.png
+.. figure:: images/table.png
     :scale: 80%
     :alt: a table of the 4 number systems
 
