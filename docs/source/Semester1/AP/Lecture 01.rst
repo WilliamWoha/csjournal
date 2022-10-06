@@ -22,7 +22,7 @@ Vectors: Components and Addition
 *    Take the angles from the x-axis - and stick to this convention. This way, you won't have to change the formula used for finding the x and y components.
 *    Cross-check the sign of the component. If the vector is in the negative x direction, make sure the x component is negative.
 | Finally, add the components to get the resultant vector's component. :math:`\vec{R}` :sub:`x` :math:`= \vec{A}` :sub:`x` :math:`+ \vec{B}` :sub:`x`. The same formula works for y components.
-| For the magnitude of the resultant, use the pythagorean theorem: :math:`\vert\vec{R}\vert = \sqrt{\vec{A}^2 + \vec{B}^2}`, which can be further expanded as :math:`\vert\vec{R}\vert = \sqrt{(\vec{A}_{\text{x}}^2 + \vec{A}_{\text{y}}^2\) + (\vec{B}_{\text{x}}^2 + \vec{B}_{\text{y}}^2)`
+| For the magnitude of the resultant, use the pythagorean theorem: :math:`\vert\vec{R}\vert = \sqrt{\vec{A}^2 + \vec{B}^2}`, which can be further expanded as :math:`\vert\vec{R}\vert = \sqrt ( \, {\vec{A}_{\text{x}}^2 + \vec{A}_{\text{y}}^2 ) \, + ( \, \vec{B}_{\text{x}}^2 + \vec{B}_{\text{y}}^2 ) \,`
 
 
 
