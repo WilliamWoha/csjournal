@@ -10,10 +10,10 @@ Vectors
 
 .. figure:: images/vector.png
     :scale: 40%
-    
+
     This is a right handed coordinate system. A vector rotated 90:math:`\circ` from OZ to OY will travel in the positive y-direction.
 
-| Then consider a vector :math:`\vec{P}` in the 3D Cartesian plane, it has magnitude :math:`\vert\ \vec{P} \vert` and the components ( :math:`P` :sub:`x`, :math:`P` :sub:`y`, :math:`P` :sub:`z`)
+| Then a vector :math:`\vec{P}` in the 3D Cartesian plane has magnitude :math:`\vert\ \vec{P} \vert` and the components ( :math:`P` :sub:`x`, :math:`P` :sub:`y`, :math:`P` :sub:`z`)
 
 Vector Components
 ^^^^^^^^^^^^^^^^^
@@ -45,7 +45,7 @@ Unit Vector
 Sum of Vectors
 ^^^^^^^^^^^^^^
 
-| Consider calculating the sum of two vectors :math:`\vec{c} = \vec{a} + \vec{b}`
+| Calculating the sum of two vectors :math:`\vec{c} = \vec{a} + \vec{b}`
 | This can be done graphically via head-to-tail rule; join the tail of the first vector with the head of the last vector.
 
 .. image:: images/headtotail.png
@@ -92,7 +92,7 @@ Cross Product
 | Where :math:`\theta` is the angle between the two vectors and :math:`\hat{n}` is the unit vector perpendicular to the plane containing the two vectors. It's direction is given by the right-hand rule.
 | Similarly, the cross product of two unit vectors will be perpendicular to the vectors, i.e :math:`\hat{i}\times\hat{j} = \hat{k}`, :math:`\hat{j}\times\hat{k} = \hat{i}`, etc. and the cross product of the same unit vector will be 0: :math:`\hat{i}\times\hat{i} = 0`.
 
-| Consider the cross product :math:`\vec{a} \times \vec{b} = (a_{\text{x}}\hat{i} + a_{\text{y}}\hat{j} + a_{\text{z}}\hat{k}) \times (b_{\text{x}}\hat{i} + b_{\text{y}}\hat{j} + b_{\text{z}}\hat{k})`
+| The cross product is :math:`\vec{a} \times \vec{b} = (a_{\text{x}}\hat{i} + a_{\text{y}}\hat{j} + a_{\text{z}}\hat{k}) \times (b_{\text{x}}\hat{i} + b_{\text{y}}\hat{j} + b_{\text{z}}\hat{k})`
 | This can be represented by the determinant of the square matrix
 
 .. math::
