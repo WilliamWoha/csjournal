@@ -3,23 +3,21 @@
 Vectors
 ^^^^^^^
 
-| A vector is a quantity possessing both magnitude and direction.
-| As vectors are directional quantities, they're represented on the x-y plane with a magnitude and an angle.
+| Vectors are directional quantities possessing a magnitude and an angle, conventionally taken counter-clockwise from the positive x-axis.
+| Consider a Vector :math:`\vec{A}`. It has horizontal and vertical components represented by :math:`\vec{A}` :sub:`x` and :math:`\vec{A}` :sub:`y`, respectively.
 
 | Head-to-Tail Rule:
 |
-<<<<<<< HEAD
-| Graphically, vectors can be added by drawing a line from the tail of the first vector to the head of the last vector. In graphical form, the $\bar{C} = \bar{A} + \bar{B}$ can be represented as
-=======
-| Graphically, vectors can be added by drawing a line from the tail of the first vector to the head of the last vector. In graphical form, the equation :math: `\vec{C} = \vec{A} + \vec{B}` can be represented as
->>>>>>> 75097691e182782ef9a8f716e7b6ec7163f4a043
+| Graphically, vectors can be added by joining the tail of the first vector to the head of the last vector. In graphical form, the equation :math:`\vec{C} = \vec{A} + \vec{B}` can be represented as
 
 .. figure:: images/headtotail.png
 
+
+
+| In the case that the vector's heads or tails don't match up, the vectors can be shifted on the plane for the desired result.
 |
+| Negative Vectors:
+| A negative vector is parallel, of equal magnitude and of opposite direction. :math:`\vec{A} = 5` is simply
 
-| In the case that one or more vectors start at the origin, the vectors can easily be shifted on the plane so that their tails and heads match up:
-
-.. figure:: images/movinghead.gif
 
 
