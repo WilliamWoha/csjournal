@@ -10,6 +10,7 @@ Vectors
 
 .. figure:: images/vector.png
     :scale: 40%
+    
     This is a right handed coordinate system. A vector rotated 90:math:`\circ` from OZ to OY will travel in the positive y-direction.
 
 | Then consider a vector :math:`\vec{P}` in the 3D Cartesian plane, it has magnitude :math:`\vert\ \vec{P} \vert` and the components ( :math:`P` :sub:`x`, :math:`P` :sub:`y`, :math:`P` :sub:`z`)
