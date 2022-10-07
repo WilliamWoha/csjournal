@@ -96,7 +96,7 @@ Cross Product
 | This can be represented by the determinant of the square matrix
 
 .. math::
-    \vec{a} \times \vec{b} = \renewcommand{\arraystretch}{2.5} \left[ \begin{array}{ccc}	i & j & k          \\	a_{\text{x}} & a_{\text{y}}    & a_{\text{z}} \\ 	b_{\text{x}} & b_{\text{y}} & b_{\text{z}}	\end{array}\right]
+    \vec{a} \times \vec{b} = \renewcommand{\arraystretch}{2.5} \left| \begin{array}{ccc}	i & j & k          \\	a_{\text{x}} & a_{\text{y}}    & a_{\text{z}} \\ 	b_{\text{x}} & b_{\text{y}} & b_{\text{z}}	\end{array}\right|
 
 
  
