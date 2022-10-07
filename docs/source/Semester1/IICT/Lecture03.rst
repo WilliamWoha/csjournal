@@ -31,16 +31,27 @@ Presentation Skills:
 | Properly formatted text should look like this. Use this format for quotes, facts, short statements, etc.
 
 .. figure:: images/format.png
-    :scale: 80 % 
-    :alt: an image showing properly formatted text
 
 | A concise slide should look like this
 
-.. figure:: images/carlsen4.png
-    :scale: 85 %
+.. figure:: images/presSlide.png
+
+    
+| and not like this
+
+.. figure:: images/presSlideTwo.png
 
 | Remember, the bullets on the slides are for you, not the audience (most of the time). Use them to guide your own thought process and talk about the topic, without overloading the audience with too much information.
 
 Lab Work:
 ^^^^^^^^^
 | The lab work here just has you making a presentation with the above format. Experiment with the tabs if you don't know where something is, it's fairly straightforward.
+|
+|
+|
+|
+|
+|
+|
+|
+| Images sourced by `Stinson Design <https://www.stinsondesign.com/>`_.
