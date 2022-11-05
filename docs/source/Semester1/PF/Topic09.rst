@@ -1,12 +1,16 @@
-.. _s1-pft-l08:
+.. _s1-pf-t09:
 
-Theory Lecture 08
------------------
+9) Self Assigning and Keyboard Buffer
+-------------------------------------
 
-| Week 4.
-| This is gonna be a long one because of something called the Keyboard Buffer. Get ready.
-
-.. _s1-pft-t008:
+| Now, remember the question that was asked on the last line of the previous page? What would be the output of Line #9?
+| The answer to that is 6. The value is unchanged.
+| This has to do with how Assigning works.
+|
+| I wanted to explain the Arithmetic Operators first. The ``=`` sign is used for Assigning values, but if it's not there, then the value is not affected in any way, shape, or form. So the cout statements would not change the values of it.
+| That doesn't actually mean you *can't* change it within the statement. ``cout << a = 15 << endl;`` is something which works, though it's not encouraged because Readability and Organization is still a priority.
+| 
+| Moving on, this page will tell about Self-Assigning Variables and also the Keyboard Buffer.
 
 Variable Assigning using itself
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -18,19 +22,17 @@ Variable Assigning using itself
 
 | Does that make sense to you?
 | If you called ``sum`` after those two lines, you'd get a value of 40.
-| When assigning (meaning in statements with ``=`` in them), the Compiler first works out the things on the right side, then assigns it to the variable on the left side. So for the line ``sum = sum + 10``, it first takes the value of ``sum`` from memory, does the required operations on it (in this case, addition of 10), and then assigns it. It just so happens to be that the assigning part happens to be at the original memory location.
+| When assigning (meaning in statements with ``=`` in them), the Compiler first works out the things on the right side, then assigns it to the variable on the left side. So for the line ``sum = sum + 10``, it first takes the value of ``sum`` from memory, does the required operations on it (in this case, addition of 10), and then assigns it. It just so happens to be that the assigning part happens to be at the original memory location. So in simple terms, it takes itself, modifies it, and puts it back.
 | In these situations, aka the ones where the variable works on itself, we can do something called `Combined Assignments`.
 *    ``sum = sum + 10`` is ``sum += 10``
 *    ``sum = sum - 10`` is ``sum -= 10``
 *    ``sum = sum * 10`` is ``sum *= 10``
 *    ``sum = sum / 10`` is ``sum /= 10``
 *    ``sum = sum % 10`` is ``sum %= 10``
-| If we do ``cout << sum + 10``, will the value of ``sum`` change? No. That just calculates and then outputs, there's no assigning taking place.
+|
+| If we do ``cout << sum + 10``, will the value of ``sum`` change? No. That just calculates and then outputs, there's no assigning taking place. But instead if we do ``cout << (sum = sum + 10)``, then the value does in fact change.
 
-| ``x += b + 5;`` is just
-| ``x = x + b + 5;``
-
-.. _s1-pft-t009:
+| ``x += b + 5;`` is just ``x = x + b + 5;``
 
 Keyboard Buffer (.get(), getline(), .ignore())
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -43,7 +45,7 @@ Keyboard Buffer (.get(), getline(), .ignore())
 	cin >> "Enter name: ";
 
 | If I write John Cena into that, then try to check the value of ``name``, it will give me an output of ``John``.
-| But there's this thing called the Keyboard Buffer. The thing is, this Buffer holds the data for all the keys pressed via the keyboard. ``John Cena`` is stored in the Keyboard Buffer, but the ``cin`` statement only read it until ``John``.
+| But there's this thing called the Keyboard Buffer. A Buffer is just a temporary memory location that acts kind of like a middleman. The thing is, this Buffer holds the data for all the keys pressed via the keyboard. ``John Cena`` is stored in the Keyboard Buffer, but the ``cin`` statement only read it until ``John``.
 | Here's an even funnier thing:
 
 .. code-block:: c++
@@ -59,7 +61,7 @@ Keyboard Buffer (.get(), getline(), .ignore())
 | If you ran that code and entered John Cena into the first prompt for an input, then you wouldn't even get the second prompt, and the code would output: ``Your full name is John, and your city is Cena``. This is because of the Keyboard Buffer.
 | "John Cena" is stored in the buffer, but the ``cin`` statement finds an escape sequence at the space present between John and Cena. So it stops there. But then another ``cin`` statement is called. Since it stopped at the space button, it then picks up from there and finds Cena, and just puts that into the second ``cin`` statement.
 |
-| The solution? Use a thing called ``getline(cin, var);``. It works the same way as ``cin >> var;``. You just write ``getline(cin, var);`` instead. But the difference is, this time no matter what you write, all of it will be stored into the variable. It only stops when the Enter key is pressed, and doesn't store the ``\n`` from that either.
+| The solution? Use a thing called ``getline(cin, var);``. It works the same way as ``cin >> var;`` (where var is just the variable name). You just write ``getline(cin, var);`` instead. But the difference is, this time no matter what you write, all of it will be stored into the variable. It only stops when the Enter key is pressed, and doesn't store the ``\n`` from that either.
 |
 | There's also ``.get()``. You write it as ``var = cin.get()``. This will read any key that is pressed and store it into the variable. Be it Enter, Space, Escape, Tab, anything. It reads all of it. It's used in games for checking for specific button key presses.
 
@@ -68,11 +70,12 @@ Keyboard Buffer (.get(), getline(), .ignore())
 
 	char key;
 	cin >> key;
-	if (key == '\n')
+	if (pressed key is '\n') // Meaning if the Pressed key is the Enter Key
 	{
     		(Some Code to trigger something)
 	}
 
+| That ``if`` statement isn't correct. I wrote it that way because I want to explain it thoroughly later, but that's just a glimpse of what it is. So don't copy paste that.
 | You want it to only work when Enter is pressed, but ``cin`` won't store Enter. So the solution? Replace ``cin >> key;`` with ``key = cin.get()``. If you press Enter, then ``\n`` will be stored into ``key``.
 | If you just write ``cin.get();`` then it won't store the key, but instead works like a "Press Any Key to Continue" button.
 | 
@@ -97,4 +100,3 @@ Keyboard Buffer (.get(), getline(), .ignore())
 |
 | The solution? Another command. ``cin.ignore(cond1, cond2)``. This is mentioned now instead of way back with John Cena because it only solves the problem of the rest of the Keyboard Buffer going into the next ``cin`` statement. It didn't solve the problem of Space not being stored.
 | ``cin.ignore(cond1, cond2)`` will ignore characters in the Keyboard Buffer until either Condition 1 is fulfilled, or Condition 2 is fulfilled. Condition 1 is a number value, and Condition 2 is a character check. ``cin.ignore(20,'\n')`` will ignore characters in the Keyboard Buffer until a ``\n`` is found, or until 20 spaces.
-

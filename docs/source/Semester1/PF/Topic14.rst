@@ -1,14 +1,7 @@
-.. _s1-pft-l11:
+.. _s1-pf-t14:
 
-Theory Lecture 11
------------------
-
-| Week 6, but this is the second class of the week and not the first. That one was lost due to Sessionals. I have no idea what they'll do to recover that.
-
-.. _s1-pft-t013:
-
-Selection Structures (elseif)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+14) Understanding IF/ELSE further
+---------------------------------
 
 | So remember the statement I made earlier? "If this happens, then do this. Otherwise do this". Let's modify that a bit. "If this happens, do this, but if this happens, do this, and if neither of those happen, then do this". That's IF, ElseIF, and ELSE in a nutshell.
 | Else if is used when more than two conditions have to be checked. Let's assume we have two numbers, a and b.
@@ -49,9 +42,6 @@ Selection Structures (elseif)
 		cout << "Failed." << endl;
 		
 | And yes this is exactly how you do correction statements. You just write ``if (marks > 100 || marks < 0)`` at the start and get the code to output a statement saying that this isn't an acceptable answer.
-| Anyways. That about covers that. The only thing left is Nested IF statements, and then my 9 hours of typing can come to a rest and PF will have been caught up. Then I'll do weekly updates on this or something.
-
-.. _s1-pft-t014:
 
 Nested Selections
 ^^^^^^^^^^^^^^^^^
@@ -77,6 +67,12 @@ Nested Selections
 		Go home
 
 | That's about it. You should be able to understand that. If not then watch a YT video on it, I'm tired.
+| It just puts IF statements within IF statements. Follow the logic.
 | You may have noticed that the last statement is an ``else if`` and not an ``else``. That's because the two conditions before it were: ``Pizza hut is open``, ``Pizza hut is closed AND Dominoes is open``. If we did an ELSE statement here, that would also include the situation of both Pizza Hut and Dominoes being open. You're not supposed to go home if they both happen to be open.
 | ELSE is the equivalent of checking the opposites of the previous IF statements.
+|
 
+Practice Exercises
+^^^^^^^^^^^^^^^^^^
+|
+| Rather simple. Program the codes in :ref:`s1-pf-req1`. The Rock Paper Scissors ones and the Highest Number one.

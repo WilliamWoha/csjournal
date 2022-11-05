@@ -1,12 +1,12 @@
-.. _s1-pft-l07:
+.. _s1-pf-t08:
 
-Theory Lecture 07
------------------
+8) MATHS Operators
+------------------
 
-| Week 4.
-| So there's these things called Operators. There's four categories of them. Arithmetic, Logical, Relational, and Bitwise. Lets start with the easy one.
-
-.. _s1-t005:
+| The thing is, there's actually 4 types of Operators. Arithmetic, Logical, Relational, and Bitwise. I titled this page as "Maths Operators" so it was easy to find and also because "Arithmetic" just sounds fancy but also unnecessary.
+| I'll still say Arithmetic Operators for the rest of the page though.
+| 
+| Logical and Relational Operators will be done with :ref:IF.
 
 Arithmetic Operators
 ^^^^^^^^^^^^^^^^^^^^
@@ -19,19 +19,24 @@ Arithmetic Operators
 *    ``%``: Percentage Sign (Modulus)
 | You know the first four already so I'm not gonna bother with them. The one thing you should know is, for division, there's no rounding. The data is just lost. If you do ``5 / 5`` you get 1 but if you do ``4 / 5`` or ``3 / 5`` or something where the decimal answer would be less then 1, your result is gonna be 0. This is different if you did ``4.0 / 5`` as then one of the values is float, and it's not a pure integer division. Then you get an answer in a float (meaning in decimal) instead of a 0.
 | Modulus, or MOD for short, is the new one. The simple explanation is:
-| ``18 / 7`` is 2 with a remainder of 4. Ignore decimals for now. If you did ``int a;`` and then ``a = 18/7;``, the value of ``a`` would be 2. The rest of the data would be lost since it's an ``int`` data type. If you did ``a = 18%7;``, the value of ``a`` would be 4. The MOD operator keeps only the remainder.
+| ``18 / 7`` is 2 with a remainder of 4. Ignore decimals for now. If you did ``int a;`` and then ``a = 18 / 7;``, the value of ``a`` would be 2. The rest of the data would be lost since it's an ``int`` data type. If you did ``a = 18 % 7;``, the value of ``a`` would be 4. The MOD operator keeps only the remainder.
+| Other examples:
+*    118 % 25 is 18.
+*    15 % 10 is 5.
+*    16 % 2 is 0.
+*    17 % 2 is 1.
+*    50 % 100 is 50.
+
 | This can be useful in a number of ways. For example, doing any number MOD 2 would either give 0 or 1. If it's 0 then it's even and if it's 1 then it's odd.
 | MOD can apply only on two integers. Not on more than that.
-| If ``x`` and ``y`` are two integers and you're doing ``x%y``, but ``x`` and ``y`` can both be either positive or negative, then the result of ``x%y`` will have the sign of ``x``. If ``x`` is negative, the result will be negative, regardless of if ``y`` is negative or positive.
+| If ``x`` and ``y`` are two integers and you're doing ``x % y``, but ``x`` and ``y`` can both be either positive or negative, then the result of ``x % y`` will have the sign of ``x``. If ``x`` is negative, the result will be negative, regardless of if ``y`` is negative or positive.
 | You can use MOD for digit separation too. Here's how it works:
-*    We have a number, ``3451``.
-*    ``3452 % 10`` is 2.
-*    ``3452 % 100`` is 52. ``52 / 10`` is 5.2 but since it's an integer, data is lost, and we get 5.
-*    ``3452 % 1000`` is 452. ``452 / 100`` is 4.52 but since it's an integer, data is lost, and we get 4.
-*    ``3452 % 10000`` is 3452. ``3452 / 1000`` is 3.452 but since it's an integer, data is lost, and we get 3.
-| In the first line, we get 2. In the second, 5. In the third, 4. In the fourth, 3. These results are the individual numbers that make up the entire number.
-
-.. _s1-t006:
+*    We have a number, ``3452``.
+*    ``3452 / 1`` is 3452. ``3452 % 10`` is 2.
+*    ``3452 / 10`` is 345.2, but since it's integer division, data is lost, and we get 345. ``345 % 10`` is 5.
+*    ``3452 / 100`` is 34.52, but since it's integer division, data is lost, and we get 34. ``34 % 10`` is 4.
+*    ``3452 / 1000`` is 3.452, but since it's integer division, data is lost, and we get 3. ``3 % 10`` is 3.
+| In the first line, we get 2. In the second, 5. In the third, 4. In the fourth, 3. These results are the individual numbers that make up the entire number: 3452.
 
 Precedence
 ^^^^^^^^^^
@@ -40,10 +45,8 @@ Precedence
 *    ``( )``
 *    ``/ , % , *``: If in same line, left to right
 *    ``+ , -``: If in same line, left to right
-| So ``(3+2)*6`` would give 30 and ``3+2*6`` would give 15
-| ``6*4+3-2/5`` would give 32 (as 2/5 would be 0)
-
-.. _s1-t007:
+| So ``(3 + 2) * 6`` would give 30 and ``3 + 2 * 6`` would give 15
+| ``6 * 4 + 3 - 2 / 5`` would give 27 (as 2 / 5 would be 0 because of integer division)
 
 Type Coercion (Type Casting)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -60,7 +63,7 @@ Type Coercion (Type Casting)
 
 .. code-block:: c++
 
-	int answer = a*b;
+	int answer = a * b;
 
 | ``a`` is float, and ``b`` is int. ``b`` gets promoted to float, and then the math operation is done. ``a * b`` is calculated. This is then saved to ``answer``, but the value gets demoted into ``int`` as the declaration of ``answer`` was in ``int``. Decimal Place values are truncated.
 | 
@@ -69,4 +72,36 @@ Type Coercion (Type Casting)
 *    ``type(value)`` or ``(type)value``: Write the data type in ``type``, and the variable name or direct value you want to convert in ``value``.
 | If you do ``float(7/10)`` the result would be 0. If you instead do ``float(7)/10`` then you get 0.7. It solves in the brackets first so make sure you're converting BEFORE the division.
 | The same logic applies to ``(float)7/10`` and ``static_cast<float>(7)/10``.
+
+
+
+Practice Exercises
+^^^^^^^^^^^^^^^^^^
+
+| I don't really have a Practice thing to give since this is just dependent on Maths, though if I think of any I'll write them.
+| Instead, you can have this, which is a brain teaser for the next concept:
+
+.. code-block:: c++
+   :linenos:
+	
+	int a;
+	cout << "Enter number: " << endl;
+	cin >> a;
+	cout << "The number you entered is: " << a << endl;
+	a = 6;
+	cout << "The value has been changed to: " << a << endl;
+	cout << "The double of the value is: " << a+6 << endl;
+	cout << "The half of the value is: " << a-3 << endl;
+	cout << "The value is: " << a << endl;
+
+| Read that code above, see if it makes sense. I want you to try and guess the output for Line #9.
+| Would it be "The value is: 9"?
+| Or would it be "The value is: 6"?
+|
+| If you're confused by what the question is, then it's just this: Will the value of ``a`` change with the cout statements used after it?
+|
+| Write the answer on a pen and paper then move on to the next page to see if you were right!
+
+
+
 

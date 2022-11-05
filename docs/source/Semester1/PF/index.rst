@@ -4,9 +4,9 @@ Programming Fundamentals
 
 | This site is undergoing updates until the Semester finishes. Please refresh the page to make sure it's the latest version.
 |
-| To avoid copyright issues with FAST, none of their material will be uploaded here. I can however reference info from it, and upload and link files that don't belong to them.
-|
 | Programming Fundamentals is worth 4 Total Credit Hours. 3 for Theory, and 1 for Lab. That means for 16 weeks, there will be 3 hours a week for Theory and 1 hour a week for Lab. Yes, we do three hours for Lab but that's beside the point. Credit Hours are counted weirdly.
+|
+| Absolutes if you don't know just means "Out of 100%, it is this many percentage points". So 40 Absolutes means it's worth 40% of the total semester grade.
 |
 | Outline for PF Theory:
 
@@ -33,35 +33,26 @@ Grading Policy is Absolute Grading.
 *    Starting Out with Programming, Logic, and Design; Third Edition by Tony Gaddis
 *    Starting Out with C++; 8th Edition by Tony Gaddis
 
-| Software:
-
-*    Ubuntu, version 20.04, installed via Dual Boot or Virtual Machine (They say it's not allowed but honestly a VM is better for most cases. It works perfectly fine and I use it. It's far far less of a hassle to install and takes less space)
-*    G++ Compiler Suite in Ubuntu
-*    Text Editor (Preferably GEdit) in Ubuntu
-
 .. toctree::
    :caption: Lectures
    :maxdepth: 1
    :glob:
 
-   TheoryLecture01
-   LabLecture01
-   TheoryLecture02
-   TheoryLecture03
-   LabLecture02
-   TheoryLecture04
-   TheoryLecture05
-   LabLecture03
-   TheoryLecture06
-   TheoryLecture07
-   LabLecture04
-   TheoryLecture08
-   TheoryLecture09
-   LabLecture05
-   TheoryLecture10
-   TheoryLecture11
-   regret1
-   TheoryLecture12
+   Topic01
+   Topic02
+   Topic03
+   Topic04
+   Topic05
+   Topic06
+   Topic07   
+   Topic08
+   Topic09
+   Topic10
+   Topic11
+   Topic12
+   Topic13
+   Topic14
+
 
 	
    
