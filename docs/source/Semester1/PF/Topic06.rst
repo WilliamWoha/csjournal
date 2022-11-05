@@ -114,10 +114,10 @@ Practice Exercises
 
 .. code-block:: c++
 
-    	   /\\
-	  /  \\
-	 /    \\
-	/      \\
+    	   /\
+	  /  \
+	 /    \
+	/      \
 
 | 2.2) Make your code from 2.1) run in only one cout statement (A very specific Escape Sequence will be used to make this possible!).
 | 2.3) Make your code from 2.1) run using setw() statements (You can't use any spaces!).
