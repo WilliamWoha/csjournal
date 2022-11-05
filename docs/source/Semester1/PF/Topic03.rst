@@ -3,6 +3,8 @@
 3) Pseudocode and Flowcharts
 ----------------------------
 
+| The best way to practice Programming and Flowcharts, are through `Scratch <https://scratch.mit.edu/>`_. It is VERY well designed and very effective at teaching the fundamentals of Programming. I haven't used it much myself but seen great things happen from it, so if you do get the time, PLEASE watch a video on it and give it a try.
+|
 | I did say in the start that it's more Logic based than it is Maths based, but the thing is those two things kind of go hand in hand. And in the start there's still gonna be a little bit of Maths involved, but I wasn't lying about the level of Maths involved. You don't have to do things like Differential Equations or something. You just have to use the same concepts you've been learning throughout your whole life in a different approach, like thinking with Base 2 instead of Base 10.
 |
 | Alright so, if you've ever seen a programming language or a program before then it either *does* make sense to you, or it *doesn't*. But the thing is, with so many languages and things to write and ways to perform the same task, there's no universal way to solve a problem.
