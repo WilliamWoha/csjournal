@@ -71,6 +71,7 @@ Nested Selections
 | You may have noticed that the last statement is an ``else if`` and not an ``else``. That's because the two conditions before it were: ``Pizza hut is open``, ``Pizza hut is closed AND Dominoes is open``. If we did an ELSE statement here, that would also include the situation of both Pizza Hut and Dominoes being open. You're not supposed to go home if they both happen to be open.
 | ELSE is the equivalent of checking the opposites of the previous IF statements.
 |
+| Do remember that an ``else`` belongs to a previous ``if`` statement. Even in Nested structures you can't make the structure use an extra ``else`` without an ``if``.
 
 Practice Exercises
 ^^^^^^^^^^^^^^^^^^
