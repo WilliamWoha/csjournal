@@ -34,14 +34,14 @@ Flowcharts
 | Here's a flowchart about trying to fix a Lamp.
 
 .. figure:: images/LampFlowchart.png
-    :scale: 100%
+    :scale: 60%
     :alt: A flowchart for fixing a lamp
 
 |
 | Here's a flowchart of the Highest Number problem:
 
 .. figure:: images/highestNumber.png
-    :scale: 100%
+    :scale: 60%
     :alt: A flowchart for Highest Number
 
 |
