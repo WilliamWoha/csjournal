@@ -21,9 +21,9 @@ Equipment Requirements
 
     Make sure to go into Settings, and to enable the setting to ``Run in Terminal``. Otherwise, Code-Runner won't be able to work with Inputs (you'll learn what those are later).
 
-.. figure:: images/table.png
+.. figure:: images/terminal.gof
     :scale: 80%
-    :alt: a table of the 4 number systems
+    :alt: a gif for enabling Run in Terminal
 
 *    Keyboard:
 
