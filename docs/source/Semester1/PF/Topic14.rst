@@ -15,7 +15,6 @@
 	}
 	else if (b>a)
 	{
-    
 		cout << b << " is greater." << endl;
 	}
 	else
