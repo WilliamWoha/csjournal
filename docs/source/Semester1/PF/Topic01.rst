@@ -22,7 +22,7 @@ Intro to the Binary Number System
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe width="560" height="315" src="https://youtu.be/LpuPe81bc2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/LpuPe81bc2w" title="Binary Numbers and Base Systems as Fast as Possible" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
 | If the video doesn't make sense to you then I'll try to explain it in text. Knowing how it works is important because the language we'll be doing (C++) uses these concepts a lot in how its made.
@@ -69,9 +69,6 @@ Intro to the Binary Number System
 | So we adjust accordingly and we get 110. Which is (1 x 2\ :sup:`2` \) + (1 x 2\ :sup:`1` \) + (0 x 2\ :sup:`0` \).
 |
 | To basically summarize: The number system works on the foundation that every next position is worth the *base* times more than the previous one. Thousands is worth 10 times more than 100, which is 10 times more than 10, which is 10 times more than 1. And the base is determined by the number of digits. If the base was switched to 2, then the next values would be worth 2, 4, 8, and 16 times respectively.
-|
-|
-|
 |
 | This is the Binary system. A number system with Base 2. Every single computer on the planet that works with electricity uses this.
 |
