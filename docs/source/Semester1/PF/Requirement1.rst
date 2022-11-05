@@ -32,4 +32,4 @@ Knowledge Requirements
     | So I'd lose!
     |
     | Although the example of RPS I just wrote would still have Maths involved in the code, it's not the kind that would give you a headache. It's just logic, and if you can master logic, you can master programming. The best programming happens away from the keyboard.
-    | This was the reason why in ref:`s1-pf-req0` I talked about the Pen and Paper.
+    | This was the reason why in :ref:`s1-pf-req0` I talked about the Pen and Paper.
