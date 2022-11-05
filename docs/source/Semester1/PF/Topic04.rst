@@ -58,7 +58,7 @@ I/O in Flowcharts and Programs
 |
 | Variables will allow the computer to actually remember the values so it doesn't forget immediately, and any input you do HAS to be stored in a variable, otherwise the computer will forget it.
 |
-| You'll learn specific Variables later, in :ref: . But for now, just keeping variables in mind, let's re-learn Flowcharts.
+| You'll learn specific Variables later, in :ref:`s1-pf-t07`. But for now, just keeping variables in mind, let's re-learn Flowcharts.
 
 Flowchart Specifics
 ^^^^^^^^^^^^^^^^^^^
@@ -69,8 +69,8 @@ Flowchart Specifics
 *    Places where the Program has to go one way or another (we call these Conditionals) are Diamonds
 | The only missing shape is the Rectangle, which is just used as a General Step. But here's an example of a more detailed program, and you can see that Rectangles get used far more frequently.
 
-.. figure:: images/table.png
-    :scale: 80%
+.. figure:: images/flowchart-fig2.gif
+    :scale: 100%
     :alt: A flowchart
 
 (Table taken from `Asq.org <https://asq.org/quality-resources/flowchart>`_).

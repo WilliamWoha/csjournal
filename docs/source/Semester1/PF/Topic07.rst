@@ -111,7 +111,7 @@ Float and Double
 Boolean
 """""""
 
-| This one's the simplest and most fun one, I love using it. It can just hold two values and that's it: It can either be set to ``true``, or it can be set to ``false``. It's not really usable for any calculations or anything but it's most useful for Flags, which are something we'll see in :ref:.
+| This one's the simplest and most fun one, I love using it. It can just hold two values and that's it: It can either be set to ``true``, or it can be set to ``false``. It's not really usable for any calculations or anything but it's most useful for Flags, which are something we'll see in :ref:`s1-pf-t12`.
 
 Character
 """""""""
@@ -119,7 +119,7 @@ Character
 | Well, the truth is, we don't. We do it the *American* way, and just store the English language.
 | Other languages can only be stored in computers by using something called the UTF-8 format, but Programming is pretty much entirely in English, so instead, the ASCII table is used, which uses only 8 bits. That gives it upto 255 values, and within that it can store every single letter of the English alphabet, some numbers, some special characters such as ``!@#$%^&*(){}[]:;"'<>,.?/``, some extra things like Escape Sequences ``\t, \n, \\, \", etc``, and more. It's enough for most people.
 | 
-| Any time you want to work with a single character, you use this. Although you may not really use it for declaration so much, you'll end up using it way more in later concepts such as :ref: Conditionals, with things like "Would you like to try again? [Y/N]" and then you can read the individual 'Y' or the individual 'N' if the person presses them. This Data Type is also the foundation for the next one: String.
+| Any time you want to work with a single character, you use this. Although you may not really use it for declaration so much, you'll end up using it way more in later concepts such as :ref:`s1-pf-t12`, with things like "Would you like to try again? [Y/N]" and then you can read the individual 'Y' or the individual 'N' if the person presses them. This Data Type is also the foundation for the next one: String.
 
 String
 """"""

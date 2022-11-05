@@ -6,7 +6,7 @@
 | The thing is, there's actually 4 types of Operators. Arithmetic, Logical, Relational, and Bitwise. I titled this page as "Maths Operators" so it was easy to find and also because "Arithmetic" just sounds fancy but also unnecessary.
 | I'll still say Arithmetic Operators for the rest of the page though.
 | 
-| Logical and Relational Operators will be done with :ref:IF.
+| Logical and Relational Operators will be done with :ref:`s1-pf-t12`.
 
 Arithmetic Operators
 ^^^^^^^^^^^^^^^^^^^^
@@ -72,8 +72,6 @@ Type Coercion (Type Casting)
 *    ``type(value)`` or ``(type)value``: Write the data type in ``type``, and the variable name or direct value you want to convert in ``value``.
 | If you do ``float(7/10)`` the result would be 0. If you instead do ``float(7)/10`` then you get 0.7. It solves in the brackets first so make sure you're converting BEFORE the division.
 | The same logic applies to ``(float)7/10`` and ``static_cast<float>(7)/10``.
-
-
 
 Practice Exercises
 ^^^^^^^^^^^^^^^^^^

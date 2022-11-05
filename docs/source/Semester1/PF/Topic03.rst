@@ -29,19 +29,19 @@ Flowcharts
 ^^^^^^^^^^
 
 | Flowcharts are just visualizations of Pseudocode using Shapes. You might think they're very simple, but believe me they can get very big very fast. It's important to keep organized.
-| Flowcharts are a good way to show Condition Checks. You won't study them until way later in :ref:, but it's good to know about how they work.
+| Flowcharts are a good way to show Condition Checks. You won't study them until way later in :ref:`s1-pf-t12`, but it's good to know about how they work.
 |
 | Here's a flowchart about trying to fix a Lamp.
 
-.. figure:: images/lamp.png
-    :scale: 80%
+.. figure:: images/LampFlowchart.png
+    :scale: 100%
     :alt: A flowchart for fixing a lamp
 
 |
 | Here's a flowchart of the Highest Number problem:
 
-.. figure:: images/lamp.png
-    :scale: 80%
+.. figure:: images/highestNumber.png
+    :scale: 100%
     :alt: A flowchart for Highest Number
 
 |
