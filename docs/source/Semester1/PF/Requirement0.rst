@@ -22,7 +22,7 @@ Equipment Requirements
     Make sure to go into Settings, and to enable the setting to ``Run in Terminal``. Otherwise, Code-Runner won't be able to work with Inputs (you'll learn what those are later).
 
 .. figure:: images/terminal.gif
-    :scale: 80%
+    :scale: 40%
     :alt: a gif for enabling Run in Terminal
 
 *    Keyboard:
