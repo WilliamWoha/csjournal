@@ -15,7 +15,7 @@ IF/ELSE
 *    ``<=``: Less than or equal to
 *    ``>``: Greater than
 *    ``<``: Less than
-*    ``==``: Equal to
+*    ``==``: Equal to (Remember that one ``=`` means Assigning)
 *    ``!=``: Not Equal to
 | And now here's some Logical Operators:
 *    ``&&``: AND
