@@ -15,17 +15,17 @@ Local Variables
 
 	void func1()
 	{
-		int n = 10;
+	    int n = 10;
 	}
 
 	void func2()
 	{
-		int n = 20;
+	    int n = 20;
 	}
 
     	int main()
 	{
-		int n = 30;
+	    int n = 30;
 	}
 
 | In each of those Functions above there's a variable called ``n`` and they all have different values. Yet if you run that code, it would run completely fine.
@@ -42,17 +42,17 @@ Global Variables
 
 	void func1()
 	{
-		n = 10;
+	    n = 10;
 	}
 
 	void func2()
 	{
-		n = 20;
+	    n = 20;
 	}
 		
     	int main()
 	{	
-		n = 30;	
+	    n = 30;	
 	}
 
 | This is the same code from above but with one extra line, and this line is outside of every single function. This means it was declared as a Global Variable. Global Variables are variables that can be accessed by any function. They behave like any regular function, the access is just global. This means multiple functions can also change it in different ways and make it harder to keep track of it.
@@ -69,9 +69,9 @@ Static Variables
 
 	void func1()
 	{
-		int n = 10;
-		cout << n << endl;
-		n++;
+	    int n = 10;
+	    cout << n << endl;
+	    n++;
 	}
 
 | If you were to call that function three times, you'd get the output of ``10``, ``10``, ``10``, all in different lines. The ``n++`` operator is there in the function, but when the Function ends and is called again, it doesn't remember the previous value. To solve this, Static Variables are used. They remember the values of previous Static Data Types.
@@ -81,9 +81,9 @@ Static Variables
 
 	void func1()
 	{
-		static int n = 10;
-		cout << n << endl;
-		n++;
+	    static int n = 10;
+	    cout << n << endl;
+	    n++;
 	}
 
 | *Now* if you were to call the function three times, you'd instead get ``10``, ``11``, ``12``, all in different lines. It's not re-declaring the value of ``n`` every time the function is called.
