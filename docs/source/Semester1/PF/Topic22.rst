@@ -100,3 +100,19 @@ Break and Continue
 	avg = float(sum)/students;
 
 | The code above is the Sentinel Value code converted so that it uses a ``break;`` statement to end the loop instead. The condition in the IF statement can be anything you want it to be. ``break;`` will cause the loop to end and the rest of the code to continue.
+|
+| The ``continue;`` statement also does the same but not for the entire loop. It just skips the rest of the code and moves to the next iteration.
+
+.. code-block:: c++
+   :linenos:
+	
+	for(int i = 0; i < 10; i++)
+	{
+		if (i == 6)
+			continue;
+		
+		cout << i << endl;
+	}
+
+| The code just outputs the values from 0 to 9 but it skips the value 6.
+| It's not used that much but it can still come in handy if you want to skip specific values. You can try making a loop that outputs even numbers only using this. Or a loop that skips all prime numbers.
