@@ -66,4 +66,4 @@
 | Two arguments are passed: ``5``, and ``10``. Those Arguments are stored in ``x`` and ``y``, and then used in the Function.
 |
 | You might be wondering why the Function Return Types are set to ``void`` even though some code is clearly being executed and calculations are being done.
-| The thing is, the specific keyword of ``return`` means to give a value *back*. So if you do ``a = pow(3, 5);``, then ``pow(3, 5)`` is calculated, and then the result of it is *return*ed to ``a``. This is not the same as, calculating the result within the function, and then writing ``cout << result << endl;``. There's no value being given back. It's just executing code.
+| The thing is, the specific keyword of ``return`` means to give a value *back*. So if you do ``a = pow(3, 5);``, then ``pow(3, 5)`` is calculated, and then the result of it is returned to ``a``. This is not the same as, calculating the result within the function, and then writing ``cout << result << endl;``. There's no value being given back. It's just executing code.
