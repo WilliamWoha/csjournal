@@ -42,17 +42,17 @@ Global Variables
 
 	void func1()
 	{
-		int n = 10;
+		n = 10;
 	}
 
 	void func2()
 	{
-		int n = 20;
+		n = 20;
 	}
 		
     	int main()
 	{	
-		int n = 30;	
+		n = 30;	
 	}
 
 | This is the same code from above but with one extra line, and this line is outside of every single function. This means it was declared as a Global Variable. Global Variables are variables that can be accessed by any function. They behave like any regular function, the access is just global. This means multiple functions can also change it in different ways and make it harder to keep track of it.
