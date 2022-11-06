@@ -5,7 +5,7 @@
 
 | This one's simple. Incredibly simple.
 |
-| It's just WHILE but written in a different way. It's also the first (and possibly onle) situation where you'd use a semicolon with some kind of Selection or Loop structure.
+| It's just WHILE but written in a different way. It's also the first (and possibly only) situation where you'd use a semicolon with some kind of Selection or Loop structure.
 |
 .. code-block:: c++
    :linenos:
