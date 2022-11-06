@@ -34,7 +34,7 @@
 
     int main() 
     {
-	  square(5);
+	square(5);
         return 0;
     }
 
@@ -58,7 +58,7 @@
 
     int main() 
     {
-	  sum(5, 10);
+	sum(5, 10);
         return 0;
     }
 
