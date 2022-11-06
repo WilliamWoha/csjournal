@@ -31,7 +31,6 @@
 
 .. code-block:: c++
    :linenos:
-   :emphasize-lines: 1,2,3,11
    
     int main() 
     {
@@ -64,9 +63,9 @@
 
     int main() 
     {
-	  myFunc();
-	  myFunc();
-	  myFunc();
+	myFunc();
+	myFunc();
+	myFunc();
         return 0;
     }
 
@@ -91,9 +90,9 @@
 
     int main() 
     {
-	  myFunc();
-	  myFunc();
-	  myFunc();
+	myFunc();
+	myFunc();
+	myFunc();
         return 0;
     }
 
