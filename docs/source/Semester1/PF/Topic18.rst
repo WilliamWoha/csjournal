@@ -67,7 +67,7 @@
 |
 
 .. figure:: images/unspecified.png
-    :scale: 80%
+    :scale: 70%
     :alt: it's no use
 
 |
