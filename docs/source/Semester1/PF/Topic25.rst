@@ -25,7 +25,7 @@ Default Parameters
 
     int main() 
     {
-	  cout << sum() << endl;
+	cout << sum() << endl;
         return 0;
     }
 
@@ -43,7 +43,7 @@ Default Parameters
 
     int main() 
     {
-	  cout << sum() << endl;
+	cout << sum() << endl;
         return 0;
     }
 
@@ -67,7 +67,7 @@ Default Parameters
 
     int main() 
     {
-	  cout << sum() << endl;
+	cout << sum() << endl;
         return 0;
     }
 
@@ -116,11 +116,11 @@ Function Overloading
     }
     int sum(int a, int b, int c)
     {
-	  return a+b+c;
+	return a+b+c;
     }
     int sum(float a, float b)
     {
-	  return a+b;
+	return a+b;
     }
 
 | Ok that float one should also have a Return Type of ``float`` but I kept it to ``int`` for the point of explaining.
