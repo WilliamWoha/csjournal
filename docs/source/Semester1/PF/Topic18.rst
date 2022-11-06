@@ -63,7 +63,7 @@
 
 | If you get a question like that, you're being too curious. Which is good, but also, it's like questioning *why* the laws of Physics are there. We already have such a difficult time understanding them as is, don't need to go after this.
 |
-| A similar question was also asked on `This StackOverflow Forum <https://stackoverflow.com/questions/6915963/multiple-increment-operators-in-single-statement>`_). I spent a LONG time trying to figure it out, and it didn't make sense to me.
+| A similar question was also asked on `This StackOverflow Forum <https://stackoverflow.com/questions/6915963/multiple-increment-operators-in-single-statement>`_. I spent a LONG time trying to figure it out, and it didn't make sense to me.
 |
 
 .. figure:: images/unspecified.png
