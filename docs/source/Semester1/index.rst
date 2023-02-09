@@ -9,7 +9,7 @@ Semester 1
 |
 | If you're a student from a new admission, here's some advice and general tips to know from the mistakes I've made, so you don't have to.
 
-*    If you need to buy a new machine, get a laptop. If you don't have much money, get a used or refurbished laptop and put an SSD in it.
+*    If you need to buy a new machine, get a laptop. If you don't have much money, get a used or refurbished laptop and put an SSD in it. I personally use a Lenovo T440 and it cost me only 140$, and 40$ for a brand new 6-cell battery. It easily lasts 15 hours and has a great keyboard. The SSD is what makes it so effective.
 *    Buy a whiteboard so you can write down your weekly tasks and deadlines and then you can put it in the corner and wake up to it every day.
 *    Interact with people and find out more of who they are and what their skills are. You'll be surprised by the level of people in your class from all sorts of places. Make sure you have someone you trust because the only thing standing between you and a bad grade is their ability to explain a concept to you (I'm writing this in the future after someone explained to me 5 weeks of content in 50 minutes and I got 93% in that exam. If you're reading this, thanks dude).
 *    You shouldn't worry, you shouldn't complain, and you shouldn't cry. The reason is, it doesn't help. Just breathe, relax, and focus. You got this. Make sure to drink plenty of water.
@@ -22,7 +22,5 @@ Semester 1
    :glob:
 
    PF/index
-   IICT/index
-   AP/index
    
    *
