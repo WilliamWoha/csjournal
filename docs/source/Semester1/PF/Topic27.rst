@@ -47,8 +47,9 @@
 	int marks[] = {10, 20, 30, 40, 50}; // 10 20 30 40 50
 	int marks[] = {10, 20, 30};         // 10 20 30
 	int marks[5] = {10, 20, 30};        // 10 20 30 0 0
-	int marks[10] = {};			// All zero's
-	int marks[10];				// All Garbage Values
+	int marks[5] = {10};        		// 10 0 0 0 0
+	int marks[10] = {};					// All zero's
+	int marks[10];						// All Garbage Values
 	
 	int a;
 	int marks[10];
