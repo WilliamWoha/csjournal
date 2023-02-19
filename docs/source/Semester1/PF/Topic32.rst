@@ -61,11 +61,11 @@
 		if(n < 1)
 			return;
 		cout << "Hello World!" << endl;
-		n--;
-		message(n); // This is the part that makes this a Recursion.
-		// message(n-1); can also be written instead of the two lines above.
+		message(n-1); // This is the part that makes this a Recursion.
 		// The objective is to put a new value into the Recursion, so it doesn't
 		// repeat itself.
+		// You could do n-- and then do message(n), but it's (according to my teachers)
+		// better practice to NOT modify the original variable.
 	}
 
 	int main()
