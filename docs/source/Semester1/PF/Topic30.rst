@@ -36,7 +36,10 @@
 | The output of the third line will be 10. If you managed to get that then you've probably already done this topic before. If you managed to get that without knowing about this topic then....I have no words.
 |
 | Alright, onto the topic itself. Passing by Reference means passing the actual variable to the function instead of the function making a replica and modifying that instead. As you saw in the example above, even though in ``fun`` the line said ``n = 5``, the value in ``int main()`` was not affected, and the output was 20 in the second ``cout`` statement. However, in ``fun2``, the value was passed by Reference. This means that any changes made to that variable within that function, will in fact be modifying the actual value, as if it was there.
-|
+
+How the Computer Memory Works
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 | I explained this slightly during :ref:`s1-pf-t07`, but we're gonna get into much more detail now. Read this next block of text carefully, and if you don't understand it, then read it multiple times. It's *CRUCIAL* that you understand this for Pointers.
 |
 | When you declare a variable, such as ``int n = 5``, then the program creates a location in the memory, and it stores the value 5 into it. It doesn't do this when the program is saved. It only does this when the Program is being run. It also does this in the computer's RAM so it doesn't slow down. Anyways, imagine the memory (RAM) to be a very very long road, and on one side of the road are houses, all neatly lined up. On the other side of the road there's nothing. It's a one sided neighborhood. Each of those houses has an Address, and each house also has stuff inside of it. There's basically infinite houses, but not all of them are occupied. If we, the programmer, decide we want to use the House so we can put stuff into it, then the Program prepares that house. If you do ``int n``, then a house is prepared, and any time you do something with ``n``, the stuff inside the house is changed. Doing ``int n`` means whatever the situation of the house was initially, will be kept as is, and the house will change only when needed. Doing ``int n = 5`` however, means that the house is immediately cleaned and then told to keep a value of 5.

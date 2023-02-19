@@ -25,4 +25,5 @@ Contents
    :glob:
 
    Semester1/index
+   Semester2/index
    *
