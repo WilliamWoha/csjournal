@@ -17,7 +17,7 @@
 
     int* ptr = new int;
 
-| The key player in this is the ``new`` keyword. The way it works is, the Heap is just this giant pool of memory that sits there, waiting to be used. It could also be doing something else because of things the programmer is unaware of, but for the most part, it doesn't do anyhting. There's memory available to use there. But when you declare a normal variable, it ends up being declared in the Stack instead. Even pointers are declared in the Stack. In the example above, the actual ``int`` variable, which is the Pointer, is declared in the Stack. So, to actually access the heap, you use the ``new`` keyword.
+| The key player in this is the ``new`` keyword. The way it works is, the Heap is just this giant pool of memory that sits there, waiting to be used. It could also be doing something else because of things the programmer is unaware of, but for the most part, it doesn't do anything. There's memory available to use there. But when you declare a normal variable, it ends up being declared in the Stack instead. Even pointers are declared in the Stack. In the example above, the actual ``int`` variable, which is the Pointer, is declared in the Stack. So, to actually access the heap, you use the ``new`` keyword.
 |
 | The ``new`` keyword returns a *Memory Address* in the Heap, and allocates space in the Heap to use as a Memory Location. Using the ``new`` keyword returns an address, and that address has to be stored into a Pointer. And that's exactly what's happening here. We've declared a pointer that will remember the location of this Memory Address, and through this pointer, we can access the variable which has now been prepared in the Heap.
 |
