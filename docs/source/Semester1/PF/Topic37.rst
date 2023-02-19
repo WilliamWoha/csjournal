@@ -13,7 +13,7 @@ Dynamic Array Declaration
 .. code-block:: c++
    :linenos:
 
-    char* ptr = char int[5];
+    char* ptr = new char[5];
 
 | The heap searches for 5 consecutive memory locations of 1 Byte each which are freely available, and when it finds any 5 which are free, it returns the pointer to the *first* one. This detail is important for actually accessing all 5 memory locations.
 | If you wanted to access the first location and use it as a variable, you'd use ``*ptr``. You would dereference it. But for the other 4 remaining locations, the only way to access them, is through Pointer Arithmetic. And here's how it works.
