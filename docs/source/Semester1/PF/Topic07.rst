@@ -102,10 +102,10 @@ Float and Double
 | So from the example of int(2.99999) you can probably guess what's happening here, but if not, I'll still explain.
 | Floating point numbers are inaccurate because the formula they use for storing numbers, don't store the *exact* numbers, but rather very very close approximations. 3 is not stored as exactly 3, but instead as something like 3.00000000000054. So in the code above, what's happening is, the result is being calculated as 2.9999999, but it's not at 3.
 | 
-| The approximation it takes is the closer one. So between, 2.8 and 3.1, for storing the number 3, it will remember use 3.1. Between 2.99 and 3.02, it will use 2.99. That's why this is happening.
+| The approximation it takes is the closer one. So between, 2.8 and 3.1, for storing the number 3, it will use 3.1. Between 2.99 and 3.02, it will use 2.99. That's why this is happening.
 | But that's just how computers are and you can't really do anything about it, though there's something you can do to make things more accurate which is the use of ``Double``. It's the same thing as ``Float``, literally, except it just uses more Memory Locations. This causes the range to increase to (±3.4 x 10\ :sup:`308`\) to (±3.4 x 10\ :sup:`-308`\). It can hold values more accurately than ``Float``, but still can suffer from this problem.
 |
-| It's not something to worry about at the beginner level. The only reason I bring this up is because, some people tend to think that ``Int`` has no reason to exist if ``Float`` can already hold those values and also hold decimals. This is NOT true.
+| It's not something to worry about at the beginner level. The only reason I bring this up is because, some people tend to think that ``Int`` has no reason to exist if ``Float`` can already hold numbers with decimal points, and also have a much much higher range. This is NOT true. Different Data Types are used for different purposes.
 |
 
 Boolean
@@ -130,8 +130,8 @@ String
 
 	#include <string>
 
-| Strings are just Multiple Characters. The main way to differentiate them is, one character will use ``' '``, while more than one will use ``" "``.
-| Any time you want to store more than one character, you use this.
+| Strings are just Multiple Characters. The main way to differentiate them is, one character will use ``' '``, while more than one will use ``" "``. 'a' is an example of a Char. "a" is an example of a String. 'aa' is technically a Char data type but it's impossible for this to exist since Char can only store *only* one character.
+| Any time you want to store more than one character, you use Strings. There's also Character Arrays but we deal with that later.
 
 Declaration and Assigning
 """""""""""""""""""""""""
@@ -146,11 +146,12 @@ Declaration and Assigning
 	float num;	
 	float num1 = 2;
 	double num2 = 3.5
-	bool isEven = false;;
+	bool isEven = false;
 	char c = 'p';
 	string a, b, c;
 	string name = "John Cena";
 	int a = 2, b = 3, c = 4;
 
 | These are all valid declarations. The less traditional ones ones you can figure out on your own.
-| You don't have to immediately assign a value during declaration. You can just assign it later. The way to do so would be ``var = value``. The Equals sign here means the Program is telling the computer to put what's on the right side, into what's on the left side. It's a bit similar to Maths, but not entirely. If you do x = 5 in Maths then you can't do things like 2x = 10. It doesn't know that. You just put the variable name on the left, and the value on the right. So in this case if you wanted to double the value of ``x``, you'd do ``x = 2 * 5``. If you're confused as to why the multiplication is ``*`` instead of ``x``, it's explained on the next page.
+| You don't have to immediately assign a value during declaration. You can just assign it later. The way to do so would be ``var = value``. The Equals sign here means the Program is telling the computer to put what's on the right side, into what's on the left side. It's a bit similar to Maths, but not entirely. If you do x = 5 in Maths then you can't do things like 2x = 10. It doesn't know that. You just put the variable name on the left, and the value on the right. But what you can also do is make it calculate the values, and use other variables. So for example I have a variable ``a`` which has a number stored in it, and I want to have another variable ``b`` which has twice the value of ``a``. I can simply do ``b = a * 2`` which is read as "In variable b, store the result of (a times 2)".
+| You'll learn more as you keep reading along and eventually things should make more sense.
