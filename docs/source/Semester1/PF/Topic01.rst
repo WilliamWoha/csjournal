@@ -51,7 +51,7 @@ Intro to the Binary Number System
 |
 | Let's say, instead of 0 to 9, you want to use a new set of digits. And this new set of digits only has two positions: 0, and 1. But what if you want to count till the number 3?
 | We'll do the same thing 0 to 9 did. We add more digits to the left side, with their values increasing. So to represent the number 3, you'd say it is 11. 
-| You might see that number and think it's 11, but it is in fact 3. It's just difficult to see that because of the two 1's. You're just not used to it. But I'm hoping what I say next will let everything just click.
+| You might see that number and think it's eleven, but it is in fact three. It's just difficult to see that because of the two 1's. You're just not used to it. But I'm hoping what I say next will let everything just click.
 |
 | Tens meant 10 times the value. 10 can also be written as 10\ :sup:`1` \.
 | Hundreds meant 100 times the value. 100 can also be written as 10\ :sup:`2` \.
@@ -63,7 +63,7 @@ Intro to the Binary Number System
 |
 | They become 2\ :sup:`1` \ and 2\ :sup:`2` \ respectively. So any number in the Tens position with Base 2 would in fact be worth 2\ :sup:`1` \ times more, and any number in the Hundreds position with Base 2 would in fact be worth 2\ :sup:`2` \ times more.
 |
-| So going back to the number 11 that we wrote. I told you it's not actually number 11, but it's 3. It should make sense to you now. The reason it's 3 is because it's (1 x 2\ :sup:`1` \) + (1\ :sup:`0` \). Which is 2+1.
+| So going back to the number 11 that we wrote. I told you it's not actually eleven, but it's three. It should make sense to you now. The reason it's three is because it's (1 x 2\ :sup:`1` \) + (1 x 2\ :sup:`0` \). Which is 2+1.
 | What about the number 6?
 | Just like how one position with 0 to 9 can go till 9, and two positions can go till 99, if you want to store more with base 2 then you just keep adding more positions. So the max value of two positions with Base 2 is 3. But with three positions, it's 7. Three positions are enough to store the number 6.
 | So we adjust accordingly and we get 110. Which is (1 x 2\ :sup:`2` \) + (1 x 2\ :sup:`1` \) + (0 x 2\ :sup:`0` \).
