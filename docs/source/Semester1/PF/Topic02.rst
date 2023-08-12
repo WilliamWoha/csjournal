@@ -15,7 +15,7 @@
     :scale: 80%
     :alt: a table of the 4 number systems
 
-    Table of the 4 number systems up to 17 numbers. Octal is Base 8 and Hexadecimal is Base 16. They're just there if you want to see what other Base system gets used, but right now the thing to understand most is Binary. If Octal and Hexadecimal confuse you, then just focus on Binary and Decimal instead. If Binary still confuses you, I recommend going back to ref:`s1-pf-t02` to revise it again.
+    Table of the 4 number systems up to 17 numbers. Octal is Base 8 and Hexadecimal is Base 16. They're just there if you want to see what other Base system gets used, but right now the thing to understand most is Binary. If Octal and Hexadecimal confuse you, then just focus on Binary and Decimal instead. If Binary still confuses you, I recommend going back to the previous page to revise it again.
 
 Converting Bases
 ^^^^^^^^^^^^^^^^
@@ -25,7 +25,7 @@ Converting Bases
 .. figure:: images/decimaltobinary.png
     :scale: 90 %
             
-    17 :sub:`10`  is equal to 10001 :sub:`2`
+    17 :sub:`10` (Read as 17 Base 10) is equal to 10001 :sub:`2` (10001 Base 2)
 
 | At some point if you do enough practice with Binary numbers then you can straight up just convert to and from it without any division at all. Again, your memory of "1,2,4,8,16,32,64,128,..." should be good. So focus on memorizing this!
 
