@@ -59,13 +59,13 @@ Type Coercion (Type Casting)
 	int b = 10;
 
 | ``(a / b)``, ``(b / a)``, ``(a * b)``, ``(a + b)``, and ``(a - b)`` would all give an output in float form. All of them "Promote" the int to a float then do an operation on it (MOD won't work, MOD needs two integers). The compiler does it automatically, you don't have to do it. This is what we call Automatic Type Coercion.
-| Data Type Ranking determines whether the conversion is promoting or demoting. It goes as follows: Long Double, Double, Float, Unsigned Long Long Int, Long Long Int, Long Int, Unsigned Int, Int. So in simple terms, Double, then Float, then Int, with Int being lowest rank and Double being the highest rank.
+| Data Type Ranking determines whether the conversion is promoting or demoting. It goes as follows: Long Double, Double, Float, Unsigned Long Long Int, Long Long Int, Long Int, Unsigned Int, Int. So in simple terms, Double, then Float, then Int, with Int being lowest rank and Double being the highest rank. I haven't explained Long and Unsigned yet but all you need to know is that they're different variations of existing Data Types. Long just means "takes up more memory for increasing range" (which is why Int ranges till 2 billion and Long Int ranges till 9 quintillion which is 9 followed by 18 zeroes), and Unsigned just means "only positive". You don't have to memorize these specifics and this order. The order is just Double > Float > Int. All you have to understand is, if an operation uses different Data Types, then it will promote the numbers to the highest rank to do the calculation. That's why 4/5 gives 0 (as they're both integers) but 4.0/5 gives 0.8 (as 4.0 is a float, the 5 is promoted and the calculation is done to give a Float as a result).
 
 .. code-block:: c++
 
 	int answer = a * b;
 
-| ``a`` is float, and ``b`` is int. ``b`` gets promoted to float, and then the math operation is done. ``a * b`` is calculated. This is then saved to ``answer``, but the value gets demoted into ``int`` as the declaration of ``answer`` was in ``int``. Decimal Place values are truncated.
+| ``a`` is float, and ``b`` is int. ``b`` gets promoted to float, and then the math operation is done. ``a * b`` is calculated. This is then saved to ``answer``, but the value gets demoted into ``int`` as the declaration of ``answer`` was in ``int``. Decimal Place values are cut off.
 | 
 | To do the conversion manually, there's two ways:
 *    ``static_cast<data type>(value)``: Static Cast. In ``<data type>`` you write the data type you want to convert to, such as ``float``. In ``value``, you write the variable name or the direct value you want to convert.
