@@ -18,7 +18,7 @@ Understanding Programs
 Inputs
 """"""
 
-| This includes things like the Keyboard, the Mouse, the Phone Touchscreen, the Microphone, things like that. Inputs are done through devices that *you* use. That *you* interact with, and the computer uses that information. Taking a picture is an input because the computer is reading the real world colours and lighting through the camera. Keyboards are inputs because you're pressing specific buttons and the computer is reading what buttons you press. Using a mouse is an input because *your* movements are what move the pointing thing on screen (I learnt later that the pointing thing is called a cursor).
+| An Input means giving information to the computer. This includes things like the Keyboard, the Mouse, the Phone Touchscreen, the Microphone, things like that. Inputs are done through devices that *you* use. That *you* interact with, and the computer uses that information. Taking a picture is an input because the computer is reading the real world colours and lighting through the camera. Keyboards are inputs because you're pressing specific buttons and the computer is reading what buttons you press. Using a mouse is an input because *your* movements are what move the pointing thing on screen (I learnt later that the pointing thing is called a cursor).
 | 
 | Why is this important to programming?
 |
@@ -29,7 +29,7 @@ Inputs
 Outputs
 """""""
 
-| This includes things like the Speakers, the Headphones, the Screen, the result when you press the Equals sign on the Calculator. Outputs are things that the computer *outputs* to you. When you're reading this text on screen, what you're actually reading is an Output of specific colours and shapes on a surface with some light. When you hear sounds via speakers or headphones, you're experiencing the data the computer is calculating and giving *out*.
+| An Output is the result the computer gives you. This includes things like the Speakers, the Headphones, the Screen, the result when you press the Equals sign on the Calculator. When you're reading this text on screen, what you're actually reading is an Output of specific colours and shapes on a surface with some light. When you hear sounds via speakers or headphones, you're experiencing the data the computer is calculating and giving *out*.
 |
 | Why is this important to programming?
 |
@@ -49,7 +49,7 @@ I/O in Flowcharts and Programs
 |
 | Now here's how the Inputs actually work. See, all of that above was just explaining what Inputs and Outputs actually are. All of that was background knowledge for the next part:
 |
-| The computer is dumb. It only remembers specific things. All of those files in Hard Drives and also loaded in RAM, that's all there is. If you remove those parts then it would remember absolutely nothing. There's a reason it's called Memory. And if something is *not* in memory, then it will forget it instantly. If you tell the numbers but the computer doesn't store them in memory, the computer immediately forgets them, like they were never even there.
+| The computer is dumb. It only remembers specific things. All of those files in Hard Drives and also loaded in RAM, that's all there is. If you remove those parts then it would remember absolutely nothing. There's a reason it's called Memory. And if something is *not* in memory, then it will forget it instantly. If you tell the numbers but the computer doesn't store them in memory, the computer immediately forgets them, like they were never even there. The memory capacity of the computer is very limited, so it makes efforts to forget things unless it has been told to actually remember it. That's why Saving your work in Microsoft Word or Excel or Photoshop is so important. If you don't Save it, it will forget and be lost forever.
 | So what if you actually want the computer to remember the numbers you tell it, so it can use them for calculation? You tell the computer to actually store it into the memory. And how do you do that? You do it the same way Maths does it.
 |
 | You do it with VARIABLES.
@@ -75,7 +75,7 @@ Flowchart Specifics
 
 (Table taken from `Asq.org <https://asq.org/quality-resources/flowchart>`_).
 
-| Although this table doesn't have an Input in it, that was on purpose, because a Program can run completely without an Input. It's just that an Input is necessary to have if you want your machine to give a different answer depending on a different situation. If a calculator will always tell you that 10+10 is 20, then sure, it does that job completely fine, but if you want to have different numbers, like 5+2 or 12+15 or anything else you can think of, you'd have to make sure the Calculator can accept an Input so it can actually do those tasks.
+| Although this table doesn't have an Input in it, that was on purpose, because a Program can run completely without an Input. It's just that an Input is necessary to have if you want your machine to give a different answer depending on a different situation. If a calculator will always tell you that 10+10 is 20, then sure, it does that job completely fine, but if you want to have different numbers, like 5+2 or 12+15 or anything else you can think of, you'd have to make sure the Calculator can accept an Input so it can actually do those tasks. The same goes for Rock Paper Scissors. If you (the human) are choosing a choice between Rock, Paper, and Scissors, then the computer needs to remember it so it can actually play the game. Otherwise it's the equivalent of you playing Rock Paper Scissors with someone and they have no idea if they won, lost, or tied, because they immediately forgot what you actually chose. The purpose of the Input is to give an appropriate Output based on different choices, and the purpose of Variables is to remember inputs.
 
 Practice Exercises
 ^^^^^^^^^^^^^^^^^^
