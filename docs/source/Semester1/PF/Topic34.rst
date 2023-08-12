@@ -9,7 +9,7 @@
 | 
 | This is important to know because the way you actually end up configuring the Values (meaning, the data type you declare something as) will affect how the computer actually looks at them and uses them and understands them.
 |
-| I did mention that Pointers are integer variables. But that doesn't mean you always declare them with ``int*``. That first word instead serves the programmer.
+| I did mention that Pointers are integer variables. But that doesn't mean you always declare them with ``int*``. That first word instead serves the programmer. ``(Stuff)*`` means, I'm declaring a Pointer which will Point specifically to ``Stuff``. And ``Stuff`` can be anything. An Int, Float, Char, String, and later in Semester 2 when we do OOP, it can also be custom data types. It can even be another pointer, but that comes way later.
 
 .. code-block:: c++
    :linenos:
@@ -48,13 +48,13 @@
    :linenos:
 
 	int a = 5;
-	char b = 'A';
+	char b = 'B';
 	int* ptrA = &a;
 	char* ptrB = &b;
-	cout << a << " " << b << endl; // Outputs 5 and A
-	cout << ptrA << " " << ptrB << endl; // Outputs address of A and address of B
-	cout << &a << " " << &b << endl; // Outputs address of A and address of B
-	cout << *ptrA << " " << *ptrB << endl; // Outputs 5 and A
+	cout << a << " " << b << endl; // Outputs 5 and B
+	cout << ptrA << " " << ptrB << endl; // Outputs address of a and address of b
+	cout << &a << " " << &b << endl; // Outputs address of a and address of b
+	cout << *ptrA << " " << *ptrB << endl; // Outputs 5 and B
 
 | In this case, ``ptrA`` and ``ptrB`` hold the memory addresses of ``a`` and ``b`` respectively. So if we want to see the actual values at the addresses of ``ptrA`` and ``ptrB``, we just Dereference them, by doing ``*ptrA``. This operation is the same as saying "the *value* at this location". So you can use them like regular variables as well.
 .. code-block:: c++
@@ -86,7 +86,7 @@
 
 	int *ptr = NULL;
 
-| To summarize everything of this page and the last one.... Well I told you it was gonna be hell wasn't it? But don't worry. They'll make sense with practice:
+| To summarize everything of this page and the last one.... And if it doesn't make sense, just keep reading into it and practicing. They'll make sense with practice:
 *	Pointers are ``int`` data types that hold Memory Addresses
 *	They're important for Memory Control and Dynamic Memory
 *	The pointer's data type has to match the variable's data type so Pointer Arithmetic can be done properly
