@@ -41,7 +41,7 @@
 
 *    ``#include <iostream>`` is called a 'Preprocessor Directive'. It's written at the top and basically prepares the rest of the program for these commands. #include means, that specific library has to be included. There are other # commands, and also other things you can 'include' with #include, but we'll look at those later..
 *    ``using namespace std;`` means using names for objects and variables from the standard library. Don't focus on what it does for now, just know that you have to write it.
-*    ``int main()`` is a Function. You'll learn Functions later but for now just understand that, ALL of your code that you write, is to be written inside of this. If written outside or if you don't mention this line, it WILL NOT work. It has to be written between the {curly brackets}.
+*    ``int main()`` is a Function. You'll learn Functions later but for now just understand that, ALL of your code that you write, is to be written inside of this. If written outside or if you don't mention this line, it WILL NOT work. The code has to be written between the {curly brackets}.
 *    ``return 0;`` is also a part of the Function. Just know that you have to write it at the absolute very end for now. This isn't always important, as the program in most cases works completely fine without it, but I've lost marks on tests for forgetting to write it, so it's better to make a habit of doing it.
 | There's still more stuff to actually cover, but that above is just the template. MAKE SURE to memorize it, you will need it for the rest of the semester.
 
