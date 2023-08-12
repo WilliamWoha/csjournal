@@ -3,7 +3,7 @@
 33) Pointers Part 1
 -------------------
 
-| Welcome to hell.
+| Welcome to the bane of my existence.
 |
 | Ok in all honesty, Pointers aren't that complicated. They're a concept that's simple but people fear them because of how much they're capable of doing. And people also hate doing something in a worse way and having their options limited. Case in point, C++ has dynamic arrays which can change their own size called Vectors, but no we're stuck with using 3D Pointers for Dynamic Memory Allocation instead. It's stupid. But...whatever. Live and Learn.
 |
