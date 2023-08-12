@@ -109,7 +109,7 @@ Practice Exercises
 ^^^^^^^^^^^^^^^^^^
 
 | Now that C++ has been introduced I can actually give you something to work with!
-| 1) Write a C++ Program that outputs your Name and Date of Birth
+| 1) Write a C++ Program that outputs your Name and Date of Birth (Variables are not required for this, it's simpler than you think)
 | 2.1) Write a C++ Program to create this pyramid using slashes:
 
 .. code-block:: c++
