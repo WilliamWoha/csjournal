@@ -27,8 +27,8 @@ Knowledge Requirements
     | If both of us were to play the same thing, it would be a draw.
     | Otherwise, Rock would beat Scissors. Scissors would beat Paper. Paper would beat Rock. Depending on who played what, one side wins and the other loses.
     | So let's say you played Rock and I played Scissors.
-    | Does Paper beat Rock? Yes!
-    | Who played Paper? You did!
+    | Does Rock beat Scissors? Yes!
+    | Who played Rock? You did!
     | So I'd lose!
     |
     | Although the example of RPS I just wrote would still have Maths involved in the code, it's not the kind that would give you a headache. It's just logic, and if you can master logic, you can master programming. The best programming happens away from the keyboard.
