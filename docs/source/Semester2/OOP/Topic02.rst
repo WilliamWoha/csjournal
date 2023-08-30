@@ -10,18 +10,16 @@
 
     int* ptr = new int;
     *ptr = 5;
-    cout << *ptr << endl;
-    ptr = NULL;
+    cout << "Value: " << *ptr << endl;
+    cout << "Address: " << ptr << endl;
+    ptr = new int;
+    *ptr = 10;
+    cout << "Value: " << *ptr << endl;
+    cout << "Address: " << ptr << endl;
 
-| What's happening here is that the memory location stored in ``ptr`` is being updated. First it was the heap location, and then it was the NULL location. But the location in the heap isn't properly addressed. The heap location is left occupied in the memory and the OS is never properly told that it's no longer needed. The pointer was used to access the heap, but now the thing remembering the address, the Pointer, no longer remembers it. So not only is the data lost, but the Heap still thinks that the data is useful.
+| What's happening here is that the memory location stored in ``ptr`` is being updated. Not the Not the value, the address itself. First it gains a free space from the Heap and stores 5 in there, then it gains another free space from the Heap and stores 10 in there. If you run that code, you'll notice that the two Address: outputs are different. Although it's one pointer, it uses two different heap locations in the memory, because we called a ``new int`` in Line 5. But if you were able to actually look at the memory (some compilers and IDEs let you do this), you'll notice that at the first address, the value 5 is still stored. It's still there, and forever will be there until the program ends. Remember back in :ref:`s1-pf-37` how I said that Tom wants you to remember the warehouses, or else he can't help you when you forget where it is? This is what's happening. On the original paper you wrote the warehouse address, you've written a new warehouse address. The old one is lost and now you have no idea where that warehouse is, and now have no way to access what's inside of it. That memory will just sit there with that value, and you won't be able to access it or use it. This is what's known as a Memory Leak.
 |
 | A Memory Leak is when data that's no longer being used isn't properly disposed of, and it takes up unnecessary space.
-|
-| As a shower thought this is what came to me way later when making these notes. Based on a video I saw about Team Fortress 2, by a guy named Shounic. The video mentioned a Memory Leak. I didn't know much about this at the time. I only randomly thought of this far far later: The whole point of the Heap, and Dynamic Memory, is being able to delete it. That's the one thing that separates it from the Stack. You can free up the Heap. And EVERYTHING runs off this logic. I mean, EVERYTHING.
-| You're playing a game. You load a character. You have a gun. You shoot the gun. Every bullet isn't already shot, the player shoots it. When shot, the bullet is created, and where is it created? In the heap. ``bullet* ptr = new bullet``. And then when it lands it has to be deleted. ``delete bullet``. The map loads and then when the game ends, the map has to be removed from memory because you're no longer playing on it, and taken to the main menu.
-| You open Google Chrome and browse the internet and read some stuff and watch some videos. Then you open another tab. And another. And another. And then you close some too. Then you close the browser. You don't wanna use it again for that time. Or you listen to some music and then you close it.
-|
-| EVERYTHING works on the Heap, because you don't ever know what's gonna be run at what time. You need to have the ability to close things and free up memory. It's all to make sure there's enough resources. It adapts.
 
 .. code-block:: c++
    :linenos:
