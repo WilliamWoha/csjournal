@@ -44,11 +44,13 @@
     int* ptr = &a;
     int** qtr = &ptr;
 
-| Let's say that ``a`` is stored in the Memory Location ``0x5000``. That location is then stored into the value of the Pointer known as ``ptr``. ``ptr`` is an Integer, and it has its own Memory Location ``0x7000`` where it is stored. But since ``ptr`` is a pointer, the value it holds is ``0x5000``. Now, you've declared another Pointer, called ``qtr``, and you want to use ``qtr`` to access ``a``, but by using ``ptr``. So you'd think doing ``qtr = &a`` is the best option, and you'd be right, but that's something different. No, you have to get to it through ``ptr``. And that's where Double Pointers come in. Although I don't have many examples of where they are useful, they're the only way to make 2D and 3D and more-D *Dynamic* arrays. So ``qtr``, which is declared at a completely separate Memory Location, let's call it ``0x8000``, is now pointing to ``0x7000``, which is the address of ``ptr``, and ``ptr`` is pointing to ``0x5000``, which is the address of ``a``.
+| Let's say that ``a`` is stored in the Memory Location ``0x5000``. That location is then stored into the value of the Pointer known as ``ptr``. ``ptr`` is an Integer, and it has its own Memory Location ``0x7000`` where it is stored. But since ``ptr`` is a pointer, the value it holds is ``0x5000``. Now, you've declared another Pointer, called ``qtr``, and you want to use ``qtr`` to access ``a``, but by using ``ptr``. So you'd think doing ``qtr = &a`` is the best option, and you'd be right, but that's something different. No, you have to get to it *through* ``ptr``. And that's where Double Pointers come in. Although I don't have many examples of where they are useful, they're the only way to make 2D and 3D and more-D *Dynamic* arrays. So ``qtr``, which is declared at a completely separate Memory Location, let's call it ``0x8000``, is now pointing to ``0x7000``, which is the address of ``ptr``, and ``ptr`` is pointing to ``0x5000``, which is the address of ``a``.
+|
+| ``qtr`` now points to ``ptr``, and ``ptr`` now points to ``a``.
 | 
 | This allows you to now access ``a`` through ``qtr``, by Multi-dereferencing.
 |
-| If you did ``*ptr``, then you'd dereference the Pointer, and it would be the same as typing ``a``. Now, if we try the same, meaning if we wrote ``*qtr``, then we'd get ``ptr``. Pay attention: We would NOT get ``*ptr``, we would get ``ptr``, meaning that writing ``*qtr`` is the same as writing ``ptr``. Writing ``ptr = &a`` is the same as writing ``*qtr = &a``.
+| If you did ``*ptr``, then you'd dereference the Pointer, and it would be the same as typing ``a``. Now, if we try the same, meaning if we wrote ``*qtr``, then we'd get ``ptr``. Pay attention: We would NOT get ``*ptr``, we would get ``ptr``, meaning that writing ``*qtr`` is the same as writing ``ptr``.
 | But we don't want that. We want to modify ``a`` directly. Well, since ``*qtr`` is the same as writing ``ptr``, aka ``*qtr == ptr``, if we apply another asterisk, what will happen? ``**qtr``. Keeping the maths equality, you get ``**qtr == *ptr``. And that's the solution. Since ``qtr`` is a double pointer, it needs to be dereferenced twice to get to the variable. ``**qtr = 10`` would modify ``a``, the same way ``*ptr = 10`` would.
 | And just like that if we have an even longer chain, it would work the same way. ``int**** qtr`` would require 4 asterisks (``*``) to access the variable.
 |
@@ -118,4 +120,6 @@
 | For every dimension you just keep adding more loops to initialize. But once that initial process is done, you have yourself a dynamic array.
 |
 | The only caveat other than declaring it is deleting it to stop a memory leak. That's gonna be fun.
+|
+| You'd use the same syntax to access the contents of the dynamic array as you would for a static array. The ``[Subscript Notation]``. So at least once setup is done, things get easier.
         
