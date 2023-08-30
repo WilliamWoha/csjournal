@@ -47,10 +47,11 @@
 | All of the above scenarios are dealing with memory in a way that's not meant to be dealt with. However if you put them into a Compiler, then only the first two will actually cause a Segmentation Fault, and the last two chunks will both run fine. But that doesn't mean it's ok to do that. The thing is, it depends on the Operating System and the Compiler. A Segmentation Fault is only raised if it's detected, and in some cases it's not detected. There are errors and flags running behind the scenes.
 |
 | To avoid this error, you just have to be careful about what you're doing with the memory.
-| In the case of the first one, the solution is to assign a memory location to the pointer and then dereference it.
+| In the case of the first one, the solution is to assign a memory location to the pointer and then dereference it. The pointer is pointing to the NULL address, and you're not meant to change the value at the NULL address.
 | For the second one, you'd convert it into a character array because a ``"string literal"`` returns a Constant Character Pointer, so writing ``char str[]`` instead of ``char *str`` lets it be stored as an array instead of constant array. Then individual characters can be modified.
 | For the third one, you make sure to stay within the range. This is the most common cause. Just because the code above doesn't raise a segmentation fault, doesn't mean all similar scenarios won't cause it. It'll happen if you're not careful. In 2D and 3D dynamic arrays, even going one over in a loop will make you access a location you're not supposed to. 
 | For the last one, the simple step is to write ``ptr = nullptr`` or ``ptr = NULL``, so that just in case you try to accidentally access it again, the compiler warns you against it. Dereferencing ``null`` is the easiest way for it to catch the problem, which is exactly what you *want* it to do. If you used ``delete`` and then tried using the pointer again like normal, then you're using a Dangling Pointer without realizing it. Setting the pointer to ``null`` will prevent you from making that mistake.
+| Despite how frustrating Segmentation Faults can be when they show up, they're a blessing in disguise. They're like injuries on the body. Although annoying, it's super important to experience them so you realize there's something wrong happening and it needs to be addressed. If you didn't experience any pain at all you wouldn't know if there was anything wrong with the body that needs fixing. It's your brain's way to tell you to fix something.
 
 .. code-block:: c++
    :linenos:
