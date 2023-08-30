@@ -12,18 +12,9 @@ Equipment Requirements
     | Any computer is fine, as long as it's not a phone or a tablet. It NEEDS to be running some form of Windows, or Linux. Either option is fine.
     | If you don't have a computer yet but want to make a purchase for it, then contact me via Discord (Woha #6430) and I can help out with making a proper decision. You can also just go to Tech channels and internet forums to figure things out on your own. Ultimately if your budget is low then your best option is a used computer with an SSD.
 
-*    VisualStudioCode:
+*    Visual Studio:
 
-    | There are plenty of options but this one just has the most support and most people using it. It's the one I use personally (even though my university wants us to just use Ubuntu's GEdit, which is the equivalent of Notepad in Windows) and I highly recommend it. It's downloadable both for Windows and Ubuntu from their `Official Download Page <https://code.visualstudio.com/download>`_.
-    | Once you install it, make sure to get the `Code Runner Addon <https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner>`_ as well. VSCode is just a text editor, kind of like Microsoft Word. In professional environments you use something called an IDE to actually make the code run. But these are just beginner steps, so that addon is enough for now.
-
-.. important::
-
-    Make sure to go into Settings, and to enable the setting to ``Run in Terminal``. Otherwise, Code-Runner won't be able to work with Inputs (you'll learn what those are later).
-
-.. figure:: images/terminal.gif
-    :scale: 40%
-    :alt: a gif for enabling Run in Terminal
+    | You can use whatever compiler and IDE you want. There's many options out there, each with its own standards it follows and methods to use it. Personally I use Visual Studio for Windows, and VSCode with the clangd addon and the G++ compiler on Linux. It's upto you for whatever you want to use, but if you're using Windows, then Visual Studio is the easiest option. You just install it and use it, no extra things involved.
 
 *    Keyboard:
 
