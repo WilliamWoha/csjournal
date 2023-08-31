@@ -25,10 +25,10 @@
     for(int i = 0; i < a; i++)
     {
         for(int j = 0; j < b; j++)
-            delete subjects[i][j];
-        delete subjects[i];
+            delete[] subjects[i][j];
+        delete[] subjects[i];
     }
-    delete subjects;
+    delete[] subjects;
     subjects = nullptr;
 
 |
