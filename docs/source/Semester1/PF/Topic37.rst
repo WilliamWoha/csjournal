@@ -17,6 +17,8 @@ Dynamic Array Declaration
 
 | The heap searches for 5 consecutive memory locations of 1 Byte each which are freely available, and when it finds any 5 which are free, it returns the pointer to the *first* one. This detail is important for actually accessing all 5 memory locations.
 | If you wanted to access the first location and use it as a variable, you'd use ``*ptr``. You would dereference it. But for the other 4 remaining locations, the only way to access them, is through Pointer Arithmetic. And here's how it works.
+|
+| One thing I'll add, which I found out the hard way. If the pointer is pointing to one value, you have to use ``delete``, but if it's pointing to an array, you have to use ``delete[]``. Even if it was declared with ``int* ptr = new int[1]``, you have to use ``delete[]``. You'll learn this in practice. Remember this!
 
 How the Heap stores Values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
