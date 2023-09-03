@@ -205,7 +205,6 @@ def rstjinja(app, docname, source):
     source[0] = rendered
 
 def setup(app):
-        app.connect("source-read", rstjinja, 50000)
-        
-        add_dynamic_function(app, days_since_build)
-        add_dynamic_function(app, points)
+    app.connect("source-read", rstjinja, 50000)
+    
+    add_dynamic_function(app, days_since_build)
