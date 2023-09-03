@@ -192,19 +192,6 @@ def days_since_build(app, need, needs, *args, **kwargs):
 
     return str(delta.days)
 
-def rstjinja(app, docname, source):
-    """
-    Render our pages as a jinja template for fancy templating goodness.
-    
-    Source: https://ericholscher.com/blog/2016/jul/25/integrating-jinja-rst-sphinx/
-    """
-    src = source[0]
-    rendered = app.builder.templates.render_string(
-        src, app.config.html_context
-    )
-    source[0] = rendered
-
 def setup(app):
-    app.connect("source-read", rstjinja, 50000)
     
     add_dynamic_function(app, days_since_build)
