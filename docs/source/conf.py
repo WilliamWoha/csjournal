@@ -21,7 +21,6 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
-
 ]
 
 intersphinx_mapping = {
@@ -52,9 +51,9 @@ html_theme_options = {
     "font": {
         "code": "JetBrains Mono"
     },
-    "site_url": "https://awesomesphinx.useblocks.com/",
-    "repo_url": "https://github.com/useblocks/awesomesphinx",
-    "repo_name": "Awesome-Sphinx",
+    "site_url": "https://csjournal.readthedocs.io/",
+    "repo_url": "https://github.com/WilliamWoha/csjournal/",
+    "repo_name": "CSJournal",
     "repo_type": "github",
     "edit_uri": "blob/main/docs",
     # "google_analytics": ["UA-XXXXX", "auto"],
@@ -89,7 +88,7 @@ html_theme_options = {
         },
     ],
     "toc_title_is_page_title": True,
-    "toc_title": "Awesome-Sphinx",
+    "toc_title": "CSJournal",
 }
 
 needs_id_regex = r'.*'
