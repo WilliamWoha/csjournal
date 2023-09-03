@@ -6,7 +6,7 @@ project = "CSJournal"
 copyright = "2023, Woha"
 author = "Woha"
 
-release = "1"
+release = "1.1"
 version = "1.1"
 
 # -- General configuration
@@ -31,7 +31,7 @@ templates_path = ["_templates"]
 # -- Options for HTML output
 
 # html_theme = "sphinx_rtd_theme"
-html_theme = "piccolo_theme"
+html_theme = "sphinx_documatt_theme"
 
 html_static_path = ['_static']
 
