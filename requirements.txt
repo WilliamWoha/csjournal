@@ -1,1 +1,1 @@
-furo
+piccolo_theme
