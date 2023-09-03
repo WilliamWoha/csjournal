@@ -166,4 +166,9 @@ table.NEEDS_DATATABLES, table.NEEDS_TABLE{
 }
 div.md-grid {
     max-width: 100rem !important;
-  }
+}
+
+td.linenos pre, td.code pre {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
