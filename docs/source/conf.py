@@ -3,11 +3,11 @@
 # -- Project information
 
 project = "CSJournal"
-copyright = "2022, Woha"
+copyright = "2023, Woha"
 author = "Woha"
 
-release = "0.1"
-version = "0.1.0"
+release = "1"
+version = "1.1"
 
 # -- General configuration
 
@@ -31,7 +31,7 @@ templates_path = ["_templates"]
 # -- Options for HTML output
 
 # html_theme = "sphinx_rtd_theme"
-html_theme = "furo"
+html_theme = "piccolo_theme"
 
 html_static_path = ['_static']
 
