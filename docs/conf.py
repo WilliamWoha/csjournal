@@ -8,10 +8,6 @@ import os
 import sys
 from sphinx_needs.api import add_dynamic_function
 
-# Make Python aware of the project config file
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-from projects import PROJECT_TAGS
-
 project = "CSJournal"
 copyright = "2023, Woha"
 author = "Woha"
