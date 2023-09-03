@@ -10,8 +10,9 @@ build:
   tools:
     python: "3.11"
       install:
+        - requirements: docs/requirements.txt
         - method: pip
-          path: docs/.
+          path: .
     # You can also specify other tool versions:
     # nodejs: "20"
     # rust: "1.70"
