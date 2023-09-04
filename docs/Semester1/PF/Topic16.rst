@@ -58,7 +58,7 @@
 | If you think there's too many lines and you could just write one ``cout`` statement to say ``cout << "Leap year" << endl;`` or ``cout << "Not a Leap Year" << endl`` then yes, you can in fact do that. But I did this on purpose.
 | The code works fine, but the problem is that it repeats itself.
 |
-| It's either a Leap Year or it's not a Leap Year, and we have multiple conditions to check, but the thing is, if mutliple of those end up doing the same thing, then there's a lot of repitition involved. So, we use Flags to reduce that repitition.
+| It's either a Leap Year or it's not a Leap Year, and we have multiple conditions to check, but the thing is, if mutliple of those end up doing the same thing, then there's a lot of repetition involved. So, we use Flags to reduce that repitition.
 
 .. code-block:: c++
    :linenos:
