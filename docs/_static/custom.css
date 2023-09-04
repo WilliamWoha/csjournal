@@ -98,9 +98,8 @@ h3 {
 }
 
 
-td.linenos pre, td.code pre {
-    font-size: 18px !important;
-    margin-bottom: 10px !important;
+td.linenos pre {
+    font-size: medium !important;
 }
 
 .dataTables_filter input {
