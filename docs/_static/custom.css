@@ -75,6 +75,9 @@ input {
     line-height: 1.5 !important;
 }
 
+.md-typeset code {
+    font-size: 1em !important;
+}
 
 h1, h2, h3 {
     font-family: 'Recursive', sans-serif !important;
