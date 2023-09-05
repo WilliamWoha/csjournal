@@ -72,7 +72,7 @@ Structures as Variables
     Employee e3;
     e3 = e2;
     
-| You can't compare structures directly. ``if (e1 == e2)`` isn't valid. You have to compare them using their individual members.
+| You can't compare structures directly. ``if (e1 == e2)`` isn't valid. You have to compare them using their individual members, like ``if (e1.payRate == e2.payRate)``. This can be tedious to do if the structure has a lot of variables which is why the best approach is to create a function where every single one of the data members is compared: ``if (structsAreEqual(e1, e2))``.
 |
 | A Structure having the same nature as a regular variable means you can also create an Array out of it.
 
