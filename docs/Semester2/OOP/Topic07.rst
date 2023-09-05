@@ -9,7 +9,7 @@
 Nested Structures
 ^^^^^^^^^^^^^^^^^
 
-| It's pretty simple. You just make a Struct, then have that Struct be a member in the definition of another Struct. You can go for as long as you want, it doesn't matter. Just treat it like a regular variable. All you wanna do is make sure that the Structure is defined before another Structure or Function tries to use it. So putting the definition of Coordinate after Circle will give an error.
+| It's pretty simple. You just make a Struct, then have that Struct be a member variable in the definition of another Struct. You can go for as long as you want, it doesn't matter. Just treat it like a regular variable. All you wanna do is make sure that the Structure is defined before another Structure or Function tries to use it. So putting the definition of Coordinate after Circle will give an error. And no, this is VERY different from inheritance. We'll get to that later.
 | You can initialize it using {curly braces inside of more {curly braces}}.
 
 .. code-block:: c++
@@ -83,7 +83,7 @@ Structures as regular Variables
 Pointers as Structure Members
 """""""""""""""""""""""""""""
 
-| This one is actually also pretty simple. It only gets complicated when you try and make duplicates of Structures. Although that may seem like a very small thing, it's a way bigger deal than you might think because copying values is how you have an array that can grow or shrink itself, and that's a very important functionality for a lot of situations.
+| This one is also pretty simple. It only gets complicated when you try and make duplicates of Structures. Although that may seem like a very small thing, it's a way bigger deal than you might think because copying values is how you have an array that can grow or shrink itself, and that's a very important functionality for a lot of situations.
 
 .. code-block:: c++
    :linenos:
@@ -186,8 +186,8 @@ Structures and Functions
         c.printCenter();
     }
 
-| The functions were defined as normal, but there's a few things to note here. The first being that variables defined inside the Structure didn't need to be defined again in the Function. As far as the Function is concerned, they already exist. It has access to those variables. The second thing is that you call the functions the same way you access member variables: with the dot ``.`` operator.
-| The other rules of return types, arguments, and everything else, will still apply. They're still functions. But they're intended to specifically be used with the Structure.
-| You can send data which has absolutely nothing to do with the function, but you NEED an Object to exist to be able to call it. This is why the Functions in question are called Member Functions. They're not normal functions, they're associated with that specific Structure.
+| Member functions are the easiest way to assign functionality related to that specific data type. Remember earlier how we wanted to check ``if (struct1 == struct2)``? We can just have a Member function here for checking. Member functions follow the same rules as regular Functions, but there's a few things to note here. The first being that Member variables defined inside the Structure didn't need to be defined again in the Function. As far as the Function is concerned, they already exist. It has access to those variables. The second thing is that you call the functions the same way you access member variables: with the dot ``.`` operator.
+| The other rules of return types, arguments, and everything else, will still apply. They're still functions. But they're intended to specifically be used with the Structure, and can't be called if a struct variable doesn't exist.
+| You can send data which has absolutely nothing to do with the function, but you NEED an Object to exist to be able to call it. This is why the Functions in question are called Member Functions. They're not normal functions, they're associated with that specific Structure. 
 |
 | That's it, we're done. Structures is finished. But now the real fun begins.
