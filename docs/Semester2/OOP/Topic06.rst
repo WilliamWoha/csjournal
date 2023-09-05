@@ -13,7 +13,7 @@ Initializing a Structure
 .. code-block:: c++
    :linenos:
 
-   StructName object = {Value1, Value2, ...};
+   StructName variable = {Value1, Value2, ...};
 
 | Here's an example:
 
