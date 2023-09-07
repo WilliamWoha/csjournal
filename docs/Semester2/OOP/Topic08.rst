@@ -26,14 +26,14 @@ Intro to Classes
 More about Classes
 """"""""""""""""""
 
-| A class has Member Variables and Member Functions, just like a Struct. It has some extra functionality compared to structures however, such as having a Constructor (After some research, I found out Structures in C don't have constructors, but Structures in C++ do. I guess they made their funct. Here's the syntax for a Class:
+| A class has Member Variables and Member Functions, just like a Struct. It has some extra functionality compared to structures however, such as having a Constructor (After some research, I found out Structures in C don't have constructors, but Structures in C++ do. I guess they made their functionality similar to Classes after being carried over from C). Here's the syntax for a Class:
 
 .. code-block:: c++
    :linenos:
 
     class ClassName {
         Datatype Variable;
-	Datatype Variable2;
+		Datatype Variable2;
         ReturnType Function() {
 	    // Function Body
 	}
@@ -48,12 +48,12 @@ More about Classes
    :linenos:
 
     class Rectangle {
-	double width;
-	double length;
+		double width;
+		double length;
 
-	double displayWidth();
-	double displayLength();
-	double displayArea();
+		double displayWidth();
+		double displayLength();
+		double displayArea();
     };
     int main() {
         Rectangle r1;
@@ -80,9 +80,9 @@ Access Specifiers
 
     class Rectangle {
     private:
-	double width;
+		double width;
     public:
-	double length;
+		double length;
     };
     int main() {
         Rectangle r1;
@@ -96,26 +96,26 @@ Access Specifiers
 
     class Rectangle {
     private:
-	double width;
-	double length;
+		double width;
+		double length;
     public:
-	double getLength() {
-	    return length;
-	}
-	double getWidth() {
-	    return width;
-	}
-	void setLength(double l) {
-	    length = l;
-	}
-	void setWidth(double w) {
-	    width = w;
-	}
+		double getLength() {
+			return length;
+		}
+		double getWidth() {
+			return width;
+		}
+		void setLength(double l) {
+			length = l;
+		}
+		void setWidth(double w) {
+			width = w;
+		}
     };
     int main() {
         Rectangle r1;
-	r1.setLength(5);
-	cout << r1.getLength() << endl;
+		r1.setLength(5);
+		cout << r1.getLength() << endl;
     }
 
 | The ``width`` and ``length`` variables are sealed, and inaccessible. For this reason we've set up the Getters (Lines 6 and 9), and Setters (Lines 12 and 15). And you might be wondering what's the point of these if these are just extra steps to have access to the variables we did, and do the same things we did earlier? It's because there's the option to do more within those codes. For example, width and length can't be negative. So we can modify those further to give specific functionality that otherwise wouldn't be possible with using the variables in their regular way.
@@ -135,4 +135,4 @@ Access Specifiers
 
 | In fact, we can write just about any code we want in there, for whatever reason we might need. All we do is flip a switch on a board (aka call the member function). Everything else that happens behind the board isn't our concern, or if it is, then we just do things to make our own lives easier. That's the whole point of the interface. Why bother with trying to change code through variables within a config file instead of going into a game's settings to do it through an easier and more visually appealing menu?
 |
-| To wrap this page up, I will mention that Structures can also do this. https://www.geeksforgeeks.org/difference-c-structures-c-structures/ has more info about the functionality of Structures in C vs C++. So a lot of resources will emphasize on using Classes in C++ instead. Data Hiding is possible in C++ Structures but not in C Structures, which further makes the difference between them smaller, so everything we've done thus far can also technically be done in Structures as well, but nearly all of C++ uses Classes and Class Diagrams because that's just the bigger priority. Structures just got brought alone from C, Classes are the bread and butter of C++ Object Oriented Programming, so try to practice with those instead. The whole reason I even covered Structures was because they're still part of the syllabus, and they're so identical that learning them makes Classes even easier to understand.
+| To wrap this page up, I will mention that Structures can also do this. Set Private and Public Data Members. This website https://www.geeksforgeeks.org/difference-c-structures-c-structures/ has more info about the functionality of Structures in C vs C++. So a lot of resources will emphasize on using Classes in C++ instead. Data Hiding is possible in C++ Structures but not in C Structures, which further makes the difference between them smaller, so everything we've done thus far can also technically be done in Structures as well, but nearly all of C++ uses Classes and Class Diagrams because that's just the bigger priority. Structures just got brought along from C, Classes are the bread and butter of C++ Object Oriented Programming, so try to practice with those instead. The whole reason I even covered Structures was because they're still part of the syllabus, and they're so identical that if you learn them you may as well say you've learnt Classes.

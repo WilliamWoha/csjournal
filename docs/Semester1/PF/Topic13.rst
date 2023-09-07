@@ -11,8 +11,8 @@
 
 	#include <cmath>
 
-| It only gets used for one command, which is called ``pow(a, b)``. This command gives the result of a :sup:`b` (a power b). It can be used in multiple ways. You can imagine using it the same ways you can use an arithmetic statement.
+| It only gets used for a few commands, depending on your use case, such as ``pow(a, b)``, ``sin(a)``, ``cos(a)``, ``tan(a)``, ``log(a)``.
 |
-| There's also more uses to it, it's an entire library after all, but for now this is what we've used it for thus far. You can look up the library to see more functions of it.
+| There's also more uses to it, it's an entire library after all, but this is what we've used it for thus far. You can look up the library to see more functions of it.
 
 
