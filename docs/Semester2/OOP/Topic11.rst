@@ -41,7 +41,6 @@
 
 .. code-block:: c++
    :linenos:
-   :emphasize-lines: 14, 15
 
     class Circle {
     private:
@@ -65,7 +64,7 @@
 
 | In this specific scenario there's 3 Circle Objects being made within the Scope of ``void func()``, and when that Scope (Meaning when the function) ends, the Object is being destroyed. In the overall code, however, there's four Destructors being called, because ``c2`` is being made in ``int main()``, and when ``int main()`` ends, that Object is also destroyed.
 |
-| So it's super similar to a Constructor where the function is called automatically, it has no return type, and it can have Out-Of-Line declaration. However it's super different in the sense that it's meant to 'Destruct' the object, it's only called when the Object is being destroyed, it can't take any parameters, and there can only be one Destructor. Here's the code for it:
+| So it's super similar to a Constructor where the function is called automatically, it has no return type, and it can have Out-Of-Line declaration. However it's super different in the sense that it's meant to 'Destruct' the object, it's only called when the Object is being destroyed, it can't take any parameters, and there can only be one Destructor. You also always want to set this to ``public``. Here's the syntax for it:
 
 .. code-block:: c++
    :linenos:
@@ -94,7 +93,7 @@
         int* ptr;
         int size;
     public:
-        Array() {ptr = nullptr; size = 0;}
+        Array(int* pointer = nullptr, int s = 0) {ptr = pointer; size = s;}
         ~Array() {}
     };
     void func() {
@@ -102,7 +101,7 @@
         // Some other code using a1
     }
 
-| When that function ends, we're no longer using the Variables that were made in it. Whatever we were doing with it, let's say it's done. We did what we wanted to do. Now the Function has ended, and it must be destroyed to free up space. So it does its thing and removes the variables from memory, and it does the same to the ``a1`` object as well. But that's where the problem of the Default Destructor lies. All it does is free up *non-heap* members. In this case, that's the ``ptr`` and the ``size``. The actual memory that the ``ptr`` is pointing to is NOT being cleared properly. There's no ``delete[]`` command being called for it, so it's causing a memory leak. This is why we have to customize the Destructor, so we can call that command and free up that memory.
+| When that function ends, we're no longer using the Variables that were made in it. Whatever we were doing with it, let's say it's done. We did what we wanted to do. Now the Function has ended, and it must be destroyed to free up space. So it does its thing and removes the variables from memory, and it does the same to the ``a1`` object as well. But that's where the problem of the Default Destructor lies. All it does is free up *non-heap* members. In this case, that's ``ptr`` and the ``size``. The actual memory that the ``ptr`` is pointing to is NOT being cleared properly. There's no ``delete[]`` command being called for it, so it's causing a memory leak. This is why we have to customize the Destructor, so we can call that command and free up that memory.
 
 .. code-block:: c++
    :linenos:
@@ -113,10 +112,7 @@
         int* ptr;
         int size;
     public:
-        Array(int* pointer = nullptr, int s = 0) {
-            ptr = pointer;
-            size = 0; 
-        }
+        Array(int* pointer = nullptr, int s = 0) {ptr = pointer; size = 0; }
         ~Array() {
             if (ptr == nullptr)
                 return;
@@ -148,4 +144,4 @@
         Circle c3;
     }
 
-| For Constructors, the order would be ``c1 > c2 > c3``, and for Destructors, it would be ``c3 > c2 > c1``. I bring this up because my uni has asked questions before on which destructor would be called when, and this isn't too much to worry about now but it's a crucial thing to focus on later when doing Inheritance.
+| For Constructors, the order would be ``c1 > c2 > c3``, and for Destructors, it would be ``c3 > c2 > c1``. I bring this up because my uni has asked questions before on which destructor would be called when, and this isn't too much to worry about now but it's a crucial thing to focus on later when doing Inheritance. And another thing I forgot to mention: Global Scope Objects will have their constructors be called before any other function, including ``int main()``, and will have their destructors be called when ``int main()`` ends. Local Scope Objects will have their Constructors be called when they're created within a Scope, and their Destructors will be called when they exit a scope. My uni gave me some curveball questions testing this by having both Global and Local objects with ``cout`` statements then asking what the output would be. Experiment around with this.
