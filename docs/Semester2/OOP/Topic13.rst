@@ -68,7 +68,9 @@
 |
 | Regarding Line 8, it's making a Copy Constructor because the Object is being passed by value instead of by Reference. I mentioned way earlier that passing by reference is simpler for Objects because if their complexity is high then it has to copy all of those values over and do a lot of data processing and moving, whereas a reference just has to make a pointer. This is why.
 |
-| You can treat the Copy Constructor just like a regular constructor and modify it to your needs. This is where we make the adjustment for the Heap to solve our initial problem as well, and make it so a *proper* copy of the Object is made.
+| You can treat the Copy Constructor just like a regular constructor and modify it to your needs. This is where we make the adjustment for the Heap to solve our initial problem as well, and make it so a *proper* copy of the Object is made. Copying all values from one Object to another is called a Shallow Copy, which is where we face our limitation. Copying all the values after going in and individually grabbind and assigning them, however, is called a Deep Copy. This is what we use when dealing with Dynamic Memory.
+|
+| There are two limitations of a Shallow Copy. The first is that either object's modification shows up for the other one, since they both point to the same Heap location. The second limitation is that if one Object's destructor is called, that location is freed. The other Object, however, still points to that location. It ends up having a Dangling Pointer. So the code snippet shown below is an example of how a Deep Copy is made when dealing with Dynamic Memory in Classes:
 
 .. code-block:: c++
    :linenos:
