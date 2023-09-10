@@ -62,7 +62,7 @@ Structures as Variables
 
 | This is where the real magic happens. This is how structures make your life easier to manage data. Now that the intro's done, here's how to use it like a regular variable so it makes your life easier.
 |
-| A structure can be assigned to another variable only if they're both the exact same structure. I'll write this now but explain later, this can be done ONLY if the Structures are all using Static memory. If any form of dynamic memory is involved, this method won't work. I'll explain the details later but all you need to know now is, if you were wondering why there's basically zero pointers on the previous page and this one, it's because the heap in structures makes things slightly complicated. One step at a time.
+| A structure can be assigned to another variable only if they're both the exact same structure. I'll write this now but explain later, this can be done ONLY if the Structures are all using Stack memory. If any form of dynamic memory is involved, this method won't work. I'll explain the details later but all you need to know now is, if you were wondering why there's basically zero pointers on the previous page and this one, it's because the heap in structures makes things slightly complicated. One step at a time.
 
 .. code-block:: c++
    :linenos:

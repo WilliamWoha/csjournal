@@ -36,7 +36,6 @@ Intro to Constructors
     };
 
 | You *ALWAYS* want the Constructor to be ``public``. There are only a very small amount of situations where the Constructor is supposed to be Private, and every single one of those involves making a limited amount of Objects (Singleton Pattern), or zero Objects (Utility Class, Abstract Class), and at this level you won't be doing that (Abstract Classes do come later but there's a far better way to do so than setting a constructor to Private). Now for the details.
-|
 *   A Constructor is automatically called when an Object is created
 *   The purpose is to 'Construct' the Object
 *   The Function Name is the Class Name
@@ -80,7 +79,7 @@ Intro to Constructors
 Parameterized Constructor
 """""""""""""""""""""""""
 
-| I wrote that there can be more than one Constructor. You might think that's strange since you're just initializing to default values. You wouldn't need more than one Constructor but...that's what's different. You're not initializing to default or empty values. You're initializing to values which you need depending on the specific data you're working with, and instead of making an Empty Object then using Setters to update values, it's easier to just put it all into the Constructor. On top of that, you can do different things depending on the type of data entered. Remember, the Constructor is just a Function. How would it differentiate between different Constructors? The same way regular Functions differentiate themselves if their names are the same: With different Parameters.
+| I wrote that there can be more than one Constructor. You might think that's strange since you're just initializing to default values. You wouldn't need more than one Constructor but...that's what's different. You're not initializing to default or empty values. You're initializing to values which you need depending on the specific data you're working with, and instead of making an Empty Object then using Setters to update values, it's easier to just put it all into the Constructor. On top of that, you can do different things depending on the type of data entered. Remember, the Constructor is just a Function. How would it differentiate between different Constructors? The same way regular Functions differentiate themselves if their names are the same: Overloading. Aka setting different parameters. Here's an example of a Parameterized Constructor:
 
 .. code-block:: c++
    :linenos:
@@ -106,8 +105,9 @@ Parameterized Constructor
         Circle c3(3, 4);
         Circle c4(3);
         Circle c5;
+    }
 
-| I set the names in the Constructor to be ``x1``, ``y1``, and ``radius1``, because you can't set them to the same names as the actual Data Members. The code doesn't however showcase having more than one Constructor at the same time. This is because I first wanted to demonstrate how Parametrized Constructors worked. That's the name for Constructors that take arguments. There's only two other things to know about them:
+| A Parameterized Constructor is just a Constructor with Arguments. I set the names in the Constructor to be ``x1``, ``y1``, and ``radius1``, because you can't set them to the same names as the actual Data Members. The code doesn't however showcase having more than one Constructor at the same time. This is because I first wanted to demonstrate how Parametrized Constructors worked. There's only two other things to know about them:
 *   You can set default arguments just like in regular Function Arguments
 *   You can't have any other Constructors with the same or less Argument Count
 | Going back to that circle, if you try to run that code, you'd get an error. This is because the declarations of ``c3``, ``c4``, and ``c5`` don't have enough information. So this time we'll use Default Arguments:
@@ -151,7 +151,7 @@ Parameterized Constructor
         radius = r1;
     }
 
-| Something to note here, ``Circle::Circle() {}`` is the constructor the Compiler makes for you by default if you don't end up creating your own code. That's why on earlier pages there weren't any errors for writing Classes without Constructors.
+| Something to note here, ``Circle::Circle() {}`` is the constructor the Compiler makes for you by default if you don't end up creating your own code. That's why on earlier pages there weren't any errors for writing Classes without Constructors. The compiler just handled it automatically.
 |
 | Before I get to the last point of the page, I want to mention this. Absolutely any code can be written in those lines. You can write ``x = x1*3`` or ``y = pow(x1, y1)`` (if you imported the ``cmath`` library), or whatever else you want. It's a function and you can do whatever you want with the Arguments, beyond just putting their values into the Data Members. You can perform calculations then put them in or do whatever you wish for. It's completely up to you.
 |
@@ -204,6 +204,8 @@ Default Constructors
 
 | This looks fine until you try to make ``c2``. It'll give an error, because it doesn't know which of the two Constructors to call.
 |
-| A Default Constructor is either a Constructor with Zero Paramters (``Class() {}``), or every Paramter has a Default Value. Pretty simple. The only thing to note here is, if you have a Default Constructor, then you can't have any other Constructor which has the same amount or less arguments, or the Compiler will be confused on which one to actually use. Should it go into the first one, and set ``r1`` to 0? Or should it go into the second one, where ``r1`` doesn't even exist? This will only happen, however, if the Data Types are the same. If you turn ``(float a, float b)`` into ``(int a, float b)``, it'll work fine.
+| A Default Constructor is either a Constructor with Zero Parameters (``Class() {}``), or every Parameter has a Default Value. Pretty simple. If it exists then an Object doesn't need any arguments passed into it to be brought into existence, however if a Default Constructor *doesn't* exist then the arguments are NECESSARY for the Object to be created.
 |
-| This is something that can be avoided through Common Sense and practice, but I bring it up because my university in question has an infamous reputation of giving extremely difficult curveball questions, and if you happen to be from that same university, or any other university that does the same, then I want you to be prepared for whatever insanity it has in store.
+| The only other thing to note here is, if you have a Default Constructor, then you can't have any other Constructor which has the same amount or less arguments, or the Compiler will be confused on which one to actually use. Regarding the code above, should it go into the first one, and set ``r1`` to 0? Or should it go into the second one, where ``r1`` as an argument doesn't even exist? This will only happen, however, if the Data Types are the same. If you turn ``(float a, float b)`` into ``(int a, float b)``, it'll work fine, as it's a different set of arguments entirely and there's no ambiguity present there.
+|
+| These errors and confusions can be avoided through Common Sense and practice, but I bring it up because my university in question has an infamous reputation of giving extremely difficult curveball questions, and if you happen to be from that same university, or any other university that does the same, then I want you to be prepared for whatever insanity it has in store.
