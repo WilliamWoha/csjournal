@@ -120,3 +120,18 @@
 | And now you can see that the two Objects have entirely different locations in memory, but their ``print`` functions give the same values of the Arrays. You can even see how running ``randomize()`` on one of the Objects won't affect the other. If we hadn't made the appropriate changes to the Copy Constructor, ``a2.print()`` would still be pointing to the Heap location of ``a1``.
 |
 | One last thing to mention, if you end up making your own Copy Constructor, you have to add in all the code for individual Data Members yourself. If there were a few other variables, such as another ``int``, ``string``, ``float``, ``char``, or really anything, then it won't be copied over automatically. You'll have to specifically write the code to copy over the values from the copy. This was done because sometimes you want to copy over values but not every single one. It was better to have the choice. So if something isn't being copied over correctly, remember to actually write the code for copying it!
+|
+| And, this was added on a way later date. There's a third time a Copy Constructor can be called, but depending on the Compiler in question, it may (very likely) be ignored. Compilers are allowed to do so, but also not required to do so. It can be turned on or off as well. There's a concept in C++ called ``Copy Elision``, which falls under ``Return Value Optimization (RVO)``. This page https://stackoverflow.com/questions/12953127/what-are-copy-elision-and-return-value-optimization explains it in detail, but all you really need to know is, look at this code:
+
+.. code-block:: c++
+   :linenos:
+
+    Circle func() {
+        Circle temp;
+        return temp;
+    }
+    int main() {
+        Circle c1 = func();
+    }
+
+| When you return an Object, it calls a Copy Constructor. Or, well, it's supposed to, but calling the Copy Constructor can be extremely expensive on memory. For this reason, many compilers optimize the process by just returning that value directly instead of making a copy for it. So if you happen to add some ``cout`` statements to the Copy Constructor, they may or may not be called, depending on how that specific Compiler has decided to do optimizations. The link above will explain it better. https://stackoverflow.com/questions/14154290/why-isnt-the-copy-constructor-called also has an example.
