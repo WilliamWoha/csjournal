@@ -19,6 +19,9 @@
         friend returnType function(arguments);
     };
 
-    returnType function(arguments);
+    returnType function(arguments) 
+    {
+
+    }
 
 | Friend functions should be used for limited use cases, or else too many functions with access to private data lessens the value of the Encapsulation and Data Hiding. The page is short for now but they're going to return. They're especially useful in Operator Overloading for integrating specific functionalities into Classes, such as being able to do ``cout << object << endl;`` by causing the ``ostream`` and ``istream`` insertion and extraction operators to be Friends.
