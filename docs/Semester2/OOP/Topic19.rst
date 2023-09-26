@@ -58,7 +58,8 @@
 | The full list of operators that can be overloaded is this:
 |
 .. list-table:: Operators that can be overloaded
-   :widths: 30 30 30 30 30 30 30 30
+   :widths: auto
+   :align: center
 
    * - ``+``
      - ``-``
@@ -113,7 +114,8 @@
 |
 
 .. list-table:: Operators that can't be overloaded
-   :widths: 30 30 30 30 30
+   :widths: auto
+   :align: center
 
    * - ``.``
      - ``.*``
