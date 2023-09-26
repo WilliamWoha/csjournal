@@ -56,8 +56,9 @@
 *   Operators must be loaded explicitly. Overloading the ``+`` operator, for example, doesn't overload the ``+=`` operator.
 |
 | The full list of operators that can be overloaded is this:
+|
 .. list-table:: Operators that can be overloaded
-   :widths: 10 10 10 10 10 10 10 10
+   :widths: 30 30 30 30 30 30 30 30
 
    * - ``+``
      - ``-``
@@ -109,9 +110,10 @@
      -
 
 | The full list of operators that can't be overloaded is this:
+|
 
 .. list-table:: Operators that can't be overloaded
-   :widths: 10 10 10 10 10
+   :widths: 30 30 30 30 30
 
    * - ``.``
      - ``.*``
@@ -121,4 +123,6 @@
 
 | And the reason for that is these operators being used by the compiler already, and using them might cause conflict. I won't get into the details but you can find more info at https://www.stroustrup.com/bs_faq2.html#overload-dot.
 |
-| Go back to :ref:`s1-oop-t15` to see an example of Operator Overloading in action. Next page onwards we're going into the details of each main operator that's worth overloading, and how it works. Most of it is obvious, but there are a few operators that have specific properties or techniques to implement them. It's pretty useful once you have it all figured out.
+| That's also why you're not allowed to make your own Operators. It might cause conflicts or smaller bugs that nobody's ever heard about, or might be hard to debug. And I'd say the table above is big enough to cover basically every operation you could need, and if not then you can just use the old fashioned way and make a function.
+|
+| Go back to :ref:`s2-oop-t15` to see an example of Operator Overloading in action. Next page onwards we're going into the details of each main operator that's worth overloading, and how it works. Most of it is obvious, but there are a few operators that have specific properties or techniques to implement them. It's pretty useful once you have it all figured out.
