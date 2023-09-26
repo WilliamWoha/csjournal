@@ -59,59 +59,65 @@
 .. list-table:: Operators that can be overloaded
    :widths: 10 10 10 10 10 10 10 10
 
-   * - +
-     - -
-     - *
-     - /
-     - %
-     - ^
-     - &
-     - |
-   * - ~
-     - !
-     - =
-     - <
-     - >
-     - +=
-     - -=
-     - *=
-   * - /=
-     - %=
-     - ^=
-     - &=
-     - |=
-     - <<
-     - >>
-     - <<=
-   * - >>=
-     - ==
-     - !=
-     - <=
-     - >=
-     - &&
-     - ||
-     - ++
-   * - --
-     - ->*
-     - ,
-     - ->
-     - []
-     - ()
-     - new
-     - delete
-   * - new[]
-     - delete[]
+   * - ``+``
+     - ``-``
+     - ``*``
+     - ``/``
+     - ``%``
+     - ``^``
+     - ``&``
+     - ``|``
+   * - ``~``
+     - ``!``
+     - ``=``
+     - ``<``
+     - ``>``
+     - ``+=``
+     - ``-=``
+     - ``*=``
+   * - ``/=``
+     - ``%=``
+     - ``^=``
+     - ``&=``
+     - ``|=``
+     - ``<<``
+     - ``>>``
+     - ``<<=``
+   * - ``>>=``
+     - ``==``
+     - ``!=``
+     - ``<=``
+     - ``>=``
+     - ``&&``
+     - ``||``
+     - ``++``
+   * - ``--``
+     - ``->*``
+     - ``,``
+     - ``->``
+     - ``[]``
+     - ``()``
+     - ``new``
+     - ``delete``
+   * - ``new[]``
+     - ``delete[]``
+     -
+     -
+     -
+     -
+     -
+     -
 
 | The full list of operators that can't be overloaded is this:
 
 .. list-table:: Operators that can't be overloaded
    :widths: 10 10 10 10 10
 
-   * - .
-     - .*
-     - ::
-     - ?:
-     - sizeof
+   * - ``.``
+     - ``.*``
+     - ``::``
+     - ``?:``
+     - ``sizeof``
 
 | And the reason for that is these operators being used by the compiler already, and using them might cause conflict. I won't get into the details but you can find more info at https://www.stroustrup.com/bs_faq2.html#overload-dot.
 |
