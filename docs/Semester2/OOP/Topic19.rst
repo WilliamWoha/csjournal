@@ -22,10 +22,10 @@
     class ClassName {
         // Data Members
     public:
-        ClassName operator+(Argument) {
+        ReturnType operator+(Argument) {
             // Code
         }
-        ClassName operator-(Argument);
+        ReturnType operator-(Argument);
     };
     ReturnType ClassName::operator-(Argument) {
         // Code
@@ -46,3 +46,73 @@
 | If implemented as Member Functions then it's necessary that they're NOT static. Static Member Functions only work with Static Data Members. There's no point in having Operator Overloading if you're not making objects interact with each other.
 |
 | The symbol you use doesn't actually affect what the function is do. You could very easily program the ``*`` symbol to perform addition, and the ``+`` symbol to perform multiplication. It just depends on what you write within the function definition, but again, the purpose is to make implementation and coding easier. Try to make the symbols appropriate for the code.
+|
+| We still have to follow some rules with this.
+*   We can't overload operators that are already defined for built-in data types, such as integer edition.
+*   The order of evaluation remains the same. Use ``(parantheses)`` to force a specific order.
+*   Association rules can't be changed, it still evaluates left to right
+*   You can't edit the number of arguments (or operands) it takes at once. For example, the ``!`` and ``&`` operators both always take one argument, while ``==`` always takes two arguments. The only exception to this is the ``(parantheses)`` operator, which lets you take as many arguments as you like. We'll cover all of them one by one.
+*   New Operators can't be created. We use only the existing ones.
+*   Operators must be loaded explicitly. Overloading the ``+`` operator, for example, doesn't overload the ``+=`` operator.
+|
+| The full list of operators that can be overloaded is this:
+.. list-table:: Operators that can be overloaded
+   :widths: 10 10 10 10 10 10 10 10
+
+   * - +
+     - -
+     - *
+     - /
+     - %
+     - ^
+     - &
+     - |
+   * - ~
+     - !
+     - =
+     - <
+     - >
+     - +=
+     - -=
+     - *=
+   * - /=
+     - %=
+     - ^=
+     - &=
+     - |=
+     - <<
+     - >>
+     - <<=
+   * - >>=
+     - ==
+     - !=
+     - <=
+     - >=
+     - &&
+     - ||
+     - ++
+   * - --
+     - ->*
+     - ,
+     - ->
+     - []
+     - ()
+     - new
+     - delete
+   * - new[]
+     - delete[]
+
+| The full list of operators that can't be overloaded is this:
+
+.. list-table:: Operators that can't be overloaded
+   :widths: 10 10 10 10 10
+
+   * - .
+     - .*
+     - ::
+     - ?:
+     - sizeof
+
+| And the reason for that is these operators being used by the compiler already, and using them might cause conflict. I won't get into the details but you can find more info at https://www.stroustrup.com/bs_faq2.html#overload-dot.
+|
+| Go back to :ref:`s1-oop-t15` to see an example of Operator Overloading in action. Next page onwards we're going into the details of each main operator that's worth overloading, and how it works. Most of it is obvious, but there are a few operators that have specific properties or techniques to implement them. It's pretty useful once you have it all figured out.
