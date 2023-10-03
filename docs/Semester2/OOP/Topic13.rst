@@ -46,7 +46,23 @@
             // Copy Constructor Code
         }
     
-| I wrote the Default Constructor there as well to give an idea. It's really just a Constructor where the Object is the Argument. And just like default Constructors, if a class doesn't have a Copy Constructor written by the programmer, it's written by the program directly. A Copy Constructor by default performs member-wise assignment of values from one Object to the other. It's triggered via one of three ways:
+| I wrote the Default Constructor there as well to give an idea. It's really just a Constructor where the Object is the Argument. And just like default Constructors, if a class doesn't have a Copy Constructor written by the programmer, it's written by the program directly. But one crucial piece of information to remember: The Copy Constructor is called for *any* function which passes an Object by value. This means if you do ``function(Circle copy)`` for any function, then it calls the copy constructor and doesn't modify the original value. The problem with this? If you use that same syntax for the Copy Constructor itself, it keeps calling itself, and becomes stuck in a recursive infinite loop. Passing by reference means you're not calling a constructor. But, since we don't want the original value to be modified, we also attach a ``const`` in the start of it. Make that a habit now, you'll see me using it way more frequently.
+
+.. code-block:: c++
+   :linenos:
+
+    public:
+        void func1(Circle c);
+        void func2(const Circle& c);
+
+| There's two major differences between them, and depending on the situation you'll use one or the other, but in most cases you'll be using the syntax of ``const Circle& c``.
+*   Passing by value calls a Copy Constructor for that object, then that copy is used within the function. Modifying the object within the function doesn't affect the original object.
+*   Passing by reference makes a pointer for that object, and sends that pointer into that function. Modifying the object within the function affects the original object.
+| The only time you should pass by Value is if the object in question is cheaper than 8 bytes, because then you're using less data than making a reference. Since a reference uses a pointer, and a pointer uses 8 bytes, you should only use it if the data types in your object total more than 8 bytes. So in this case, we have 3 ``float`` data types, which equals 12 bytes. For this scenario, passing by ``const`` reference is cheaper. If, however, we only had one data type, or 3 ``bool`` or ``char`` variables instead, then passing by value would be cheaper.
+|
+| Of course there's also the scenario where you pass by reference where you *do* want to modify the original object, but that's rare. Still, you just remove the ``const`` keyword in that scenario.
+|
+| A Copy Constructor by default performs member-wise assignment of values from one Object to the other. It's triggered via one of three ways:
 
 .. code-block:: c++
    :linenos:
