@@ -1,7 +1,7 @@
 .. _s2-oop-t21:
 
-21) Overloading Default Data Types
-----------------------------------
+21) Overloading Operators for Default Data Types
+------------------------------------------------
 
 | This is just a more in-depth explanation of overloading operators in a way that lets you use them with other data types, but externally. I showed on the previous page the overloading of ``operator>>`` and ``operator<<`` for input and output using ``cin`` and ``cout``, and that you can implement the operator overload externally as well.
 
