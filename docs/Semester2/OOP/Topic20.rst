@@ -758,4 +758,4 @@ operator>>
 Conclusion
 ^^^^^^^^^^
 
-| I know that this page was long but I did it because I struggle with having internet a lot, so having it all be in one place without having to search and scroll makes things way easier to share and read and quote. Use this page as a reference for operator overloading. If there's anything left it'll be covered on the next page. After that, we move on to Class Relationships (Association, Aggregation, Composition).
+| I know that this page was long but I did it because I struggle with having internet a lot, so having it all be in one place without having to search and scroll makes things way easier to share and read and quote. Use this page as a reference for operator overloading. Whatever's left will be covered on the next page or two. After that, we move on to Class Relationships (Association, Aggregation, Composition).
