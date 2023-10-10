@@ -414,7 +414,7 @@ operator>=
 .. code-block:: c++
    :linenos:
 
-    bool ComplexInt::operator>(const ComplexInt& obj) {
+    bool ComplexInt::operator>=(const ComplexInt& obj) {
       return *this > obj || *this == obj;
     }
     
@@ -424,7 +424,7 @@ operator<=
 .. code-block:: c++
    :linenos:
 
-    bool ComplexInt::operator>(const ComplexInt& obj) {
+    bool ComplexInt::operator<=(const ComplexInt& obj) {
       return *this < obj || *this == obj;
     }
 
@@ -434,7 +434,7 @@ operator!=
 .. code-block:: c++
    :linenos:
 
-    bool ComplexInt::operator>(const ComplexInt& obj) {
+    bool ComplexInt::operator!=(const ComplexInt& obj) {
       return !(*this == obj);
     }
     
