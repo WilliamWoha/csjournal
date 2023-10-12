@@ -16,13 +16,34 @@ Relationships
 
 | There's many relationships present between real world objects. These are:
 *   Part-of (An engine is a part of a car)
-*   Has-a ()
-*   Uses-a
-*   Depends-on
-*   Member-of
-*   Is-a
+*   Has-a (A car has a steering wheel)
+*   Uses-a (A driver uses a steering wheel)
+*   Depends-on (A flower depends on a bee for pollination)
+*   Member-of (A student is a member of a class)
+*   Is-a (A square is a shape)
+| And yes some of them are different ways of saying the same thing. We'll get to the formal terminologies as far as OOP is concerned now.
+
+Composition
+^^^^^^^^^^^
+
+| This is a very close relationship between objects. In simple words, it can be described as ``has a``. Such as, a car has an engine. A human has a brain. A phone has a battery. A CPU has transistors. A room has windows. Now, although I did write a bunch of real world examples, this relation is slightly different for OOP. Here, it's for relationships where one or more simple objects combine to make up a more complex object, and the relationship is so strong that if the more complex object were to be destroyed, then so would the more simpler object. Although you can separate an engine from a car or a brain from a human or a battery from a phone, unless you have specific tools or measures to save it, they're going to be destroyed if the car, human, or phone is destroyed.
+|
+| We can take an example from a game, too. Take for example, Minecraft, or GTA, or really any game which has an inventory and a multiplayer lobby. Imagine the Inventory to be an array that stores a bunch of Objects in it. This inventory is tied to the player. If you're in a multiplayer lobby, the game has to process the data of every person and their inventories, because that's how multiplayer lobbies work. The other person's data also has to be loaded. Now, if you and another person are playing normally, the game will load the corresponding data on your computer and update the game accordingly. But suddenly, if the other player disconnects, then the game calls a destructor to remove that player's data from your computer, as there's nothing to load anymore. The only reason they keep their inventories when they connect again is because they're stored and reloaded later. We're ignoring that specific detail for now and only considering that they disconnected. The player is gone, and so is their inventory.
+|
+| It can be something much simpler too. Even the ``ComplexInt`` earlier designed is suitable, despite having only two variables in it.
+|
+| The relation of Composition applies to any class where the Data Members exist within the lifespan of the Class. Meaning that when the Class is created, so are the Data Members. And when the class is Destroyed, so are the data members. It's impossible for the Data Members to exist after the class has been destroyed.
+|
+| You'll understand this relationship better when you see the others in action, as those are relationships where the class can be destroyed but the object can still exist outside of it.
+
+Aggregation
+^^^^^^^^^^^
+
+| This is something we haven't implemented before. Aggregation, in simple words, can be described as ``uses a``. A person uses an address. Every person has an address, but multiple people can live at the same address, and the address doesn't rely on the person to exist. It was already there. Someone either moves in or moves out. A bullet is shot by a gun, but while in flight, if the gun is destroyed, it doesn't matter. The bullet still continues to exist. A driver uses a car, but the car doesn't rely on the driver for existence and destruction. You want to use this kind of relation when you don't want a data member to be destroyed when the class's destructor is called, or if you want something to be linked to multiple Classes, like multiple ``Person`` objects having the same address or same car shared.
+|
+| You might be wondering how this is possible, as the Data Members we've done till now are all Composition based. Well, not quite. The Data Members present within a class are Composition Based, yes. But if the data members are *pointers*, then it can carry out an Aggregation based relationship, as long as you actually *properly* utilize it.
 
 Association
 ^^^^^^^^^^^
 
-| 
+| This is basically Aggregation but even more loose. Unlike Composition or Aggregation, where the part is part of the whole object, the associated object has practically no relation to the original object. In aggregation, the relationship is always unidirectional. In an association, the relationship may be unidirectional or bidirectional. An example can be of Doctors and Patients. A doctor does have a relationship with their patients, but conceptually it's not a part/whole (object composition) relationship. A doctor can see many patients in a day, and a patient can see many doctors (like for a second opinion, or needing multiple doctors for different tasks). Neither of the object's lifespans are tied to the other.
