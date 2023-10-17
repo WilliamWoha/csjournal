@@ -30,13 +30,82 @@ Composition
 |
 | We can take an example from a game, too. Take for example, Minecraft, or GTA, or really any game which has an inventory and a multiplayer lobby. Imagine the Inventory to be an array that stores a bunch of Objects in it, and that this inventory is tied to a class called Player. If you're in a multiplayer lobby, the game has to process the data of every person and their inventories, because that's how multiplayer lobbies work. The other person's data also has to be loaded. Now, if you and another person are playing normally, the game will load the corresponding data on your computer and update the game accordingly. But suddenly, if the other player disconnects, then the game calls a destructor to remove that player's data from your computer, as there's nothing to load anymore. The only reason they keep their inventories when they connect again is because they're stored and reloaded later. We're ignoring that specific detail for now and only considering that they disconnected. The other player is gone, and so is their inventory. The game on *your* end won't load their stuff anymore, so it destroyed the Player Class, and with that, freed up all the memory their presence was taking, including their inventory. It's no longer being loaded on your computer.
 |
-| It can be something much simpler too. Even the ``ComplexInt`` earlier designed is suitable, despite having only two variables in it. If the object is destroyed, you can't access its variables anymore.
+| It can be something much simpler too. Even the ``ComplexInt`` earlier designed is suitable, despite having only two variables in it. If the object is destroyed, you can't access its variables anymore. But we're usually referring to relationships between *Classes*, and that usually doesn't involve primitive data types such as ``float`` or ``char``.
 |
 | The relation of Composition applies to any class where the Data Members exist within the lifespan of the Class. Meaning that when the Class is created, so are the Data Members. And when the class is Destroyed, so are the data members. The person is born, they have organs. They die, so do the organs. It's impossible for the Data Members to exist after the class has been destroyed.
 |
 | You'll understand this relationship better when you see the others in action, as those are relationships where the class can be destroyed but the object can still exist outside of it.
 |
 | I'm going in depth for this because if you're from the same university as me then you're going to have a *lot* of questions asked about what the relation is and how it works, and how it's different from other types. Realistically, you've already done this with *every single class* done so far, because it's easy to make a class have Data Members that are born and die with the Class. It's Aggregation that gets you confused. Understanding the fundamentals is important so you can learn what to use when and why.
+
+.. code-block:: c++
+   :linenos:
+
+    class Coordinate {
+    public:
+      float x;
+      float y;
+    };
+    class Circle {
+    public:
+      Coordinate center;
+      float radius;
+    };
+    class Polygon {
+    public:
+      Coordinate* vertices; // Array of vertices
+      int numOfVertices;
+    };
+
+| Above is an example of the class ``Coordinate`` having a Composition relation with ``Circle`` and ``Polygon``.
+|
+| Class relations are standardized and presented in diagram form through something called ``UML Class Diagrams``. https://creately.com/guides/class-diagram-relationships/ has more info about it, and I'd recommend giving it a look because you might get asked to either make these diagrams, or to interpret them. To represent the code above via a UML diagram, it would look like this:
+
+.. raw:: html
+    :file: ../_images/drawio/composition_1.svg
+
+| Here's another example of a UML Diagram, and I'll write the corresponding code for it just below.
+
+.. raw:: html
+    :file: ../_images/drawio/composition_2.svg
+
+.. code-block:: c++
+   :linenos:
+
+    class Library;
+    class Book;
+    class Page;
+    class Line;
+    class Word;
+    // I wouldn't be implementing Words as a class as string exists.
+    // But sometimes string isn't allowed, so I still implemented it.
+
+    // class Letters is not required as char already exists.
+
+    class Library {
+      Book* books;
+      int numOfBooks;
+    };
+    class Book {
+      Page* pages;
+      int numOfPages;
+    };
+    class Page {
+      Line* lines;
+      int numOfLines;
+    };
+    class Line {
+      Word* words;
+      int numOfWords;
+    };
+    class Word {
+      char* arr;
+      int numOfLetters;
+    };
+
+| I never knew about lines 1, 2, 3, 4, and 5 until I started writing this. I never ended up using it but it's still useful. Similar to how you can do ``func();`` and then ``func{ code }``, aka function declaration and definition respectively, you can also declare a class. This process is formally called ``forward declaration``, and https://www.geeksforgeeks.org/what-are-forward-declarations-in-c/ has more details about it. I just put it here for keeping the order. If you don't write those, you just have to make the Classes in reverse order. First the word, then the Line, then the Page, and so on until the Library.
+|
+| In this specific situation, if you do ``Library* ptr = new Library;``, you'll also be expected to write a destructor for ``Library``, which is going to be a long and tedious process because to prevent memory leaks, you also need a destructor for ``Book``. Each book needs to run a destructor for ``Page``, each page needs to run a destructor for ``Line``,  each line needs to run a destructor for ``Word``, and finally, each word needs to run an operation to ``delete[] arr``. It's like a 5D array, or even 6D if you for some reason decide to make an array of ``Library`` in whatever you're doing.
 
 Aggregation
 ^^^^^^^^^^^
