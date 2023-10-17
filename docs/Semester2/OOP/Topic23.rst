@@ -62,12 +62,12 @@ Composition
 | Class relations are standardized and presented in diagram form through something called ``UML Class Diagrams``. https://creately.com/guides/class-diagram-relationships/ has more info about it, and I'd recommend giving it a look because you might get asked to either make these diagrams, or to interpret them. To represent the code above via a UML diagram, it would look like this:
 
 .. raw:: html
-    :file: ../_images/drawio/composition_1.svg
+    :file: ../images/composition_1.svg
 
 | Here's another example of a UML Diagram, and I'll write the corresponding code for it just below.
 
 .. raw:: html
-    :file: ../_images/drawio/composition_2.svg
+    :file: ../images/composition_2.svg
 
 .. code-block:: c++
    :linenos:
