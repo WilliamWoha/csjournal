@@ -62,12 +62,12 @@ Composition
 | Class relations are standardized and presented in diagram form through something called ``UML Class Diagrams``. https://creately.com/guides/class-diagram-relationships/ has more info about it, and I'd recommend giving it a look because you might get asked to either make these diagrams, or to interpret them. To represent the code above via a UML diagram, it would look like this:
 
 .. raw:: html
-    :file: ../images/composition_1.svg
+    :file: images/composition_1.svg
 
 | Here's another example of a UML Diagram, and I'll write the corresponding code for it just below.
 
 .. raw:: html
-    :file: ../images/composition_2.svg
+    :file: images/composition_2.svg
 
 .. code-block:: c++
    :linenos:
@@ -112,7 +112,78 @@ Aggregation
 
 | This is something we haven't implemented before. Aggregation, in simple words, can be described as ``uses a``. A person uses an address. Every person has an address, but multiple people can live at the same address, and the address doesn't rely on the person to exist. It was already there. Someone either moves in or moves out. A bullet is shot by a gun, but while in flight, if the gun is destroyed, it doesn't matter. The bullet still continues to exist. A driver uses a car, but the car doesn't rely on the driver for existence and destruction. You want to use this kind of relation when you don't want a data member to be destroyed when the class's destructor is called, or if you want something to be linked to multiple Classes, like multiple ``Person`` objects having the same address or same car shared.
 |
-| You might be wondering how this is possible, as the Data Members we've done till now are all Composition based. Well, not quite. The Data Members present within a class are Composition Based, yes. But if the data members are *pointers*, then it can carry out an Aggregation based relationship, as long as you actually *properly* utilize it.
+| You might be wondering how this is possible, as the Data Members we've done till now are all Composition based. See, till now we've been using pointers within Data Members just for dynamic arrays. This time, we'll be using them for utilizing this relation. Here's an example of Composition, which I'm putting here to show you how NOT to do Aggregation:
+
+.. code-block:: c++
+   :linenos:
+
+    class Part {
+        // Code
+    };
+    class Whole {
+    private:
+        Part* p;
+    public:
+        Whole() {
+            this->p = new Part;
+        }
+        ~Whole() {
+            delete p;
+        }
+    };
+    int main() {
+        Whole w;
+    }
+
+| This IS NOT aggregation. I'm specifically writing this here because I made the mistake of thinking that having a pointer counts as aggregation. I didn't understand it properly and suffered the consequences, don't repeat the mistake I did. The above code is Composition, and the *below* code is Aggregation. Go back and forth and see the differences to realize how it works.
+
+.. code-block:: c++
+   :linenos:
+
+    class Part {
+        // Code
+    };
+    class Whole {
+    private:
+        Part* p;
+    public:
+        Whole(Part* p) {
+            this->p = p;
+        }
+    };
+    int main() {
+        Part* p = new Part;
+        Whole w(p);
+    }
+
+| You don't have to throw it in the constructor. This is still just a basic version. In the most realistic implementation you'd be making the Whole have access to ``p`` and lose access to ``p`` at different parts throughout the program using function calls, like throwing a grenade in call of duty but dying just after throwing it. The grenade doesn't vanish with you.
+
+.. code-block:: c++
+   :linenos:
+
+    class Address {
+        // Code
+    };
+    class Employee {
+    private:
+        Address* address;
+    public:
+        Whole() {
+            address = nullptr;
+        }
+        void updateAddress(Address* address) {
+            this->address = address;
+        }
+    };
+    int main() {
+        Address a[4];
+        // Pretend there's a bunch of Addresses with values.
+        Employee e[10];
+        // Pretend there's a bunch of Employees with values.
+        e[0].updateAddress(a[3]);
+        e[4].updateAddress(a[1]);
+        e[2].updateAddress(nullptr); // Clearing the address
+    }
 
 Association
 ^^^^^^^^^^^
