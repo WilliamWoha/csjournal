@@ -60,15 +60,19 @@ Composition
 | Above is an example of the class ``Coordinate`` having a Composition relation with ``Circle`` and ``Polygon``.
 |
 | Class relations are standardized and presented in diagram form through something called ``UML Class Diagrams``. https://creately.com/guides/class-diagram-relationships/ has more info about it, and I'd recommend giving it a look because you might get asked to either make these diagrams, or to interpret them. To represent the code above via a UML diagram, it would look like this:
+|
 
 .. raw:: html
     :file: images/composition_1.svg
 
+|
 | Here's another example of a UML Diagram, and I'll write the corresponding code for it just below.
-
+|
 .. raw:: html
     :file: images/composition_2.svg
-
+|
+| And finally the code.
+|
 .. code-block:: c++
    :linenos:
 
@@ -112,7 +116,14 @@ Aggregation
 
 | This is something we haven't implemented before. Aggregation, in simple words, can be described as ``uses a``. A person uses an address. Every person has an address, but multiple people can live at the same address, and the address doesn't rely on the person to exist. It was already there. Someone either moves in or moves out. A bullet is shot by a gun, but while in flight, if the gun is destroyed, it doesn't matter. The bullet still continues to exist. A driver uses a car, but the car doesn't rely on the driver for existence and destruction. You want to use this kind of relation when you don't want a data member to be destroyed when the class's destructor is called, or if you want something to be linked to multiple Classes, like multiple ``Person`` objects having the same address or same car shared.
 |
-| You might be wondering how this is possible, as the Data Members we've done till now are all Composition based. See, till now we've been using pointers within Data Members just for dynamic arrays. This time, we'll be using them for utilizing this relation. Here's an example of Composition, which I'm putting here to show you how NOT to do Aggregation:
+| Here's the UML Diagram showing Aggregation. Notice that the diamond is hollow instead of filled. Again, I won't be going into details about the diagrams, but they'll still be present here for reference. You can search on the internet for more reference and details about UML Diagrams, or go to https://creately.com/guides/class-diagram-relationships/ to learn more, as mentioned earlier. 
+|
+
+.. raw:: html
+    :file: images/aggregation_1.svg
+
+|
+| You might be wondering how this relation is possible, as the Data Members we've done till now are all Composition based. See, till now we've been using pointers within Data Members just for dynamic arrays. This time, we'll be using them for utilizing this relation. Here's an example of Composition, which I'm putting here to show you how NOT to do Aggregation:
 
 .. code-block:: c++
    :linenos:
@@ -156,7 +167,13 @@ Aggregation
         Whole w(p);
     }
 
-| You don't have to throw it in the constructor. This is still just a basic version. In the most realistic implementation you'd be making the Whole have access to ``p`` and lose access to ``p`` at different parts throughout the program using function calls, like throwing a grenade in call of duty but dying just after throwing it. The grenade doesn't vanish with you.
+| You don't have to throw it in the constructor. This is still just a basic version. In the most realistic implementation you'd be making the Whole have access to ``p`` and lose access to ``p`` at different parts throughout the program using function calls, like throwing a grenade in call of duty but dying just after throwing it. The grenade doesn't vanish with you. Here's an example with both the diagram and the code:
+|
+
+.. raw:: html
+    :file: images/aggregation_2.svg
+
+|
 
 .. code-block:: c++
    :linenos:
