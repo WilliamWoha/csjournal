@@ -69,12 +69,17 @@ Intro to Constructors
     }
 
     int main() {
-        Employee e1("Dwayne Johnson", 314, 25, 7, 'M', "Monday Tuesday Wednesday");
-        Employee e2("John Cena", 315, 26, 8, 'M', "Tuesday Wednesday Thursday");
-        // This next line will give an error since there's not enough arguments.
-        Employee e3("Ryan Gosling");
+        Employee e1;
+        Employee* e2 = new Employee;
+        // There's a catch.
+        // This isn't possible anymore.
+        Employee e3("Dwayne Johnson", 314, 25, 7, 'M', "Monday Tuesday Wednesday");
+        Employee e4("John Cena", 315, 26, 8, 'M', "Tuesday Wednesday Thursday");
+        Employee e5("Ryan Gosling");
         // This is where we get to the next topic.
     }
+
+| There's a catch, though. I found this out later and now I'm editing the page. If you make your own constructor, it replaces the constructor the Compiler makes for you, and that constructor is responsible for letting you declare classes like Structs. So the lines where ``e3``, ``e4``, ``e5`` are declared, are now invalid. I'll explain why this is happening after I explain the Parameterized Constructor.
 
 Parameterized Constructor
 """""""""""""""""""""""""
@@ -102,30 +107,16 @@ Parameterized Constructor
     int main() {
         Circle c1(3, 4, 5);
         Circle c2(0, 0, 0);
+        // The next declarations will give an error.
         Circle c3(3, 4);
         Circle c4(3);
         Circle c5;
     }
 
-| A Parameterized Constructor is just a Constructor with Arguments. I set the names in the Constructor to be ``x1``, ``y1``, and ``radius1``, because you can't set them to the same names as the actual Data Members. The code doesn't however showcase having more than one Constructor at the same time. This is because I first wanted to demonstrate how Parametrized Constructors worked. There's only two other things to know about them:
+| A Parameterized Constructor is just a Constructor with Arguments. I set the names in the Constructor to be ``x1``, ``y1``, and ``radius1``, because you can't set them to the same names as the actual Data Members. The code however doesn't showcase having more than one Constructor at the same time. This is because I first wanted to demonstrate how Parametrized Constructors worked. There's only two other things to know about them:
 *   You can set default arguments just like in regular Function Arguments
 *   You can't have any other Constructors with the same or less Argument Count
-| Going back to that circle, if you try to run that code, you'd get an error. This is because the declarations of ``c3``, ``c4``, and ``c5`` don't have enough information. So this time we'll use Default Arguments:
-
-.. code-block:: c++
-   :linenos:
-
-    public:
-        Circle(float x1 = 0, float y1 = 0, float radius1 = 0);
-    };
-
-    Circle::Circle(float x1 = 0, float y1 = 0, float radius1 = 0) {
-        x = x1;
-        y = y1;
-        radius = radius1;
-    }
-
-| This works fine. You can then create the Circles like you did earlier. Now we go back to that Multiple Constructor statement. It'll work like this:
+| Going back to that circle, if you try to run that code, you'd get an error. This is because the declarations of ``c3``, ``c4``, and ``c5`` don't have enough information. There's two ways to deal with this. The first is to have multiple Constructors:
 
 .. code-block:: c++
    :linenos:
@@ -151,23 +142,87 @@ Parameterized Constructor
         radius = r1;
     }
 
-| Something to note here, ``Circle::Circle() {}`` is the constructor the Compiler makes for you by default if you don't end up creating your own code. That's why on earlier pages there weren't any errors for writing Classes without Constructors. The compiler just handled it automatically.
-|
-| Before I get to the last point of the page, I want to mention this. Absolutely any code can be written in those lines. You can write ``x = x1*3`` or ``y = pow(x1, y1)`` (if you imported the ``cmath`` library), or whatever else you want. It's a function and you can do whatever you want with the Arguments, beyond just putting their values into the Data Members. You can perform calculations then put them in or do whatever you wish for. It's completely up to you.
-|
-| Now, getting back to topic, there's a problems with this specific scenario. It's redundant. Repeated Code. The way to fix it? Default Arguments.
+| This works fine, but there's too much redundant code. A constructor is still just a function, and we can treat it like one. So we can also give it Default Arguments: 
 
 .. code-block:: c++
    :linenos:
 
     public:
-        Circle(float x1 = 0, float y1 = 0, float r1 = 0);
+        Circle(float x1 = 0, float y1 = 0, float radius1 = 0);
     };
 
-    Circle::Circle(float x1, float y1, float r1) {
+    Circle::Circle(float x1 = 0, float y1 = 0, float radius1 = 0) {
         x = x1;
         y = y1;
-        radius = r1;
+        radius = radius1;
+    }
+
+| You can also have multiple constructors accepting different data types as well.
+|
+| Something to note here, ``Circle::Circle() {}`` is (almost) the constructor the Compiler makes for you by default if you don't end up creating your own code. That's why on earlier pages there weren't any errors for writing Classes without Constructors. The compiler just handled it automatically. I say almost, I'll explain that in just a couple of paragraphs.
+|
+| Before I get to the last point of the page, I want to mention this. Absolutely any code can be written in those lines. You can write ``x = x1*3`` or ``y = pow(x1, y1)`` (if you imported the ``cmath`` library), or whatever else you want. It's a function and you can do whatever you want with the Arguments, beyond just putting their values into the Data Members. You can perform calculations then put them in or do whatever you wish for. It's completely up to you. It can accept any arguments at all and you can use that however you wish for the existing data types. This is just a basic example, the control is in your hands. Though the constructor with the Default Arguments would be better to implement in this specific scenario.
+|
+| Alright, now remember earlier on the page when I said that if you make a constructor with zero arguments, just above the Parameterized Constructor portion, that it won't accept declarations of ``Employee e3("Dwayne Johnson", 314, 25, 7, 'M', "Monday Tuesday Wednesday");``, and so on? This is because the default constructor isn't actually ``Constructor()``. It's actually ``Constructor(<brace-enclosed initializer list>)``. We've been using it a lot already, but never as a function argument. https://en.cppreference.com/w/cpp/language/list_initialization has more info about what it is and its syntax but it can be a bit hard to understand. A ``<brace-enclosed initializer list>`` is just an array-like piece of data ``{stored, between, curly, braces}`` and separated by commas. Now, although there's multiple things present between the ``{braces}``, they make it so the entire thing is technically just one piece of data, kind of like an array or struct. It's like a ``"string literal"``, it can't be stored into a data type, and the data between commas can be anything. This is extremely useful to know about because this is the easiest way to give data to constructors, even through pointer based declarations.
+|
+| If you don't replace the compiler's constructor, then it generates a Constructor that takes any sized ``<brace-enclosed initializer list>``. But keep something in mind: if ANY of your data members are private, it WILL NOT take any arguments for a constructor. If you use any private member you are FULLY EXPECTED to make a proper constructor. You're expected to give it something as soon as it exists because garbage values are going to cause problems. Don't just make it have garbage then use setters later, deal with it now.
+|
+| The whole reason I bring up the existence of this concept is because this thing is compatible with any function, and can be used to send data to a function (including constructors) in an easy manner.
+
+.. code-block:: c++
+   :linenos:
+
+    // If all data members were public,
+    // And the constructor wasn't replaced,
+    // the following are all valid.
+    Employee e1 = {"Dwayne Johnson1"};
+    Employee e2({"Dwayne Johnson2", 315});
+    Employee* e3 = new Employee({"Dwayne Johnson3", 316, 9});
+    Employee* e4 = new Employee{"Dwayne Johnson4", 317, 10, 'M'};
+
+| And here's how you'd use it if you did replace the Constructor.
+
+.. code-block:: c++
+   :linenos:
+
+    class Employee {
+    private:
+        string name;
+        int ID;
+        double payRate;
+        double hours;
+        char gender;
+        string workingDays;
+    public:
+        Employee(string n, int i, double pR, double h, char g, string wD = "Any Day") {
+            name = n;
+            ID = i;
+            payRate = pR;
+            hours = h;
+            gender = g;
+            workingDays = wD;
+        }
+        void print() {
+            cout << name << '\n' << ID << '\n' << payRate << '\n' << hours << '\n' << gender << '\n' << workingDays << '\n' << endl;
+        }
+    };
+
+    int main() {
+        Employee e1("Dwayne Johnson", 314, 25, 7, 'M', "Monday Tuesday Wednesday");
+        Employee e2({"John Cena", 315, 26, 8, 'M', "Tuesday Wednesday Thursday"});
+        Employee* e3 = new Employee({"Ryan Gosling", 316, 27, 9, 'M', "Friday"});
+        // Take note that even though Samuel L Jackson's arguments aren't complete,
+        // this still compiles because the compiler is smart enough to pass the
+        // brace-enclosed initializer list until the second last argument, and then
+        // use the Default Value written for wD above. If that default value
+        // wasn't present, the line would be giving an error.
+        Employee* e4 = new Employee{"Samuel L Jackson", 317, 28, 10, 'M'};
+        e4->print();
+        
+        Employee* e5 = new Employee[3]{{"A",1,1,1,'A',"A"}, {"B",2,2,2,'B',"B"}, {"C",3,3,3,'C',"C"}};
+        e5[0].print();
+        e5[1].print();
+        e5[2].print();
     }
 
 Default Constructors
