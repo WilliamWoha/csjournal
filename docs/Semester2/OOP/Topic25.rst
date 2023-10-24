@@ -56,12 +56,12 @@ Class Access
 Access Specifiers within the Class Definition
 """""""""""""""""""""""""""""""""""""""""""""
 
-| For this specific scenario, we'll be assuming that the ``public`` specifier is used for Inheriting.
+| For this specific scenario, we'll be assuming that the ``public`` specifier is used for Inheriting. This is the most common form of Inheritance. We'll be looking into other forms as well but you won't use them anywhere near as often as you use this.
 |
 | For any member in the Base Class, be it a Data Member or Member Function:
-*   If it is defined as ``public``, then the Derived Class also declares them as public. As an example, if we have a public ``int`` in the Base Class, then the Derived Class will inherit that ``int``, and since the access specifier is set to public, that ``int`` will be publicly accessible. 
-*   If the member is defined as ``private``, however, then that data will remain ``private``, no matter what. You CANNOT inherit private members and make them public. The member will be inherited, but it will still be private. In fact, not only will it be private, it will be private to the Base Class as well. Not even the Base Class has direct access to it, and it's expected to use Getters and Setters to interact with it.
-*   If the member is defined as ``protected``, then the data will be declared as ``public`` for the derived class, but only for the derived class. Any 
+*   If it is defined as ``public``, then the Derived Class also declares them as public. As an example, if we have a public ``int`` in the Base Class, then the Derived Class will inherit that ``int``, and since the access specifier is set to public, that ``int`` will be publicly accessible. The Base Class has direct access to it, the Derived Class has direct access to it, and Objects have direct access to it.
+*   If the member is defined as ``private``, however, then that data will remain ``private``, no matter what. You CANNOT inherit private members and make them public. The member will be inherited, and it will remain private, and not only will it remain inaccessible to Objects, but it will even remain inaccessible to the Derived Class. Only the Base class has direct access to it. The derived class doesn't have direct access to it, and Objects don't have direct access to it.
+*   If the member is defined as ``protected``, then the data will be declared as ``public`` for the derived class, but only for the derived class. It's a mix of Public and Private. 
 
 Access Specifiers while Inheriting
 """"""""""""""""""""""""""""""""""
