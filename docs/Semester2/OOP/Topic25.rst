@@ -60,11 +60,61 @@ Access Specifiers within the Class Definition
 |
 | For any member in the Base Class, be it a Data Member or Member Function:
 *   If it is defined as ``public``, then the Derived Class also declares them as public. As an example, if we have a public ``int`` in the Base Class, then the Derived Class will inherit that ``int``, and since the access specifier is set to public, that ``int`` will be publicly accessible. The Base Class has direct access to it, the Derived Class has direct access to it, and Objects have direct access to it.
-*   If the member is defined as ``private``, however, then that data will remain ``private``, no matter what. You CANNOT inherit private members and make them public. The member will be inherited, and it will remain private, and not only will it remain inaccessible to Objects, but it will even remain inaccessible to the Derived Class. Only the Base class has direct access to it. The derived class doesn't have direct access to it, and Objects don't have direct access to it.
-*   If the member is defined as ``protected``, then the data will be declared as ``public`` for the derived class, but only for the derived class. It's a mix of Public and Private. 
+*   If the member is defined as ``private``, however, then that data will remain ``private``, no matter what. Derived Classes do NOT have direct access to the ``private`` members of the Base classes. They have to use other functions, such as getters and setters, to interact with them. If a class sets something as private, it's completely off limits to every other part of the code except the Class itself and Friend functions.
+*   If the member is defined as ``protected``, then the data will be accessible for the derived class, but only for the derived class. Objects won't have direct access. It's a mix of Public and Private.
 
-Access Specifiers while Inheriting
-""""""""""""""""""""""""""""""""""
+.. code-block:: c++
+   :linenos:
+
+    class Base {
+    public:
+        int x;
+    protected:
+        int y;
+    private:
+        int z;
+    };
+
+    class PublicDerived: public Base {
+    // x is public
+    // y is protected
+    // z is not accessible from PublicDerived
+    };
+
+    class ProtectedDerived: protected Base {
+    // x is protected
+    // y is protected
+    // z is not accessible from ProtectedDerived
+    };
+
+    class PrivateDerived: private Base {
+    // x is private
+    // y is private
+    // z is not accessible from PrivateDerived
+    };
+
+| The thing to note about ``protected`` is that it stays as the type ``protected`` when you do Inheritance, instead of being turned into ``public``. This matters because if you do Inheritance on multiple levels, you can keep access to it.
+
+.. code-block:: c++
+   :linenos:
+
+    class Base {
+    protected:
+        int x;
+    };
+    class Derived1: public Base {
+    };
+    class Derived2: protected Derived1 {
+    };
+    class Derived3: public Derived2 {
+    public:
+        void printX() {
+            cout << "X: " << x << endl;
+        }
+        void setX(int x) {
+            this->x = x;
+        }
+    };
 
 Constructors and Destructors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
