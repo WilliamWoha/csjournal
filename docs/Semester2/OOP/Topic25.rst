@@ -107,31 +107,31 @@ Constructors and Destructors
 .. code-block:: c++
    :linenos:
 
-      class Base {
-      public:
-          Base() {
-              cout << "Base Constructor Called." << endl;
-          }
-          Base(int a) {
-              cout << "Parameterized Constructor Called." << endl;
-          }
-          ~Base() {
-              cout << "Base Destructor Called." << endl;
-          }
-      };
-      class Derived: Base {
-      public:
-          Derived() {
-              cout << "Derived Constructor Called." << endl;
-          }
-          ~Derived() {
-              cout << "Derived Destructor Called." << endl;
-          }
-      };
-      int main() {
-          Derived obj;
-          cout << endl;
-      }
+    class Base {
+    public:
+        Base() {
+            cout << "Base Constructor Called." << endl;
+        }
+        Base(int a) {
+            cout << "Parameterized Constructor Called." << endl;
+        }
+        ~Base() {
+            cout << "Base Destructor Called." << endl;
+        }
+    };
+    class Derived: Base {
+    public:
+        Derived() {
+            cout << "Derived Constructor Called." << endl;
+        }
+        ~Derived() {
+            cout << "Derived Destructor Called." << endl;
+        }
+    };
+    int main() {
+        Derived obj;
+        cout << endl;
+    }
 
 | Run that and you'll see the pattern.
 |
@@ -140,48 +140,114 @@ Constructors and Destructors
 .. code-block:: c++
    :linenos:
 
-      class Rectangle {
-      public:
-          float side1;
-          float side2;
-          Rectangle() {
-              side1 = 0;
-              side2 = 0;
-          }
-          Rectangle(float side1, float side2) {
-              this->side1 = side1;
-              this->side2 = side2;
-          }
-      };
-      
-      class Square : public Rectangle {
-      public:
-          Square(int side) : Rectangle(side, side) {}
-          Square() {}
-      };
-      
-      int main() {
-          Square obj(5);
-          cout << obj.side1 << ", " << obj.side2 << endl;
-          Square obj2;
-          cout << obj2.side1 << ", " << obj2.side2 << endl;
-      }
+    class Rectangle {
+    public:
+        float side1;
+        float side2;
+        Rectangle() {
+            side1 = 0;
+            side2 = 0;
+        }
+        Rectangle(float side1, float side2) {
+            this->side1 = side1;
+            this->side2 = side2;
+        }
+    };
+    
+    class Square : public Rectangle {
+    public:
+        Square(int side) : Rectangle(side, side) {}
+        Square() {}
+    };
+    
+    int main() {
+        Square obj(5);
+        cout << obj.side1 << ", " << obj.side2 << endl;
+        Square obj2;
+        cout << obj2.side1 << ", " << obj2.side2 << endl;
+    }
 
 | This is useful because it allows you to choose which Constructor to call from the Derived Class. You could run the default one, or modify arguments or make your own arguments and call it. Keep in mind, however, if you're calling the Base Constructor of your choice you MUST do it via the Member-Initializer list. It can't be called otherwise. Or, well, it'll be called but it won't modify the actual values of your Object.
 
 .. code-block:: c++
 
-          Square(int side) {
-              Rectangle(side, side)
-          }
+    Square(int side) {
+        Rectangle(side, side)
+    }
 
 | This will work. But if you output the values of ``side1`` and ``side2``, it'll give 0 and 0. It didn't modify the actual values of the ``Square`` class during the Construction.
 
 Method Overriding
 ^^^^^^^^^^^^^^^^^
 
+| Method Overriding (or Function Overriding) lets you replace functions that belong to a Base Class. This is a situation where we're trying to have a Derived Class have its own functionality with the same function compared to the Base Class. On the end of the previous page I explained how instead of having ``BobPunch()`` or ``PandaKick()`` you can just have the same function of ``Punch()`` or ``Kick()`` do different things depending on which Object is calling it. This is how it's done. We'll go into detail with this example later when doing ``Polymorphism`` because we'll also have dealt with Abstract Classes by then. For now, we'll keep to a much simpler example.
+
+.. code-block:: c++
+   :linenos:
+
+    class Base {
+    public:
+        void print() {
+            cout << "From Base." << endl;
+        }
+        void print2() {
+            cout << "From Base (Print2)" << endl;
+        }
+    };
+    class Derived: public Base {
+    public:
+        void print() {
+            cout << "From Derived." << endl;
+        }
+    };
+    int main() {
+        Derived obj;
+        obj.print();
+        obj.print2();
+        obj.Base::print();
+    }
+
+| Method Overriding works in kind of the opposite way of Method Overloading. In Method Overloading, you're changing the ``Signature`` of the function (meaning the Data Types in its arguments) so it can be called with the same name but different arguments. Here, you're changing what the function is actually doing, while keeping the same name and same arguments. As shown above, even though we called ``obj.print()``, it calls the ``print()`` that belongs to ``Derived``, and *only* that function. It doesn't even consider the ``print()`` that exists in ``Base``, unless we explicitly tell it to call that function using ``obj.Base::print()``. I wrote ``obj.print2()`` as another sample function, it doesn't really do anything here.
+|
+| This is going to matter *tremendously* in Polymorphism, but it's too much to cover for now. Just understand that Function Overriding will make the Derived class call its own code, but it can still call the code of the Base if you use ``Base::`` to access it.
+
 Single-Level, Multi-Level, and Multi-Inheritance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| There's three types of Inheritance: 
+*   Single Inheritance
+*   Multi-level Inheritance
+*   Multi-Inheritance
+| Single Inheritance just means one Base class, and One or Many Derived classes. We've already been dealing with this.
+|
+| Multi-level inheritance is slightly more complicated but fundamentally the same. It just makes it so there's a longer chain.
+
+.. code-block:: c++
+   :linenos:
+
+    class CommunityMember {
+    };
+    class Employee: public CommunityMember {
+    };
+    class Student: public CommunityMember {
+    };
+    class Alumnus: public CommunityMember {
+    };
+    class Faculty: public Employee {
+    };
+    class Staff: public Employee {
+    };
+    class Administrator: public Faculty {
+    };
+    class Teacher: public Faculty {
+    };
+    class AdministratorTeacher: public Administrator, public Teacher {
+    };
+
+| Here we're performing all types of Inheritance.
+*   ``Employee``, ``Student``, and ``Alumnus`` are Single-Inheritance
+*   ``Faculty``, ``Staff``, ``Administrator``, and ``Teacher`` are Multi-Level Inheritance
+*   ``AdministratorTeacher`` is Multi-Inheritance
 
 The Diamond Problem
 ^^^^^^^^^^^^^^^^^^^
