@@ -27,7 +27,7 @@
         Array a3 = a1;
     }
 
-| We solve that today using the Copy Constructor. First I have to explain how the ``=`` operator, which we call the Assignment Operator, even works. It first sees if the left side can accept the Data Type provided on the right side, and if it passes that check, sets the values to be equal. In the case of Classes, it does 'Member Wise' assignment, which just means every member of the object on the left is given the values of every member of the object on the right. We've already covered this. The part that we didn't actually cover was how to avoid two Pointers belonging to classes pointing to the same location in Heap. We'll solve that using the Copy Constructor.
+| We solve that today using the Copy Constructor. First I have to explain how the ``=`` operator, which we call the Assignment Operator, even works. It first sees if the left side can accept the Data Type provided on the right side, and if it passes that check, sets the values to be equal. In the case of Classes, it does 'Member Wise' assignment, which just means every member of the object on the left is given the values of every member of the object on the right. We've already covered this. The part that we didn't actually cover was how to avoid two Pointers belonging to classes pointing to the same location in Heap, since it's setting the Pointers to be equal as well. We'll solve that using the Copy Constructor.
 |
 | The Copy Constructor is a Constructor used specifically to create a second object from an existing first object. However, like other Constructors, it can be modified to suit our needs. Here's the syntax for it:
 
@@ -78,7 +78,7 @@
     func(Circle c) {}
     func(const Circle& c) {}
 
-| Take note: ONLY in lines 3, 4, and 8 is a Copy Constructor called. Line 5 is just a version of Line 4 where it uses the Heap instead. It's also called in that line but the Syntax isn't new. The combination of lines 6 and 7 does NOT trigger a copy constructor! That's different, that's the assignment operator. That's gonna get covered in Operator Overloading. Line 9 *also* does not call a Copy Constructor, as it's passing the Object by reference, which is just in practice making a pointer.
+| Take note: ONLY in lines 3, 4, 5, and 8 is a Copy Constructor called. Line 5 is just a version of Line 4 where it uses the Heap instead. It's also called in that line but the Syntax isn't new. The combination of lines 6 and 7 does NOT trigger a copy constructor! That's different, that's the assignment operator. That's gonna get covered in Operator Overloading. Line 9 *also* does not call a Copy Constructor, as it's passing the Object by reference, which is just in practice making a pointer.
 |
 | Line 3 *does* call a copy constructor, Line 4 *does* call a copy constructor, Line 5 *does* call a copy constructor, Line 8 *does* call a copy constructor, Lines 6 and 7 together *do NOT* call a copy constructor, and Line 9 *does NOT* call a copy constructor.
 |
