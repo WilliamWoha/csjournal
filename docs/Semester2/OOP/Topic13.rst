@@ -80,7 +80,7 @@
 
 | Take note: ONLY in lines 3, 4, and 8 is a Copy Constructor called. Line 5 is just a version of Line 4 where it uses the Heap instead. It's also called in that line but the Syntax isn't new. The combination of lines 6 and 7 does NOT trigger a copy constructor! That's different, that's the assignment operator. That's gonna get covered in Operator Overloading. Line 9 *also* does not call a Copy Constructor, as it's passing the Object by reference, which is just in practice making a pointer.
 |
-| Line 3 *does* call a copy constructor, Line 4 *does* call a copy constructor, Line 5 *does* call a copy constructor, Line 8 *does* call a copy constructor, Lines 5 and 6 together *do NOT* call a copy constructor, and Line 9 *does NOT* call a copy constructor.
+| Line 3 *does* call a copy constructor, Line 4 *does* call a copy constructor, Line 5 *does* call a copy constructor, Line 8 *does* call a copy constructor, Lines 6 and 7 together *do NOT* call a copy constructor, and Line 9 *does NOT* call a copy constructor.
 |
 | Regarding Line 8, it's making a Copy Constructor because the Object is being passed by value instead of by Reference. I mentioned way earlier that passing by reference is simpler for Objects because if their complexity is high then it has to copy all of those values over and do a lot of data processing and moving, whereas a reference just has to make a pointer. This is why.
 |
