@@ -271,6 +271,8 @@ operator= (Shallow Copy)
       this->imag = obj.getImag();
       return *this;
     }
+
+| https://en.cppreference.com/w/cpp/language/operator_assignment has more info about the Assignment Operator. As far as the Compiler's own version is concerned, it tries to make sure that if you do ``a = b``, then ``b`` is something that can be converted and applied to ``a``. For example, if you have a ComplexInt called ``c2``, and you do ``c2 = 20;``, then you'd think it doesn't work, but it does, because ``20`` can be converted into a ComplexInt, since we have a constructor for it. ``c2 = 20;`` is the same as doing ``c2 = ComplexInt(20);``, and since ``ComplexInt(20)`` is valid, the conversion works. If we do something like ``c2 = 'a'`` then it wouldn't work, but if we had a constructor for it, then it could. Play around with it.
     
 operator+=
 """"""""""
