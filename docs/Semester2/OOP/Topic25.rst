@@ -218,9 +218,6 @@ Single-Level, Multi-Level, and Multi-Inheritance
 *   Single Inheritance
 *   Multi-level Inheritance
 *   Multi-Inheritance
-| Single Inheritance just means one Base class, and One or Many Derived classes. We've already been dealing with this.
-|
-| Multi-level inheritance is slightly more complicated but fundamentally the same. It just makes it so there's a longer chain.
 
 .. code-block:: c++
    :linenos:
@@ -244,10 +241,20 @@ Single-Level, Multi-Level, and Multi-Inheritance
     class AdministratorTeacher: public Administrator, public Teacher {
     };
 
-| Here we're performing all types of Inheritance.
+| Here's a UML Diagram presenting this scenario:
+|
+.. raw:: html
+    :file: images/inheritance_2.svg
+|
 *   ``Employee``, ``Student``, and ``Alumnus`` are Single-Inheritance
 *   ``Faculty``, ``Staff``, ``Administrator``, and ``Teacher`` are Multi-Level Inheritance
 *   ``AdministratorTeacher`` is Multi-Inheritance
+|
+| Single-Inheritance is what we've been dealing with this whole time. One Base Class, and one Derived Class.
+|
+| Multi-Level Inheritance is just extending the chain. There's a Base Class, then there's a Derived Class. This Derived Class in Multi-Level inheritance acts as the base class, for another Derived Class. It follows the same rules as Single-Level Inheritance. Another example for this can be with a class ``Coordinate``, which is inherited by a class ``Line``, which is inherited by a class ``Polygon``. It can go as long as you need it to or as short as you need it to.
+|
+| Multi-Inheritance is where things get interesting. It's not used that often but still exists for a reason. Here's how it works:
 
 The Diamond Problem
 ^^^^^^^^^^^^^^^^^^^
