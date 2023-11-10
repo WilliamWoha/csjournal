@@ -207,7 +207,7 @@ Method Overriding
         obj.Base::print();
     }
 
-| Method Overriding works in kind of the opposite way of Method Overloading. In Method Overloading, you're changing the ``Signature`` of the function (meaning the Data Types in its arguments) so it can be called with the same name but different arguments. Here, you're changing what the function is actually doing, while keeping the same name and same arguments. As shown above, even though we called ``obj.print()``, it calls the ``print()`` that belongs to ``Derived``, and *only* that function. It doesn't even consider the ``print()`` that exists in ``Base``, unless we explicitly tell it to call that function using ``obj.Base::print()``. I wrote ``obj.print2()`` as another sample function, it doesn't really do anything here.
+| Method Overriding works in kind of the opposite way of Method Overloading. In Method Overloading, you're changing the ``Signature`` of the function (meaning the Data Types in its arguments) so it can be called with the same name but different arguments. Here, you're changing what the function is actually doing, while keeping the same name and same arguments. As shown above, even though we called ``obj.print()``, it calls the ``print()`` that belongs to ``Derived``, and *only* that function. It doesn't even consider the ``print()`` that exists in ``Base``, unless we explicitly tell it to call that function using the Scope Resolution Operator, ``obj.Base::print()``. I wrote ``obj.print2()`` as another sample function, it doesn't really do anything here.
 |
 | This is going to matter *tremendously* in Polymorphism, but it's too much to cover for now. Just understand that Function Overriding will make the Derived class call its own code, but it can still call the code of the Base if you use ``Base::`` to access it.
 
@@ -254,10 +254,79 @@ Single-Level, Multi-Level, and Multi-Inheritance
 |
 | Multi-Level Inheritance is just extending the chain. There's a Base Class, then there's a Derived Class. This Derived Class in Multi-Level inheritance acts as the base class, for another Derived Class. It follows the same rules as Single-Level Inheritance. Another example for this can be with a class ``Coordinate``, which is inherited by a class ``Line``, which is inherited by a class ``Polygon``. It can go as long as you need it to or as short as you need it to.
 |
-| Multi-Inheritance is where things get interesting. It's not used that often but still exists for a reason. Here's how it works:
+| Multi-Inheritance is where things get interesting. It's not used that often but still exists for a reason. Here's how it works.
+|
+| Multi-Inheritance is when you make a class inherit from multiple other classes. Having two, separate Derived Classes from one Base Class is just Single Inheritance done twice. This is different. This is where you have *two* Base Classes, and *one* Derived Class which has the members of *both* Base Classes, or Parents. This is useful for scenarios where you want to combine the functionality of two unique and separate classes into one, but the project really has to be large scale to do something like this, as it's rather uncommon, but it does still get used.
+|
+| Multi-Inheritance brings about problems of ambiguity. Kind of like Function Overriding, except here you're not really overriding anything. Let's say you had two classes, ``Employee`` and ``Student``, and you wanted to make a new class called ``StudentEmployee``. At my specific university you can either become a TA, which is a Teacher's Assistant. In simple words, this is a student with a salary. You can also directly get hired by the university as a Lab Instructor while performing your Master's Degree. In that case you're a teacher pursuing a degree. But beyond this there are still regular Employees and Students. Let's say you had a function, ``printInfo()`` for both ``Employee`` and ``Student``, and they would print out the details for that specific object. If you're inheriting from both, however, it wouldn't know which one to print. Would it perform ``Employee::printInfo()`` or would it perform ``Student::printInfo()``? There's ambiguity in this scenario. The code does compile, but if you actually run the ``printInfo()`` function, it'll give an error.
+
+.. code-block:: c++
+   :linenos:
+
+    class Student {
+    public:
+        void printInfo() {
+            cout << "STUDENT" << endl;
+        }
+    };
+    class Employee {
+    public:
+        void printInfo() {
+            cout << "EMPLOYEE" << endl;
+        }
+    };
+    class StudentEmployee: public Student, public Employee {
+    };
+    int main() {
+        StudentEmployee SE1;
+        // SE1.printInfo(); // Uncommenting this line will give an error.
+        cout << "End Of Program." << endl;
+    }
+
+| And just like earlier, we just use the Scope Resolution Operator, ``::``, to give an identifier to the compiler for what we want to call. Writing ``SE1.Student::printInfo()`` or ``SE1.Employee::printInfo()`` will both let the code work, and is often useful if you want to be able to see individual things or keep old functionality.
 
 The Diamond Problem
 ^^^^^^^^^^^^^^^^^^^
 
+.. code-block:: c++
+   :linenos:
+
+    class A {
+    int value;
+    public:
+        A(int num): value(num) {}
+        void print() {
+            cout << "I am in A. Value: " << value << endl;
+        }
+    };
+    class B: public A {
+    public:
+        B(): A(5) {}
+    };
+    class C: public A {
+    public:
+        C(): A(10) {}
+    };
+    class D: public B, public C {
+    };
+    int main() {
+        D thing;
+        // thing.A::print();
+        cout << "End Of Program." << endl;
+    }
+
+| In the ``int main()`` portion of the code above, if you try to uncomment ``thing.A::print()`` then it'll give an error, saying ``'A' is an ambiguous base of 'D'``. This is what we call the Diamond Problem, and it only exists in languages that support Multi-Inheritance. Here, it's unknown whether we're referring to the ``A`` that was responsible for the construction of ``B``, or to the ``A`` that was responsible for the construction of ``C``.
+|
+| Here's a UML Diagram presenting this scenario:
+|
+.. raw:: html
+    :file: images/inheritance_3.svg
+|
+| You *can* do ``thing.B::print()`` or ``thing.C::print()``, but ``thing.print()`` and ``thing.A::print()`` will both not work.
+|
+| You can just choose to make code that wouldn't deal with it, or you can learn Virtual Inheritance below to try and solve it. I didn't really end up using Multi-Inheritance enough for this to be a concern, I just avoided making code that would give this challenge. In any case, if you're bored or want to learn more, then you can learn of Virtual Inheritance below. Otherwise, that's about it for Inheritance.
+
 Virtual Inheritance
 ^^^^^^^^^^^^^^^^^^^
+
+| https://www.learncpp.com/cpp-tutorial/virtual-base-classes/ explains it well. This is more of an advanced concept so, it probably won't show up in something like exams. Only read into it if you're done with everything else first.
