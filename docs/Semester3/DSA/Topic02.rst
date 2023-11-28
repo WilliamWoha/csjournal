@@ -61,6 +61,8 @@
 | ``T`` doesn't need to have a complex name. It's tradition to just use ``T`` but you can have it be any name at all, just like a variable.
 |
 | Unfortunately, *using* the function isn't as simple as it would be in something like Python. Although the function is templatized now, you can't just do ``max(value1, value2)`` now. The Compiler needs to know what specific data type it has to define for ``T``, and it can't do so automatically.
+|
+| Originally, you used ``max(value1, value2)``. Now, since the function is templatized, you have to do ``max<data_type>(value1, value2)`` instead. An example has been written below.
 
 .. code-block:: c++
    :linenos:
@@ -73,5 +75,27 @@
             return y;
     }
     int main() {
-        cout << max(5, 10) << endl;
+        cout << max<int>(5, 10) << endl;
+        cout << max<float>(10.5, 5.3) << endl;
     }
+
+| There is good news though. Sometimes, the Compiler *is* able to do ``max(value1, value2)`` if there's enough information for it to make a proper deduction on the data type. If you do ``max(5, 10)``, or ``max<>(5, 10)``, the compiler sees that an actual data type hasn't been provided, so it will attempt to deduce an actual data type from the *arguments* to see which function to generate. In this case, it sees that ``max<T>`` with arguments ``(int, int)`` would translate to ``max<int>(int, int)``. But it's better to just write ``max<int>`` instead as then you know which version is being generated.
+|
+| A template might not handle all data types correctly. In the example above what would happen if you sent ``max("Hello", "World")``? The code is valid, and it would compile, and may even give a result back, but it may not be what you want. You can specialize specific template portions by overloading the function in this way:
+
+.. code-block:: c++
+   :linenos:
+
+    template <typename T>
+    T max(T x, T y) {
+        if(x > y)
+            return x;
+        else
+            return y;
+    }
+    template <>
+    const char* max<const char*>(const char* x, const char* y) {
+        // Code to compare x and y, by whatever standards you wish.
+    }
+
+| This is also useful to know for a function which compares two classes but an operator overload for said class may not exist.
