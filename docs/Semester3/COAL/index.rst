@@ -11,7 +11,7 @@ Computer Organization and Assembly Language
 | Second, which was a reason I really wish I knew earlier: Despite how fast C++ is, it's still bloated.
 
 .. figure:: images/Hello_World_Line_Count.png
-    :scale: 100%
+    :scale: 50%
 
 | The image above was obtained by first making a Console App in Visual Studio, going to the Project Properties, then to C/C++, and setting ``Preprocess to a file`` to ``Yes (/P)``. After that, you right click the ``.cpp`` file on the right, and click ``Compile``. This creates a ``.i`` file in your Debug folder (where the Console app and ``.cpp`` file is), which turns the ``#include`` line into actual code. Don't do that normally, this was just for showing the image above, and I wrote the process here for anyone wanting to do so themselves, or for future me to do it again.
 |
