@@ -30,6 +30,8 @@ PacManASM
         <iframe width="1149" height="718" src="https://www.youtube.com/embed/B0cpoWkWj4A" title="PacManASM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
+| https://github.com/i220878/Sem3-COAL-Project
+|
 | My task was to create Pac-Man via Assembly Language, specifically via MASM syntax by enabling the Microsoft Macro Assembler under Build Dependencies of a Visual Studio C++ Empty Project. Normally the university course teaches Assembly on DOS-Box but since this time it was done on Visual Studio, it was supposed to be done on the Terminal instead.
 |
 | I wasn't a fan of this, as the game in question wouldn't look or feel smooth. I asked my teacher if WinAPI functions were allowed, and he was ok with it, but told me to be careful as I'd be doing it at my own risk.
@@ -45,8 +47,6 @@ PacManASM
 | Then I spent the next 6 days in stress and pain as I was able to get a window open and I was able to load one Bitmap Image on it, but not two. It would flicker, glitch, load duplicates, do many, many things I didn't want. Until at some point in my lack of sleep thought that making it in C and converting it might be my only hope, at which point I thought...why make it in C at all? Just do that part in my head. And finally, after 8 days of immense struggle, I was able to understand Double Buffering and draw a Graphics Window with multiple Bitmap Images, through pure MASM Assembly.
 |
 | From this point onwards it was just a matter of implementing the game, and I spent 5 sleep deprived days and nights on it trying to make it the best version it could be because finding the motivation to do a game in Assembly again will be an impossible task. It's now or never. And after the deadline passed, the attached video was the result.
-|
-| The code is in the video description.
 
 Vulcan
 ^^^^^^
@@ -57,9 +57,9 @@ Vulcan
         <iframe width="1233" height="694" src="https://www.youtube.com/embed/mpPYtAB94s4" title="Vulcan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
+| https://github.com/i220878/Sem2-OOP-Project
+| 
 | The task was to make another game, but this time incorporate OOP Concepts. I had a reputation to uphold so I spent 130 hours on it and multiple sleepless nights to try and finish it before the deadline, and it turned out amazing. The same thing as Semester 1, but going even more above and beyond to try and see just what I can do.
-|
-| The code is in the video description.
 
 Tetris
 ^^^^^^
@@ -70,6 +70,8 @@ Tetris
         <iframe width="1149" height="718" src="https://www.youtube.com/embed/sw7ajcEk27M" title="Tetris" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
+| https://github.com/i220878/Sem1-PF-Project
+|
 | Just this semester I learnt how to write "Hello World!" and in this same semester there's so much to do. Tetris was such an intense project for someone just starting out to programming. I only got 40% in my Mid-Exam and I was fearing failing the subject. I spent so much time and effort learning C++ and making the project to try and get muscle memory for the language. I did it so vigorously that instead of doing the smart thing and looking up the proper ways of doing things, I just did what made sense. I spent 800 lines on the rotations for the tetrominoes. Instead of *rotating* the pieces, that code *restructures* them. Each *individual piece* obtains new coordinates to go to, for *each rotation*. Instead of using a timer to trigger between different frames, I did 50 IF statements checking "If time is between 0 and 0.1", "If time is between 0.1 and 0.2", and so on. It's one of the *worst programmed* things I've done but it was so important to my learning and it ended up being so well made (despite that bad programming) that in terms of visual quality and gameplay it won the "Best Project" award, and I got so much muscle memory for C++ and Programming in general that I got 89.5% on my Final Exam.
 |
 | The code is in the video description.
@@ -99,8 +101,8 @@ NFS Most Wanted: Pepega Mod
 |
 | You sacrifice the feeling of experiencing something for the first time, so that you can make that experience possible for everyone else. But the feeling you get in return? There is nothing more fulfilling than knowing your work is the reason why someone else can feel joy and fun.
 
-Old School Projects
--------------------
+Old Projects From School
+------------------------
 
 | These were from my previous school. They aren't linked to Programming but they're linked to the creative passion I have. They're both from my Media Studies tasks from the previous school.
 |
@@ -108,12 +110,12 @@ Old School Projects
 |
 | I got an A grade on both projects.
 
-The World Will Know Your Name
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The World Will Know Your Name (Music Video)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | https://theibrahimawais.blogspot.com/
 
-The Ripper
-^^^^^^^^^^
+The Ripper (Film Opening)
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | https://iawaisproductions.blogspot.com/
