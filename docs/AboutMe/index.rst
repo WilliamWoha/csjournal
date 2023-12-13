@@ -73,8 +73,6 @@ Tetris
 | https://github.com/i220878/Sem1-PF-Project
 |
 | Just this semester I learnt how to write "Hello World!" and in this same semester there's so much to do. Tetris was such an intense project for someone just starting out to programming. I only got 40% in my Mid-Exam and I was fearing failing the subject. I spent so much time and effort learning C++ and making the project to try and get muscle memory for the language. I did it so vigorously that instead of doing the smart thing and looking up the proper ways of doing things, I just did what made sense. I spent 800 lines on the rotations for the tetrominoes. Instead of *rotating* the pieces, that code *restructures* them. Each *individual piece* obtains new coordinates to go to, for *each rotation*. Instead of using a timer to trigger between different frames, I did 50 IF statements checking "If time is between 0 and 0.1", "If time is between 0.1 and 0.2", and so on. It's one of the *worst programmed* things I've done but it was so important to my learning and it ended up being so well made (despite that bad programming) that in terms of visual quality and gameplay it won the "Best Project" award, and I got so much muscle memory for C++ and Programming in general that I got 89.5% on my Final Exam.
-|
-| The code is in the video description.
 
 Personal Projects
 -----------------
