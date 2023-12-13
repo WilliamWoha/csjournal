@@ -24,6 +24,7 @@ Contents
    :maxdepth: 1
    :glob:
 
+   AboutMe/index
    Semester1/index
    Semester2/index
    Semester3/index
