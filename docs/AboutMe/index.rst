@@ -15,7 +15,7 @@ About Me
 University Projects
 -------------------
 
-| Although most of the Projects here are related to university, I still put my heart and soul into them to try and make the best versions. The Data Structures project isn't fully complete yet so I can't comment on it but everything else (PF, OOP, COAL) required you to make games, and for *every* subject, in *every* semester, I've consistently scored the highest marks and won the "Best Project" award. Each Project was solo and had hundreds of submissions.
+| Although most of the Projects here are related to university, I still put my heart and soul into them to try and make the best versions. The Data Structures project isn't fully complete yet so I can't comment on it but everything else (PF, OOP, COAL) required you to make games. Each Project was solo and there were hundreds of people in each semester taking the subject, and for *every* subject, in *every* semester, I've consistently scored the highest marks and won the "Best Project" award.
 |
 | That's not to say I'm some kind of prodigy or have a lot of talent. I experienced *plenty* of struggle with every single one of them and many, many sleepless nights were spent on them. I was just committed to making something my teachers could be proud of, and to prove to myself that I can make a great product.
 |
