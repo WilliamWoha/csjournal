@@ -90,7 +90,13 @@ NFS Most Wanted: Pepega Mod
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | [WARNING: This Creative Work features content which may not be suitable for all audiences. This is specifically mentioned as a way to present a public project I did but viewer discretion is advised.]
-|
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 2%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe width="1233" height="694" src="https://www.youtube.com/embed/emjm894ANN0" title="NFS Most Wanted: Pepega Edition - OUT NOW! | Launch Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
 | I have a passion for gaming, and Need For Speed: Most Wanted (2005) is one of the best games I've ever had the pleasure of experiencing. I found a Speedrunning channel for the game called KuruHS and noticed some mods for the game, one of which was called the Pepega Mod. I was learning Blender at the time so I thought it was a good opportunity to put that skill to good use. I got in touch with the team that was working on it, presented my skillset and creative ideas, and eventually we worked together to build one of the most downloaded mods for NFS Most Wanted 2005 that exists today, and then mastering that further in an Anniversary Update (or as Eden, our Group Head titled it, Anniver.2ary update, as a creative way to say Version 2 of the mod).
 |
 | It now sits at more than 150,000 downloads and millions of views spread across multiple YouTube videos. The humor in it can be very specific, and often misunderstood, but the ten of us in the team still put in as much effort as possible to modify the game and provide a new, refreshing, and fun experience on a classic game. It also got a version made for NFS: ProStreet, but I had left the team by then.
