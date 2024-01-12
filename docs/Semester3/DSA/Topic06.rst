@@ -35,7 +35,7 @@ Array Searching
         return -1;
     }
 
-| This works for most situations but if you're looking through an array of size One Million then in the worst case it would do One Million comparisons. One way to improve upon this would be a search function called ``binarySearch`` which is much faster, but requires the array to be sorted. This is because it uses the fact that the array is sorted to cut the search space in half every time, and it's much faster than a linear search. The code for this is as follows:
+| This works for most situations but if you're looking through an array of size One Million then in the worst case it would do One Million comparisons, which would happen if the thing you're looking for is at the very end, or even worse, not there at all. One way to improve upon this would be a search function called ``binarySearch`` which is much faster, but requires the array to be sorted. This is because it uses the fact that the array is sorted to cut the search space in half every time, and it's much faster than a linear search. The code for this is as follows:
 
 .. code-block:: c++
    :linenos:
@@ -72,8 +72,8 @@ Array Sorting
 | There's many more out there, such as Merge Sort, and all of them have their own advantages and disadvantages. Unfortunately I can't explain in detail *how* all of these Sorting Algorithms work because of how many diagrams it needs, and on top of that there's already so many sites that visualize it step by step in a much better way than I could. Seriously, just google them, there's thousands of results and they explain the algorithms in fantastic detail. Different algorithms are going to be better for different situations, but generally Merge Sort or Quick Sort is preferred because of their abilities to do the entire sorting in O(n log n) instead of O(n\ :sup:`2`\) like the others.
 |
 | This time I won't just say "it depends on the situation" and end it there, because these specific algorithms actually got asked about in my exam so do give it some practice. Specifically try to see which of the sorting algorithms above (not including Quick Sort) is the best for these situations:
-*   Array is already sorted
-*   Array is sorted in reverse order
-*   Most of the elements of the Array are where they're supposed to be, but a few elements are not
-*   None of the elements of the Array are where they're supposed to be, but most of the elements are close to where they're supposed to be
+*   Array is already sorted (1 2 3 4 5 6 7)
+*   Array is sorted in reverse order (7 6 5 4 3 2 1)
+*   Most of the elements of the Array are where they're supposed to be, but a few elements are not (1 6 3 4 5 2 7)
+*   None of the elements of the Array are where they're supposed to be, but most of the elements are close to where they're supposed to be (6 7 1 2 3 4 5)
 | This was asked from me in an exam and I got it wrong. The university didn't actually tell which answers were the right ones so, if I find the right answers I'll write them here, and if I forget to or if you figure it out on your own then please contact me so I can write them here.
