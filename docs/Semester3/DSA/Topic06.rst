@@ -17,7 +17,7 @@
 | And so on. You can use it however you want but those basic operations above are the basic ones. Adding and Removing elements however are less common, because Arrays have a fixed size. There's two ways to deal with this: The first is to use ``vector``s, which are Arrays that can grow and shrink by moving all the elements from one array to another. The second is to have a large fixed size array, keep empty areas, and eventually as the array fills up you use the empty areas to add more elements. I did this in my Semester 2 Project for having an array that would keep track of all bullets on screen, and if spawning a new bullet would exceed the array size, I just replaced the first bullet in the array with the new bullet, kind of like a 'circular buffer'. This approach sped up my game by over 300% because there were no calls being made to allocate or delete memory, and the array was always the same size. It made such a major difference because originally it was allocating and deleting memory *every time a bullet was spawned or despawned*, and it's an expensive operation to call.
 
 Array Searching
----------------
+^^^^^^^^^^^^^^^
 
 | Accessing an element in an Array is extremely fast, and the computer is able to access it in Constant Time (which in Big-O notation is ``O(1)``). Constant Time just means, no matter what the size of the Array is, it will always take the same amount of time to access an element, and you'll see how this differs when we do something like a Linked List later on.
 |
@@ -62,7 +62,7 @@ Array Searching
 | Let's talk about Sorting then.
 
 Array Sorting
--------------
+^^^^^^^^^^^^^
 
 | We covered four algorithms for sorting in Classes:
 *   Bubble Sort
