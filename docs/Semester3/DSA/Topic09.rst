@@ -19,6 +19,7 @@
 *   Check if the Queue is full (Array based implementation only)
 *   Insert an item into the Queue (also called an Enqueue or Push operation)
 *   Remove an item from the Queue (also called a Dequeue or Pop operation)
+*   Return the item at the front of the Queue (also called a Peek operation)
 *   Clear the Queue
 | If you compare these operations to what we wrote for the List, you'll notice a lot of similarities and a few differences. Until the Insert operation, it's basically identical, but the Insert and Remove operations will NOT let the programmer control the position. All the programmer can do is Enqueue and Dequeue, otherwise they risk violating the rules of the Data Structure. A queue won't work the way it's designed to if the second item in line suddenly gets priority and is addressed over the first one. The rules must be followed. And yes there can be situations where the thing you're enqueueing *is* more important than what's already in the queue, but that's a different Data Structure called a Priority Queue. We're not dealing with that right now.
 |
@@ -37,6 +38,7 @@
         bool isFull() const;
         void enqueue(const T& item);
         T dequeue();
+        T peek();
         void clear();
     };
 
@@ -59,20 +61,18 @@
 *   Enqueue(3): ``3 - - - -``, Front == 0, Rear == 0, 3 is Added
 *   Enqueue(4): ``3 4 - - -``, Front == 0, Rear == 1, 4 is Added
 *   Enqueue(5): ``3 4 5 - -``, Front == 0, Rear == 2, 5 is Added
-*   Dequeue():  ``3 4 5 - -``, Front == 1, Rear == 2, 3 is Released
-*   Enqueue(2): ``3 4 5 2 -``, Front == 1, Rear == 3, 2 is Added
-*   Enqueue(8): ``3 4 5 2 8``, Front == 1, Rear == 4, 8 is Added
-*   Dequeue():  ``3 4 5 2 8``, Front == 2, Rear == 4, 4 is Released
-*   Dequeue():  ``3 4 5 2 8``, Front == 3, Rear == 4, 5 is Released
-*   Dequeue():  ``3 4 5 2 8``, Front == 4, Rear == 4, 2 is Released
-*   Dequeue():  ``3 4 5 2 8``, Front == -1, Rear == -1, 8 is Released 
-*   Enqueue(1): ``1 4 5 2 8``, Front == 0, Rear == 0, 1 is Added
-*   Enqueue(2): ``1 2 5 2 8``, Front == 0, Rear == 1, 2 is Added
-*   Enqueue(3): ``1 2 3 2 8``, Front == 0, Rear == 2, 3 is Added
-*   Enqueue(4): ``1 2 3 4 8``, Front == 0, Rear == 3, 4 is Added
+*   Dequeue():  ``- 4 5 - -``, Front == 1, Rear == 2, 3 is Released
+*   Enqueue(2): ``- 4 5 2 -``, Front == 1, Rear == 3, 2 is Added
+*   Enqueue(8): ``- 4 5 2 8``, Front == 1, Rear == 4, 8 is Added
+*   Dequeue():  ``- - 5 2 8``, Front == 2, Rear == 4, 4 is Released
+*   Dequeue():  ``- - - 2 8``, Front == 3, Rear == 4, 5 is Released
+*   Dequeue():  ``- - - - 8``, Front == 4, Rear == 4, 2 is Released
+*   Dequeue():  ``- - - - -``, Front == -1, Rear == -1, 8 is Released 
+*   Enqueue(1): ``1 - - - -``, Front == 0, Rear == 0, 1 is Added
+*   Enqueue(2): ``1 2 - - -``, Front == 0, Rear == 1, 2 is Added
+*   Enqueue(3): ``1 2 3 - -``, Front == 0, Rear == 2, 3 is Added
+*   Enqueue(4): ``1 2 3 4 -``, Front == 0, Rear == 3, 4 is Added
 *   Enqueue(5): ``1 2 3 4 5``, Front == 0, Rear == 4, 5 is Added
-| Although the values are still there, they don't concern us. At the end of the ``dequeue()`` operations, even though the Array has values in it, ``front`` and ``rear`` are both set to ``-1``, which means the queue is effectively empty, then we can use it like normal.
-|
 | Adding these two integers reduces the complexity of ``enqueue`` and ``dequeue`` down to O(1), as the Array immediately knows which place to add a value to, and return a value from.
 |
 | The only catch with this is that there's a size limit. If Rear reaches a value of 5 then it won't work anymore as the array has a size of 5 and the index ranges from 0 to 4. One way around this is to implement a circular functionality. You can see this being useful in a situation like ``front == 4, rear == 4, programmer uses enqueue()``. There are free values in the queue, at indexes ``0, 1, 2, 3``, but if you *didn't* make your queue circular then you might be returning an error statement instead. Making your queue circular means moving the ``rear`` back to index 0 by keeping track of free spaces. Doing this will increase the amount of IF statements you have to write but effectively lets you have an infinite amount of ``enqueue`` and ``dequeue`` operations as long as there aren't more than ``n`` items in the queue at once.
@@ -80,13 +80,13 @@
 | That's the major problem though. You can't have more than ``n`` items in the queue at once, since it's an array. In space saving measures this is fine behaviour but if we want a general purpose Queue, we want to be able to grow it as much as possible. That's where the Linked List implementation comes in. It's effectively the same logic, and it keeps the O(1) complexity of the ``enqueue``` and ``dequeue`` operations (by keeping pointers for Front and Rear, similar to how you remembered indexes in the Array version), but with the added advantage that it can grow infinitely. Here's how it would look (Front and Rear are pointers, when I've written Front == 3 it means Front is pointing to a Node in a Linked List, and the data in that node is 3. Front itself is NOT equal to 3!):
 *   Start:      ``NULL``,       Front == ``nullptr``, Rear == ``nullptr``
 *   Enqueue(3): ``3``,          Front == 3, Rear == 3
-*   Enqueue(4): ``3->4``,       Front == 3, Rear == 4
-*   Enqueue(5): ``3->4->5``,    Front == 3, Rear == 5
-*   Dequeue():  ``4->5``,       Front == 4, Rear == 5, 3 is Released
-*   Enqueue(2): ``4->5->2``,    Front == 4, Rear == 2
-*   Enqueue(8): ``4->5->2->8``, Front == 4, Rear == 8
-*   Dequeue():  ``5->2->8``,    Front == 5, Rear == 8, 4 is Released
-*   Dequeue():  ``2->8``,       Front == 2, Rear == 8, 5 is Released
+*   Enqueue(4): ``3 -> 4``,       Front == 3, Rear == 4
+*   Enqueue(5): ``3 -> 4 -> 5``,    Front == 3, Rear == 5
+*   Dequeue():  ``4 -> 5``,       Front == 4, Rear == 5, 3 is Released
+*   Enqueue(2): ``4 -> 5 -> 2``,    Front == 4, Rear == 2
+*   Enqueue(8): ``4 -> 5 -> 2 -> 8``, Front == 4, Rear == 8
+*   Dequeue():  ``5 -> 2 -> 8``,    Front == 5, Rear == 8, 4 is Released
+*   Dequeue():  ``2 -> 8``,       Front == 2, Rear == 8, 5 is Released
 *   Dequeue():  ``8``,          Front == 8, Rear == 8, 2 is Released
 *   Dequeue():  ``NULL``,       Front == ``nullptr``, Rear == ``nullptr``, 8 is Released
 | This time, using the class definition written near the start of the page, try to implement both the Array based implementation and the Linked List based implementation yourself. It's going to be a modified version of a List in both the Array form and the Linked List form. I've already given the codes for making a List via an Array and a Linked List on the previous page, I won't be giving the code for newer things unless it's something super important or useful. In Semester 1 and Semester 2 I did that for reference purposes and examples but now you need to learn the two most important skills a programmer can have:
